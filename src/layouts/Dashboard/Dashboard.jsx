@@ -13,36 +13,39 @@ class Dashboard extends Component {
     };
   render() {
     return (
-      <div className="wrapper p-grid">
-          <div className={'p-grid-12'}>
-              <Header/>
+      <div className={"wrapper"}>
+          <div className={"p-grid"}>
+              <div className={'p-col-12'}>
+                  <div className={"box"}>
+                    <Header/>
+                  </div>
+              </div>
           </div>
-          <div className="p-col-3 p-align-stretch vertical-container">
-            <Sidebar {...this.props} className={'box box-stretched'}/>
+          <div className={"p-grid"}>
+              <div className="p-col-3">
+                <Sidebar {...this.props} className={'box'}/>
+              </div>
+              <Switch>
+                  <div style={{background: "red"}}>
+                    {dashboardRoutes.map((prop, key) => {
+                      if (prop.name === "Notifications")
+                        return (
+                              <Route path={prop.path} key={key} render={routeProps => (
+                                  <prop.component
+                                    {...routeProps}
+                                  />
+                                )}
+                              />
+                        );
+                      if (prop.redirect)
+                        return <Redirect from={prop.path} to={prop.to} key={key} />;
+                      return (
+                            <Route path={prop.path} component={prop.component} key={key} />
+                      );
+                    })}
+                  </div>
+              </Switch>
           </div>
-        <div className={'p-col-9'}>
-          <Switch>
-            {dashboardRoutes.map((prop, key) => {
-              if (prop.name === "Notifications")
-                return (
-                  <Route
-                    path={prop.path}
-                    key={key}
-                    render={routeProps => (
-                      <prop.component
-                        {...routeProps}
-                      />
-                    )}
-                  />
-                );
-              if (prop.redirect)
-                return <Redirect from={prop.path} to={prop.to} key={key} />;
-              return (
-                    <Route path={prop.path} component={prop.component} key={key} />
-              );
-            })}
-          </Switch>
-        </div>
       </div>
     );
   }

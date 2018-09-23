@@ -28,12 +28,12 @@ class Movies extends Component{
 
     renderListItem(movie) {
         return (
-            <div className={"p-col-12 car-details"} style={{background: "blue", padding: '2em', borderBottom: '1px solid #d9d9d9'}}>
-                <div className={"p-grid"}>
-                    <div className={"p-col-12 p-md-3"}>
+            <div className={"p-grid"}>
+                <div className={"p-col car-details"} style={{background: "blue", padding: '2em', borderBottom: '1px solid #d9d9d9'}}>
+                    <div className={"p-col"}>
                         <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} style={{height: '80px', width: '80px;'}}/>
                     </div>
-                    <div className={"p-col-12 p-md-8 car-data"}>
+                    <div className={"p-col car-data"}>
                         <div>Title: <b>{movie.title}</b></div>
                         <div>Genre: <b>{movie.genre_ids}</b></div>
                         <div>Stars: <b>{movie.vote_average}</b></div>
@@ -46,10 +46,15 @@ class Movies extends Component{
     renderHeader() {
         return (
             <div className={"p-grid"}>
-                <div className={"p-col-6"} style={{textAlign: 'right'}}>
+                <div className={"p-col"} style={{textAlign: 'right'}}>
                     <DataViewLayoutOptions layout={this.state.layout}
                                            onChange={(e) => this.setState({layout: e.value})}
                     />
+                </div>
+                <div className={"p-grid"}>
+                    <div className={"p-col"}>1</div>
+                    <div className={"p-col"}>1</div>
+                    <div className={"p-col"}>1</div>
                 </div>
             </div>
         );
@@ -59,15 +64,12 @@ class Movies extends Component{
         const header = this.renderHeader();
 
         return(
-            <div>
+            <div className={"p-grid"} style={{background: 'orange'}}>
                 <div>
-                    <div className={"content-section introduction"}>
-                        <div className={"feature-intro"}>
-                            <h1>DataView</h1>
-                        </div>
+                    <div>
+                        <h1>DataView</h1>
                     </div>
-
-                    <div className={"content-section implementation dataview-demo"}>
+                    <div className={"p-col"}>
                         <DataView value={this.state.popularMovies}
                                   header={header}
                                   layout={this.state.layout}

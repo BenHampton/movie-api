@@ -5,7 +5,7 @@ import GenresPanel from "../component/Genres/GenresPanel";
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
+    path: "/app",
     name: "Home",
     icon: "pe-7s-graph",
     component: Dashboard
