@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import NotificationSystem from "react-notification-system";
+//import NotificationSystem from "react-notification-system";
 
-import Sidebar from "components/Sidebar/Sidebar";
+import Sidebar from "../../component/Sidebar/Sidebar";
 
-import { style } from "variables/Variables.jsx";
+// import { style } from "variables/Variables.jsx";
 
-import dashboardRoutes from "routes/dashboard.jsx";
+import dashboardRoutes from "../../routes/dashboard.jsx";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -113,7 +113,7 @@ class Dashboard extends Component {
                     render={routeProps => (
                       <prop.component
                         {...routeProps}
-                        handleClick={this.handleNotificationClick}
+                        // handleClick={this.handleNotificationClick}
                       />
                     )}
                   />

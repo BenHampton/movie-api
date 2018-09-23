@@ -1,8 +1,5 @@
-import Dashboard from "views/Dashboard/Dashboard";
-import Typography from "views/Typography/Typography";
-import Icons from "views/Icons/Icons";
-import Maps from "views/Maps/Maps";
-import Notifications from "views/Notifications/Notifications";
+import Dashboard from "../layouts/Dashboard/Dashboard";
+import Movies from "../component/Movies";
 
 const dashboardRoutes = [
   {
@@ -12,10 +9,10 @@ const dashboardRoutes = [
     component: Dashboard
   },
   {
-    path: "/user",
+    path: "/movies",
     name: "User Profile",
     icon: "pe-7s-user",
-    component: Dashboard
+    component: Movies
   },
   {
     path: "/table",
@@ -29,14 +26,8 @@ const dashboardRoutes = [
     icon: "pe-7s-news-paper",
     component: Dashboard
   },
-  { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
-  { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "pe-7s-bell",
-    component: Dashboard
-  },
+  // { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
+  // { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
   {
     upgrade: true,
     path: "/upgrade",
