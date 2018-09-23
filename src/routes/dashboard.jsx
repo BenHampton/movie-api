@@ -1,7 +1,7 @@
 import Dashboard from "../layouts/Dashboard/Dashboard";
 import MoviePanel from "../component/PopularMovies/MoviePanel";
 import App from "../App";
-import Genres from "../component/Genres/Genres";
+import GenresPanel from "../component/Genres/GenresPanel";
 
 const dashboardRoutes = [
   {
@@ -20,7 +20,7 @@ const dashboardRoutes = [
     path: "/genres",
     name: "Genres",
     icon: "pe-7s-note2",
-    component: Genres
+    component: GenresPanel
   },
   {
     path: "/typography",
