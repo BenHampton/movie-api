@@ -1,5 +1,9 @@
 import axios from 'axios';
-import{API_URL, API_KEY, API_POPULAR_MOVIES} from '../config';
+import{ API_URL,
+        API_KEY,
+        API_POPULAR_MOVIES,
+        URL_TV_GENRES,
+        URL_MOVIE_GENRES } from '../config';
 
 import '../component/PopularMovies/css/movie.css';
 
@@ -11,5 +15,25 @@ export class MovieService {
                 _this.setState({popularMovies: data})
                 return data;
             });
+    }
+
+    getMovieGenres(_this){
+        axios.get(`${API_URL}${URL_MOVIE_GENRES}${API_KEY}`)
+            .then(response => response.data)
+            .then(data => {
+                console.log(data)
+                var p = _this;
+            });
+
+    }
+
+    getTVGenres(_this){
+        axios.get(`${API_URL}${URL_TV_GENRES}${API_KEY}`)
+            .then(response => response.data)
+            .then(data => {
+                console.log(data)
+                var p = _this;
+            });
+
     }
 }

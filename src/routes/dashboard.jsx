@@ -1,6 +1,7 @@
 import Dashboard from "../layouts/Dashboard/Dashboard";
 import MoviePanel from "../component/PopularMovies/MoviePanel";
 import App from "../App";
+import Genres from "../component/Genres/Genres";
 
 const dashboardRoutes = [
   {
@@ -16,10 +17,10 @@ const dashboardRoutes = [
     component: MoviePanel
   },
   {
-    path: "/table",
-    name: "Table List",
+    path: "/genres",
+    name: "Genres",
     icon: "pe-7s-note2",
-    component: App
+    component: Genres
   },
   {
     path: "/typography",
