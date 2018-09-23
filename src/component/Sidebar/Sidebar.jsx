@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-
+import './css/sidebard.css';
 
 import dashboardRoutes from "../../routes/dashboard.jsx";
 
@@ -24,20 +24,7 @@ class Sidebar extends Component {
   render() {
 
     return (
-      <div
-        id="sidebar"
-        className="sidebar"
-        data-color="black"
-      >
-        <div className="logo">
-          <a
-            href="https://www.creative-tim.com"
-            className="simple-text logo-mini"
-          >
-            <div className="logo-img">
-            </div>
-          </a>
-        </div>
+      <div id="sidebar" className="sidebar">
         <div className="sidebar-wrapper">
           <ul className="nav">
             {/*{this.state.width <= 991 ? <HeaderLinks /> : null}*/}
