@@ -9,14 +9,9 @@ class MoviePanel extends Component{
     }
     render(){
         return(
-            <div className={"p-grid"}>
-                <div>
-                    <div className={"p-col box"} style={{marginTop: '15%', marginLeft: '30%'}}></div>
-                    <div className={"p-col"}>
-                        <div className={"box"}>
-                            <Movies />
-                        </div>
-                    </div>
+            <div>
+                <div className={'movie-container'}>
+                    <Movies />
                 </div>
             </div>
         )

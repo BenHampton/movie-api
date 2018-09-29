@@ -31,16 +31,19 @@ class Movies extends Component{
     renderListItem(movie) {
         return (
             <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}}>
-                <div>
-                    <div>
-                        <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} style={{height: '80px', width: '80px;'}}/>
-                    </div>
-                    <div>
-                        <div>Title: <b>{movie.title}</b></div>
-                        <div>Genre: <b>{movie.genre_ids}</b></div>
-                        <div>Stars: <b>{movie.vote_average}</b></div>
-                    </div>
-                </div>
+                <Row className={"show-grid"}>
+                    <Col md={4} >
+                        <div>
+                            <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>                        </div>
+                    </Col>
+                    <Col md={7} className={'movie-title'}>
+                        <div>
+                            <div>Title: <b>{movie.title}</b></div>
+                            <div>Genre: <b>{movie.genre_ids}</b></div>
+                            <div>Stars: <b>{movie.vote_average}</b></div>
+                        </div>
+                    </Col>
+                </Row>
             </div>
         );
     }
