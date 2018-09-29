@@ -6,43 +6,56 @@ import Sidebar from "../../component/Sidebar/Sidebar";
 import dashboardRoutes from "../../routes/dashboard.jsx";
 import Header from "../../component/Header/Header";
 
+import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
+import {Col, Row} from "react-bootstrap";
+import '../../component/Header/css/header.css'
+
 class Dashboard extends Component {
   constructor(props) {
     super(props);
 
     };
   render() {
+
     return (
-      <div className="wrapper p-grid">
-          <div className={'p-grid-12'}>
-              <Header/>
-          </div>
-          <div className="p-col-3 p-align-stretch vertical-container">
-            <Sidebar {...this.props} className={'box box-stretched'}/>
-          </div>
-        <div className={'p-col-9'}>
-          <Switch>
-            {dashboardRoutes.map((prop, key) => {
-              if (prop.name === "Notifications")
-                return (
-                  <Route
-                    path={prop.path}
-                    key={key}
-                    render={routeProps => (
-                      <prop.component
-                        {...routeProps}
-                      />
-                    )}
-                  />
-                );
-              if (prop.redirect)
-                return <Redirect from={prop.path} to={prop.to} key={key} />;
-              return (
-                    <Route path={prop.path} component={prop.component} key={key} />
-              );
-            })}
-          </Switch>
-        </div>
+      <div className="container-fluid">
+          <Row className={"show-grid"}>
+              <Col md={12} className={'header'}>
+                <div>
+                    <Header/>
+                </div>
+              </Col>
+          </Row>
+          <Row className={"show-grid"}>
+              <Col md={2} className={'sidebar'}>
+                <div>
+                    <Sidebar {...this.props} className={'sidebar'}/>
+                </div>
+              </Col>
+                <Col md={10}>
+                <Switch>
+                    {dashboardRoutes.map((prop, key) => {
+                      if (prop.name === "Notifications")
+                        return (
+                          <Route
+                            path={prop.path}
+                            key={key}
+                            render={routeProps => (
+                              <prop.component
+                                {...routeProps}
+                              />
+                            )}
+                          />
+                        );
+                      if (prop.redirect)
+                        return <Redirect from={prop.path} to={prop.to} key={key} />;
+                      return (
+                            <Route path={prop.path} component={prop.component} key={key} />
+                      );
+                    })}
+                    </Switch>
+                </Col>
+          </Row>
       </div>
     );
   }

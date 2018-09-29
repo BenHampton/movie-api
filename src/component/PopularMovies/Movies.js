@@ -2,6 +2,8 @@ import React ,{ Component} from 'react';
 import {MovieService} from '../../services/MovieService';
 import {IMG_URL} from '../Constants/constants'
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
+import Row from "react-bootstrap/es/Row";
+import Col from "react-bootstrap/es/Col";
 
 class Movies extends Component{
     constructor(props){
@@ -28,12 +30,12 @@ class Movies extends Component{
 
     renderListItem(movie) {
         return (
-            <div className={"p-col-12 car-details"} style={{background: "blue", padding: '2em', borderBottom: '1px solid #d9d9d9'}}>
-                <div className={"p-grid"}>
-                    <div className={"p-col-12 p-md-3"}>
+            <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}}>
+                <div>
+                    <div>
                         <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} style={{height: '80px', width: '80px;'}}/>
                     </div>
-                    <div className={"p-col-12 p-md-8 car-data"}>
+                    <div>
                         <div>Title: <b>{movie.title}</b></div>
                         <div>Genre: <b>{movie.genre_ids}</b></div>
                         <div>Stars: <b>{movie.vote_average}</b></div>
@@ -45,8 +47,8 @@ class Movies extends Component{
 
     renderHeader() {
         return (
-            <div className={"p-grid"}>
-                <div className={"p-col-6"} style={{textAlign: 'right'}}>
+            <div>
+                <div>
                     <DataViewLayoutOptions layout={this.state.layout}
                                            onChange={(e) => this.setState({layout: e.value})}
                     />
@@ -61,15 +63,8 @@ class Movies extends Component{
         return(
             <div>
                 <div>
-                    <div className={"content-section introduction"}>
-                        <div className={"feature-intro"}>
-                            <h1>DataView</h1>
-                        </div>
-                    </div>
-
-                    <div className={"content-section implementation dataview-demo"}>
+                    <div>
                         <DataView value={this.state.popularMovies}
-                                  header={header}
                                   layout={this.state.layout}
                                   itemTemplate={this.itemTemplate}
                         />

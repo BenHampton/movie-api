@@ -24,7 +24,7 @@ class Sidebar extends Component {
   render() {
 
     return (
-      <div id="sidebar" className="sidebar">
+      <div>
             {dashboardRoutes.map((prop, key) => {
               if (!prop.redirect)
                 return (
