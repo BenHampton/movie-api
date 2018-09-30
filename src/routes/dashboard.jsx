@@ -2,6 +2,7 @@ import Dashboard from "../layouts/Dashboard/Dashboard";
 import MoviePanel from "../component/PopularMovies/MoviePanel";
 import App from "../App";
 import GenresPanel from "../component/Genres/GenresPanel";
+import NowPlayingPanel from "../component/NowPlaying/NowPlayingPanel";
 
 const dashboardRoutes = [
   {
@@ -23,10 +24,10 @@ const dashboardRoutes = [
     component: GenresPanel
   },
   {
-    path: "/typography",
-    name: "Typography",
+    path: "/now-playing",
+    name: "Now Playing",
     icon: "pe-7s-news-paper",
-    component: App
+    component: NowPlayingPanel
   },
   // { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
   // { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
