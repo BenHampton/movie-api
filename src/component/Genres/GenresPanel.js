@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Genres from "./Genres";
 import Row from "react-bootstrap/es/Row";
 import Col from "react-bootstrap/es/Col";
-import Grid from "react-bootstrap/es/Grid";
 
 class GenresPanel extends Component{
     render(){

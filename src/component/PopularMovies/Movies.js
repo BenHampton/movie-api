@@ -4,14 +4,7 @@ import {IMG_URL} from '../Constants/constants'
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import {Button} from "primereact/components/button/Button";
 import {Panel} from '../../../node_modules/primereact/panel'
-
-import '../../../node_modules/primeicons/fonts/primeicons.svg'
-
-import '../../../node_modules/primereact/resources/primereact.css'
-import '../../../node_modules/primeflex/primeflex.css'
-import '../../../node_modules/primeicons/primeicons.css'
 import {Dialog} from "primereact/components/dialog/Dialog";
-
 
 class Movies extends Component{
     constructor(props){

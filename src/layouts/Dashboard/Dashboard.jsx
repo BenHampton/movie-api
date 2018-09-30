@@ -2,13 +2,17 @@ import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import Sidebar from "../../component/Sidebar/Sidebar";
-
+import {Col, Row} from "react-bootstrap";
 import dashboardRoutes from "../../routes/dashboard.jsx";
 import Header from "../../component/Header/Header";
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
-import {Col, Row} from "react-bootstrap";
+
 import '../../component/Header/css/header.css'
+import '../../../node_modules/primeicons/fonts/primeicons.svg'
+import '../../../node_modules/primereact/resources/primereact.css'
+import '../../../node_modules/primeflex/primeflex.css'
+import '../../../node_modules/primeicons/primeicons.css'
 
 class Dashboard extends Component {
   constructor(props) {
