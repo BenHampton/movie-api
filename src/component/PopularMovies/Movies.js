@@ -2,14 +2,16 @@ import React ,{ Component} from 'react';
 import {MovieService} from '../../services/MovieService';
 import {IMG_URL} from '../Constants/constants'
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
-import Row from "react-bootstrap/es/Row";
-import Col from "react-bootstrap/es/Col";
-import '../../../node_modules/primeicons/fonts/primeicons.svg'
-import Button from "react-bootstrap/es/Button";
+import {Button} from "primereact/components/button/Button";
 import {Panel} from '../../../node_modules/primereact/panel'
+
+import '../../../node_modules/primeicons/fonts/primeicons.svg'
 
 import '../../../node_modules/primereact/resources/primereact.css'
 import '../../../node_modules/primeflex/primeflex.css'
+import '../../../node_modules/primeicons/primeicons.css'
+import {Dialog} from "primereact/components/dialog/Dialog";
+
 
 class Movies extends Component{
     constructor(props){
@@ -17,9 +19,8 @@ class Movies extends Component{
         this.state = {
             popularMovies: [],
             layout: 'list',
-            sortKey: null,
-            sortOrder: null,
-            gridClassName: ''
+            selectedMovie: null,
+            isDialogVisible: false
 
         }
         this.getMovieDB = new MovieService();
@@ -42,20 +43,16 @@ class Movies extends Component{
 
     renderListItem(movie) {
         return (
-            <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}}>
-                <Row className={"show-grid"}>
-                    <Col md={4} >
-                        <div>
-                            <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>                        </div>
-                    </Col>
-                    <Col md={7} className={'movie-title'}>
-                        <div>
-                            <div>Title: <b>{movie.title}</b></div>
-                            <div>Genre: <b>{movie.genre_ids}</b></div>
-                            <div>Stars: <b>{movie.vote_average}</b></div>
-                        </div>
-                    </Col>
-                </Row>
+            <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}} className={'p-grid'}>
+                <div className={'p-col-3'}>
+                    <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>                        </div>
+                <div>
+                    <div className={'p-col movieList-text'}>
+                        <div>Title: <b>{movie.title}</b></div>
+                        <div>Genre: <b>{movie.genre_ids}</b></div>
+                        <div>Stars: <b>{movie.vote_average}</b></div>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -63,17 +60,38 @@ class Movies extends Component{
         return (
                 <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
                     <Panel header={movie.title} style={{ textAlign: 'center' }}>
-                        <p>GRID</p>
                         <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>
                         <div className="car-detail">
                             {movie.title} - {movie.genre_ids}
                         </div>
                         <hr className="ui-widget-content" style={{ borderTop: 0 }} />
-                        <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedCar: movie, visible: true })}></Button>
+                        <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedMovie: movie, isDialogVisible: true })}></Button>
                     </Panel>
                 </div>
         );
     }
+    renderCarDialogContent() {
+        if (this.state.selectedMovie) {
+            return (
+                <div className="p-grid" style={{fontSize: '16px', textAlign: 'center', padding: '20px'}}>
+                    <div className="p-col-12" style={{textAlign: 'center'}}>
+                        <img src={`${IMG_URL}${this.state.selectedMovie.poster_path}`} alt={this.state.selectedMovie.brand} className={'image-poster'}/>
+
+                    </div>
+
+                    <div className="p-col-4">Title: </div>
+                    <div className="p-col-8">{this.state.selectedMovie.title}</div>
+
+                    <div className="p-col-4">Year: </div>
+                    <div className="p-col-8">{this.state.selectedMovie.genre_ids}</div>
+                </div>
+            );
+        }
+        else {
+            return null;
+        }
+    }
+
 
     renderHeader() {
         return (
@@ -91,17 +109,22 @@ class Movies extends Component{
         return(
             <div>
                 <div>
-                    <div>
-                        <div className="p-grid">
-                            <div className="p-col">1</div>
-                            <div className="p-col">2</div>
-                            <div className="p-col">3</div>
-                        </div>
+                    <div className={'content-section implementation'}>
                         <DataView value={this.state.popularMovies}
                                   layout={this.state.layout}
                                   itemTemplate={this.itemTemplate}
                                   header={header}
                         />
+                        <Dialog header="Movie Details"
+                                visible={this.state.isDialogVisible}
+                                width="225px"
+                                modal={true}
+                                minY={70}
+                                maximizable={true}
+                                blockScroll={true}
+                                onHide={() => this.setState({isDialogVisible: false})}>
+                            {this.renderCarDialogContent()}
+                        </Dialog>
                     </div>
                 </div>
 

@@ -9,31 +9,30 @@
     /*background: pink;*/
 
 /*}*/
-.movie-title{
-     text-align: center;
-     margin: auto auto;
-     display: flex;
-     justify-content: center;
-     max-width: 100%;
-     max-height: 80%;
-     font-size: 15px;
-     font-weight: bold;
- }
+/*.movie-title{*/
+     /*text-align: center;*/
+     /*margin: auto auto;*/
+     /*display: flex;*/
+     /*justify-content: center;*/
+     /*max-width: 100%;*/
+     /*max-height: 80%;*/
+     /*font-size: 15px;*/
+     /*font-weight: bold;*/
+ /*}*/
 
 .image-poster {
     max-width: 90%;
     height: 30vh;
-    float: right;
 }
-.gridMovieList{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.movieList-text{
+    margin: auto auto;
+    font-size: 15px;
 }
 
-.data-view-movie{
-    width: 100%;
+.gridMovie-titles{
+    max-height: 10%;
 }
+
 
 
 /*text-align: center;*/
