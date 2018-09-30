@@ -4,13 +4,22 @@ import {IMG_URL} from '../Constants/constants'
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import Row from "react-bootstrap/es/Row";
 import Col from "react-bootstrap/es/Col";
+import '../../../node_modules/primeicons/fonts/primeicons.svg'
+import Button from "react-bootstrap/es/Button";
+import {Panel} from '../../../node_modules/primereact/panel'
+
+import '../../../node_modules/primereact/resources/primereact.css'
+import '../../../node_modules/primeflex/primeflex.css'
 
 class Movies extends Component{
     constructor(props){
         super(props);
         this.state = {
             popularMovies: [],
-            layout: 'list'
+            layout: 'list',
+            sortKey: null,
+            sortOrder: null,
+            gridClassName: ''
 
         }
         this.getMovieDB = new MovieService();
@@ -24,8 +33,11 @@ class Movies extends Component{
         if (!movie) {
             return;
         }
-        if (layout === 'list')
+        if (layout === 'list') {
             return this.renderListItem(movie);
+        } else if (layout === 'grid'){
+            return this.renderGridItem(movie)
+            }
     }
 
     renderListItem(movie) {
@@ -47,14 +59,27 @@ class Movies extends Component{
             </div>
         );
     }
+    renderGridItem(movie) {
+        return (
+                <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
+                    <Panel header={movie.title} style={{ textAlign: 'center' }}>
+                        <p>GRID</p>
+                        <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>
+                        <div className="car-detail">
+                            {movie.title} - {movie.genre_ids}
+                        </div>
+                        <hr className="ui-widget-content" style={{ borderTop: 0 }} />
+                        <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedCar: movie, visible: true })}></Button>
+                    </Panel>
+                </div>
+        );
+    }
 
     renderHeader() {
         return (
             <div>
-                <div>
-                    <DataViewLayoutOptions layout={this.state.layout}
-                                           onChange={(e) => this.setState({layout: e.value})}
-                    />
+                <div style={{textAlign: 'right'}}>
+                    <DataViewLayoutOptions layout={this.state.layout} onChange={(e) => this.setState({layout: e.value})} />
                 </div>
             </div>
         );
@@ -67,9 +92,15 @@ class Movies extends Component{
             <div>
                 <div>
                     <div>
+                        <div className="p-grid">
+                            <div className="p-col">1</div>
+                            <div className="p-col">2</div>
+                            <div className="p-col">3</div>
+                        </div>
                         <DataView value={this.state.popularMovies}
                                   layout={this.state.layout}
                                   itemTemplate={this.itemTemplate}
+                                  header={header}
                         />
                     </div>
                 </div>

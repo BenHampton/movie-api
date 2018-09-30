@@ -25,6 +25,15 @@
     height: 30vh;
     float: right;
 }
+.gridMovieList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.data-view-movie{
+    width: 100%;
+}
 
 
 /*text-align: center;*/
