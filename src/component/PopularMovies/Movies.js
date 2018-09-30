@@ -5,12 +5,14 @@ import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/Da
 import {Button} from "primereact/components/button/Button";
 import {Panel} from '../../../node_modules/primereact/panel'
 import {Dialog} from "primereact/components/dialog/Dialog";
+import {Lightbox} from "primereact/components/lightbox/Lightbox";
 
 class Movies extends Component{
     constructor(props){
         super(props);
         this.state = {
             popularMovies: [],
+            movieTrailerKey: null,
             layout: 'list',
             selectedMovie: null,
             isDialogVisible: false
@@ -18,6 +20,7 @@ class Movies extends Component{
         }
         this.getMovieDB = new MovieService();
         this.itemTemplate = this.itemTemplate.bind(this)
+        this.retrieveMovieId = this.retrieveMovieId.bind(this);
     }
     componentDidMount(){
         this.popularMovies = this.getMovieDB.getPopularMovies(this);
@@ -34,11 +37,29 @@ class Movies extends Component{
             }
     }
 
+    retrieveMovieId(movie){
+        this.getMovieDB.getMovieTrailer(this, movie.id);
+    }
     renderListItem(movie) {
         return (
             <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}} className={'p-grid'}>
                 <div className={'p-col-3'}>
-                    <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>                        </div>
+                    <Lightbox type={'content'}>
+                        <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
+                            <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>
+                        </a>
+                            <div>
+                                <iframe title="Video"
+                                        width="560"
+                                        height="315"
+                                        src={"https://www.youtube.com/embed/" + this.state.movieTrailerKey}
+                                        frameBorder="0"
+                                        allowFullScreen>
+
+                                </iframe>
+                            </div>
+                    </Lightbox>
+                </div>
                 <div>
                     <div className={'p-col movieList-text'}>
                         <div>Title: <b>{movie.title}</b></div>
@@ -49,11 +70,25 @@ class Movies extends Component{
             </div>
         );
     }
+
     renderGridItem(movie) {
         return (
                 <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
                     <Panel header={movie.title} style={{ textAlign: 'center' }}>
-                        <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>
+                        <Lightbox type={'content'}>
+                            <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
+                                <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>
+                            </a>
+                                <div>
+                                    <iframe title="Video"
+                                            width="560"
+                                            height="315"
+                                            src={"https://www.youtube.com/embed/" + this.state.movieTrailerKey}
+                                            frameBorder="0"
+                                            allowFullScreen>
+                                    </iframe>
+                                </div>
+                        </Lightbox>
                         <div className="car-detail">
                             {movie.title} - {movie.genre_ids}
                         </div>
@@ -69,12 +104,9 @@ class Movies extends Component{
                 <div className="p-grid" style={{fontSize: '16px', textAlign: 'center', padding: '20px'}}>
                     <div className="p-col-12" style={{textAlign: 'center'}}>
                         <img src={`${IMG_URL}${this.state.selectedMovie.poster_path}`} alt={this.state.selectedMovie.brand} className={'image-poster'}/>
-
                     </div>
-
                     <div className="p-col-4">Title: </div>
                     <div className="p-col-8">{this.state.selectedMovie.title}</div>
-
                     <div className="p-col-4">Year: </div>
                     <div className="p-col-8">{this.state.selectedMovie.genre_ids}</div>
                 </div>
