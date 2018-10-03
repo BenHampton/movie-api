@@ -12,18 +12,23 @@ class NowPlaying extends Component{
         super(props);
         this.state = {
             nowPlaying: [],
-            movieTrailerKey: null,
             layout: 'list',
+            showReleaseDates: [],
+            movieTrailerKey: null,
             selectedNowPlayingMovie: null,
+            movieIds: null,
             isDialogVisible: false
-
         }
+
         this.getMovieDB = new MovieService();
         this.itemTemplate = this.itemTemplate.bind(this)
         this.retrieveMovieId = this.retrieveMovieId.bind(this);
+        this.renderListItem = this.renderListItem.bind(this);
     }
     componentDidMount(){
-        this.nowPlaying = this.getMovieDB.getNowPlaying(this);
+        this.nowPlaying = this.getMovieDB.getNowPlaying(this, (data) => {
+            this.getMovieDB.getDetailsAppendingRelease(this, data);
+        });
     }
 
     itemTemplate(nowPlaying, layout) {
@@ -37,15 +42,17 @@ class NowPlaying extends Component{
         }
     }
 
-    retrieveMovieId(nowPlaying){
-        this.getMovieDB.getMovieTrailer(this, nowPlaying.id);
+    retrieveMovieId(nowPlayingId){
+        this.getMovieDB.getMovieTrailer(this, nowPlayingId);
+
     }
+
     renderListItem(nowPlaying) {
         return (
             <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}} className={'p-grid'}>
                 <div className={'p-col-3'}>
                     <Lightbox type={'content'}>
-                        <a className={'group'} onClick={(e) => this.retrieveMovieId(nowPlaying)} >
+                        <a className={'group'} onClick={(e) => this.retrieveMovieId(nowPlaying.id)} >
                             <img src={`${IMG_URL}${nowPlaying.poster_path}`} alt={nowPlaying.original_title} className={'image-poster'}/>
                         </a>
                         <div>
@@ -55,7 +62,6 @@ class NowPlaying extends Component{
                                     src={"https://www.youtube.com/embed/" + this.state.movieTrailerKey}
                                     frameBorder="0"
                                     allowFullScreen>
-
                             </iframe>
                         </div>
                     </Lightbox>
@@ -73,7 +79,7 @@ class NowPlaying extends Component{
 
     renderGridItem(nowPlaying) {
         return (
-            <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
+            <div style={{ padding: '.5em'}} className="p-g-12 p-md-3">
                 <Panel header={nowPlaying.title} style={{ textAlign: 'center' }}>
                     <Lightbox type={'content'}>
                         <a className={'group'} onClick={(e) => this.retrieveMovieId(nowPlaying)} >
@@ -90,7 +96,7 @@ class NowPlaying extends Component{
                         </div>
                     </Lightbox>
                     <div className="car-detail">
-                        {nowPlaying.title} - {nowPlaying.genre_ids}
+                        {/*{nowPlaying.title} - {nowPlaying.genre_ids}*/}
                     </div>
                     <hr className="ui-widget-content" style={{ borderTop: 0 }} />
                     <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedNowPlayingMovie: nowPlaying, isDialogVisible: true })}></Button>
@@ -107,8 +113,6 @@ class NowPlaying extends Component{
                     </div>
                     <div className="p-col-4">Title: </div>
                     <div className="p-col-8">{this.state.selectedNowPlayingMovie.title}</div>
-                    <div className="p-col-4">Year: </div>
-                    <div className="p-col-8">{this.state.selectedNowPlayingMovie.genre_ids}</div>
                 </div>
             );
         }
@@ -130,7 +134,6 @@ class NowPlaying extends Component{
 
     render(){
         const header = this.renderHeader();
-
         return(
             <div>
                 <div>
@@ -140,13 +143,9 @@ class NowPlaying extends Component{
                                   itemTemplate={this.itemTemplate}
                                   header={header}
                         />
-                        <Dialog header="Movie Details"
-                                visible={this.state.isDialogVisible}
+                        <Dialog visible={this.state.isDialogVisible}
                                 width="225px"
                                 modal={true}
-                                minY={70}
-                                maximizable={true}
-                                blockScroll={true}
                                 onHide={() => this.setState({isDialogVisible: false})}>
                             {this.renderCarDialogContent()}
                         </Dialog>

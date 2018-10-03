@@ -1,20 +1,21 @@
 import React ,{ Component} from 'react';
 import {MovieService} from '../../services/MovieService';
 import {IMG_URL} from '../Constants/constants'
-import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import {Button} from "primereact/components/button/Button";
 import {Panel} from '../../../node_modules/primereact/panel'
 import {Dialog} from "primereact/components/dialog/Dialog";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
+import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 
 class Movies extends Component{
     constructor(props){
         super(props);
         this.state = {
             popularMovies: [],
-            movieTrailerKey: null,
             layout: 'list',
+            movieTrailerKey: null,
             selectedMovie: null,
+            movieIds: null,
             isDialogVisible: false
 
         }
@@ -39,6 +40,11 @@ class Movies extends Component{
 
     retrieveMovieId(movie){
         this.getMovieDB.getMovieTrailer(this, movie.id);
+        return(
+            <div>
+                coming soon
+            </div>
+        )
     }
     renderListItem(movie) {
         return (
@@ -64,7 +70,6 @@ class Movies extends Component{
                     <div className={'p-col movieList-text'}>
                         <div>Title: <b>{movie.title}</b></div>
                         <div>Genre: <b>{movie.genre_ids}</b></div>
-                        <div>Stars: <b>{movie.vote_average}</b></div>
                     </div>
                 </div>
             </div>
@@ -90,10 +95,10 @@ class Movies extends Component{
                                 </div>
                         </Lightbox>
                         <div className="car-detail">
-                            {movie.title} - {movie.genre_ids}
+                            {/*{movie.title}*/}
                         </div>
                         <hr className="ui-widget-content" style={{ borderTop: 0 }} />
-                        <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedMovie: movie, isDialogVisible: true })}></Button>
+                            <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedMovie: movie, isDialogVisible: true })}></Button>
                     </Panel>
                 </div>
         );
@@ -132,27 +137,23 @@ class Movies extends Component{
         const header = this.renderHeader();
 
         return(
-            <div>
-                <div>
-                    <div className={'content-section implementation'}>
-                        <DataView value={this.state.popularMovies}
-                                  layout={this.state.layout}
-                                  itemTemplate={this.itemTemplate}
-                                  header={header}
-                        />
-                        <Dialog header="Movie Details"
-                                visible={this.state.isDialogVisible}
-                                width="225px"
-                                modal={true}
-                                minY={70}
-                                maximizable={true}
-                                blockScroll={true}
-                                onHide={() => this.setState({isDialogVisible: false})}>
+            <div className={'content-section implementation'}>
+                <div className={'content-section implementation'}>
+                    <DataView value={this.state.popularMovies}
+                              layout={this.state.layout}
+                              itemTemplate={this.itemTemplate}
+                              header={header}
+                    />
+                    <Dialog header="Movie Details"
+                            visible={this.state.isDialogVisible}
+                            width="225px"
+                            modal={true}
+                            onHide={() => this.setState({isDialogVisible: false})}>
+                        <div>
                             {this.renderCarDialogContent()}
-                        </Dialog>
-                    </div>
+                        </div>
+                    </Dialog>
                 </div>
-
             </div>
         )
     }
