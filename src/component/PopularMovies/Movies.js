@@ -113,7 +113,7 @@ class Movies extends Component{
 
     renderImageHeader(movie) {
         return (
-            <div style={{fontSize: '19px', maxHeight: '10px', marginBottom: '30px'}}>
+            <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
                 {movie.title}
             </div>
         );
