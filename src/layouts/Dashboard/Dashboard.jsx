@@ -8,11 +8,12 @@ import Header from "../../component/Header/Header";
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
 
-import '../../component/Header/css/header.css'
 import '../../../node_modules/primeicons/fonts/primeicons.svg'
 import '../../../node_modules/primereact/resources/primereact.css'
 import '../../../node_modules/primeflex/primeflex.css'
 import '../../../node_modules/primeicons/primeicons.css'
+import '../../component/Header/css/header.css'
+import '../../component/PopularMovies/css/movie.css';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -30,8 +31,8 @@ class Dashboard extends Component {
                 </div>
               </Col>
           </Row>
-          <Row className={"show-grid"}>
-              <Col md={2} className={'sidebar'}>
+          <Row className={"show-grid "}>
+              <Col md={2} className={'sidebar d-flex align-content-stretch'}>
                 <div>
                     <Sidebar {...this.props} className={'sidebar'}/>
                 </div>

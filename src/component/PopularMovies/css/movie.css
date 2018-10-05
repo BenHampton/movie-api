@@ -24,6 +24,11 @@
     max-width: 90%;
     height: 30vh;
 }
+
+.image-poster-grid {
+    max-width: 111%;
+    height: 64vh;
+}
 .movieList-text{
     margin: auto auto;
     font-size: 15px;
@@ -33,6 +38,9 @@
     max-height: 10%;
 }
 
+p-dataview-content{
+    margin-left: 50px;
+}
 
 
 /*text-align: center;*/

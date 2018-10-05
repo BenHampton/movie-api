@@ -12,7 +12,7 @@ class Movies extends Component{
         super(props);
         this.state = {
             popularMovies: [],
-            layout: 'list',
+            layout: 'imageGrid',
             movieTrailerKey: null,
             selectedMovie: null,
             movieIds: null,
@@ -27,15 +27,21 @@ class Movies extends Component{
         this.popularMovies = this.getMovieDB.getPopularMovies(this);
     }
 
+    isEmpty(item){
+        return item === null || item === undefined || item === '';
+    }
+
     itemTemplate(movie, layout) {
         if (!movie) {
             return;
         }
-        if (layout === 'list') {
+        if(layout === 'imageGrid'){
+            return this.renderImageGrid(movie)
+        }else if (layout === 'list') {
             return this.renderListItem(movie);
         } else if (layout === 'grid'){
             return this.renderGridItem(movie)
-            }
+        }
     }
 
     retrieveMovieId(movie){
@@ -46,6 +52,7 @@ class Movies extends Component{
             </div>
         )
     }
+
     renderListItem(movie) {
         return (
             <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}} className={'p-grid'}>
@@ -103,6 +110,30 @@ class Movies extends Component{
                 </div>
         );
     }
+
+    renderImageGrid(movie){
+        return (
+            <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
+                <Panel style={{ textAlign: 'center'}}>
+                    <Lightbox type={'content'}>
+                        <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
+                            <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster-grid'}/>
+                        </a>
+                        <div>
+                            <iframe title="Video"
+                                    width="560"
+                                    height="315"
+                                    src={"https://www.youtube.com/embed/" + this.state.movieTrailerKey}
+                                    frameBorder="0"
+                                    allowFullScreen>
+                            </iframe>
+                        </div>
+                    </Lightbox>
+                </Panel>
+            </div>
+        );
+    }
+
     renderCarDialogContent() {
         if (this.state.selectedMovie) {
             return (
@@ -122,7 +153,6 @@ class Movies extends Component{
         }
     }
 
-
     renderHeader() {
         return (
             <div>
@@ -137,7 +167,7 @@ class Movies extends Component{
         const header = this.renderHeader();
 
         return(
-            <div className={'content-section implementation'}>
+            <div  className={'content-section implementation'} >
                 <div className={'content-section implementation'}>
                     <DataView value={this.state.popularMovies}
                               layout={this.state.layout}
