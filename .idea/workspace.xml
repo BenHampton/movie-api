@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a732bef1-ca0b-4870-92c8-0b7bc2f0256a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/PopularMovies/MoviePanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PopularMovies/MoviePanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/PopularMovies/Movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PopularMovies/Movies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/PopularMovies/css/movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PopularMovies/css/movie.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Movies.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Movies.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/Movies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="107" column="40" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="40" />
+            <state relative-caret-position="300">
+              <caret line="115" column="79" selection-start-line="115" selection-start-column="79" selection-end-line="115" selection-end-column="79" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -41,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebard.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidebard.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="63">
+              <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -91,8 +87,8 @@
       <find>p-dataview-content-empty</find>
       <find>p-s</find>
       <find>popularMovies</find>
-      <find>pi-search</find>
       <find>icon</find>
+      <find>pi-search</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,9 +125,9 @@
         <option value="$PROJECT_DIR$/src/component/PopularMovies/MoviePanel.js" />
         <option value="$PROJECT_DIR$/node_modules/primereact/components/dataview/DataView.css" />
         <option value="$PROJECT_DIR$/src/component/PopularMovies/css/movie.css" />
-        <option value="$PROJECT_DIR$/src/component/PopularMovies/Movies.js" />
         <option value="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" />
         <option value="$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css" />
+        <option value="$PROJECT_DIR$/src/component/PopularMovies/Movies.js" />
       </list>
     </option>
   </component>
@@ -470,7 +466,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108538000" />
+    <option name="totallyTimeSpent" value="109427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1546" height="840" extended-state="0" />
@@ -486,10 +482,10 @@
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32905984" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.3309481" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32954547" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.13526244" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.13526244" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -836,23 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/primeicons/primeicons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/Movies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="107" column="40" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Sidebar/Sidebar.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -872,8 +851,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="63">
+          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/primeicons/primeicons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/Movies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="115" column="79" selection-start-line="115" selection-start-column="79" selection-end-line="115" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

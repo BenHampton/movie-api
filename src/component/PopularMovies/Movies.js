@@ -86,7 +86,7 @@ class Movies extends Component{
     renderGridItem(movie) {
         return (
                 <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
-                    <Panel header={movie.title} style={{ textAlign: 'center' }}>
+                    <Panel header={movie.title} style={{ textAlign: 'center'}}>
                         <Lightbox type={'content'}>
                             <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
                                 <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>
@@ -111,10 +111,18 @@ class Movies extends Component{
         );
     }
 
+    renderImageHeader(movie) {
+        return (
+            <div style={{fontSize: '19px', maxHeight: '10px', marginBottom: '30px'}}>
+                {movie.title}
+            </div>
+        );
+    }
+
     renderImageGrid(movie){
         return (
             <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
-                <Panel style={{ textAlign: 'center'}}>
+                <Panel header={this.renderImageHeader(movie)} style={{ textAlign: 'center'}}>
                     <Lightbox type={'content'}>
                         <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
                             <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster-grid'}/>
@@ -129,6 +137,12 @@ class Movies extends Component{
                             </iframe>
                         </div>
                     </Lightbox>
+                    <div className="car-detail">
+                        {/*{movie.title}*/}
+                    </div>
+                    <hr className="ui-widget-content" style={{ borderTop: 0 }} />
+                    <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedMovie: movie, isDialogVisible: true })}></Button>
+
                 </Panel>
             </div>
         );
