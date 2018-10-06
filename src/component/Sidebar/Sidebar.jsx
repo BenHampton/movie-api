@@ -24,14 +24,14 @@ class Sidebar extends Component {
   render() {
 
     return (
-      <div id="sidebar" className="sidebar"  >
+      <div id="sidebar" className="sidebar" >
         <div className={'sidebar-wrapper'}>
           <ul className={'nav'}>
               {dashboardRoutes.map((prop, key) => {
                 if (!prop.redirect)
                   return (
                     <li className={ prop.upgrade ? "active active-pro" : this.activeRoute(prop.path) } key={key} >
-                      <NavLink to={prop.path} className="nav-link" activeClassName="active" >
+                      <NavLink to={prop.path} className="nav-link navLink-hoverBox" activeClassName="active" >
                         <i className={prop.icon} />
                         <p>{prop.name}</p>
                       </NavLink>

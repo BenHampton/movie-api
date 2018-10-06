@@ -23,7 +23,7 @@ class Dashboard extends Component {
   render() {
 
     return (
-      <div className="p-grid p-nogutter ">
+      <div className="p-grid p-nogutter">
           <div className={'p-col-12'} style={{background: 'red'}}>
                 <Header/>
           </div>

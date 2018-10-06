@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a732bef1-ca0b-4870-92c8-0b7bc2f0256a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Genres/GenresPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Genres/GenresPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Sidebar/Sidebar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" afterDir="false" />
@@ -18,14 +19,10 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="sidebard.css" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="319">
-                    <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-                  </state>
-                </provider>
+                <provider selected="true" editor-type-id="text-editor" />
               </entry>
             </file>
           </leaf>
@@ -35,23 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Movies.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/Movies.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="126" column="52" selection-start-line="126" selection-start-column="52" selection-end-line="126" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dashboard.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dashboard.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="398">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -59,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sidebar.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sidebar.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Sidebar/Sidebar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+            <state relative-caret-position="125">
+              <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -72,13 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>classNames2</find>
-      <find>grid</find>
-      <find>datav</find>
-      <find>title</find>
-      <find>data-</find>
-      <find>visible</find>
-      <find>movieTrailerKey</find>
       <find>conso</find>
       <find>movie</find>
       <find>itemTemplate</find>
@@ -102,6 +80,13 @@
       <find>icon</find>
       <find>pi-search</find>
       <find>nav</find>
+      <find>nav-link</find>
+      <find>pro</find>
+      <find>active</find>
+      <find>opacity</find>
+      <find>background</find>
+      <find>wrap</find>
+      <find>wrapper</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,7 +117,6 @@
         <option value="$PROJECT_DIR$/src/component/Header/css/header.css" />
         <option value="$PROJECT_DIR$/src/component/Header/Header.js" />
         <option value="$PROJECT_DIR$/node_modules/primereact/components/dataview/DataView.js" />
-        <option value="$PROJECT_DIR$/src/component/Genres/GenresPanel.js" />
         <option value="$PROJECT_DIR$/src/component/NowPlaying/NowPlayingPanel.js" />
         <option value="$PROJECT_DIR$/src/routes/dashboard.jsx" />
         <option value="$PROJECT_DIR$/src/config.js" />
@@ -143,9 +127,10 @@
         <option value="$PROJECT_DIR$/node_modules/primereact/components/dataview/DataView.css" />
         <option value="$PROJECT_DIR$/src/component/PopularMovies/css/movie.css" />
         <option value="$PROJECT_DIR$/src/component/PopularMovies/Movies.js" />
-        <option value="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" />
-        <option value="$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css" />
+        <option value="$PROJECT_DIR$/src/component/Genres/GenresPanel.js" />
         <option value="$PROJECT_DIR$/src/component/Sidebar/Sidebar.jsx" />
+        <option value="$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css" />
+        <option value="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" />
       </list>
     </option>
   </component>
@@ -169,11 +154,10 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1755" />
+    <option name="width" value="1758" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -183,6 +167,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +187,13 @@
               <item name="movie-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="Genres" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="movie-api" type="b2602c69:ProjectViewProjectNode" />
@@ -267,15 +261,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../light-bootstrap-dashboard-react" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -367,15 +358,16 @@
       <workItem from="1537626358912" duration="5208000" />
       <workItem from="1538181293501" duration="21254000" />
       <workItem from="1538274686980" duration="3348000" />
-      <workItem from="1538792723098" duration="1897000" />
+      <workItem from="1538792723098" duration="3810000" />
+      <workItem from="1538796554479" duration="2303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111501000" />
+    <option name="totallyTimeSpent" value="115717000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-1788" y="0" width="1406" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="11" />
@@ -386,26 +378,26 @@
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32905984" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.3309481" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.33048433" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.13825503" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.15527488" />
       <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="bottom" id="Find" order="6" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="13" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="14" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="12" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +408,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -424,14 +416,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/routes/index.jsx" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -580,16 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Genres/Genres.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-251">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Header/css/header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -616,13 +590,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/index.jsx">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Genres/GenresPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -652,16 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/NowPlaying/NowPlaying.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -674,6 +631,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="15" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="20" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -681,6 +641,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -698,33 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/css/movie.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/Movies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="126" column="52" selection-start-line="126" selection-start-column="52" selection-end-line="126" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/primeicons/primeicons.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -732,17 +668,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css">
+    <entry file="file://$PROJECT_DIR$/src/component/NowPlaying/NowPlaying.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="56">
+          <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Genres/Genres.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/css/movie.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-router-dom/NavLink.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Home.url">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/Movies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="126" column="52" selection-start-line="126" selection-start-column="52" selection-end-line="126" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Genres/GenresPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Sidebar/Sidebar.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        <state relative-caret-position="125">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Sidebar/css/sidebard.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
