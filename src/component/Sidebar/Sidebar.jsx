@@ -24,19 +24,23 @@ class Sidebar extends Component {
   render() {
 
     return (
-      <div>
-            {dashboardRoutes.map((prop, key) => {
-              if (!prop.redirect)
-                return (
-                  <div className={ prop.upgrade ? "active active-pro" : this.activeRoute(prop.path) } key={key} >
-                    <NavLink to={prop.path} className="nav" activeClassName="active" >
-                      <i className={prop.icon} />
-                      <p>{prop.name}</p>
-                    </NavLink>
-                  </div>
-                );
-              return null;
-            })}
+      <div id="sidebar" className="sidebar"  >
+        <div className={'sidebar-wrapper'}>
+          <ul className={'nav'}>
+              {dashboardRoutes.map((prop, key) => {
+                if (!prop.redirect)
+                  return (
+                    <li className={ prop.upgrade ? "active active-pro" : this.activeRoute(prop.path) } key={key} >
+                      <NavLink to={prop.path} className="nav-link" activeClassName="active" >
+                        <i className={prop.icon} />
+                        <p>{prop.name}</p>
+                      </NavLink>
+                    </li>
+                  );
+                return null;
+              })}
+          </ul>
+        </div>
       </div>
     );
   }
