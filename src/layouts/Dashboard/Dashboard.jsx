@@ -31,29 +31,29 @@ class Dashboard extends Component {
               <div className={'p-col-2'}>
                   <Sidebar {...this.props} className={'sidebar'}/>
               </div>
-              <Switch>
-                  <div className={'p-col-10 dashbaord-route'}>
-                      {dashboardRoutes.map((prop, key) => {
-                          if (prop.name === "Notifications")
-                            return (
-                              <Route
-                                path={prop.path}
-                                key={key}
-                                render={routeProps => (
-                                  <prop.component
-                                    {...routeProps}
+              <div className={'p-col-10 dashboard-route'}>
+                  <Switch>
+                          {dashboardRoutes.map((prop, key) => {
+                              if (prop.name === "Notifications")
+                                return (
+                                  <Route
+                                    path={prop.path}
+                                    key={key}
+                                    render={routeProps => (
+                                      <prop.component
+                                        {...routeProps}
+                                      />
+                                    )}
                                   />
-                                )}
-                              />
-                            );
-                          if (prop.redirect)
-                            return <Redirect from={prop.path} to={prop.to} key={key} />;
-                          return (
-                                <Route path={prop.path} component={prop.component} key={key} />
-                          );
-                      })}
-                  </div>
-              </Switch>
+                                );
+                              if (prop.redirect)
+                                return <Redirect from={prop.path} to={prop.to} key={key} />;
+                              return (
+                                    <Route path={prop.path} component={prop.component} key={key} />
+                              );
+                          })}
+                  </Switch>
+              </div>
           </div>
       </div>
     );

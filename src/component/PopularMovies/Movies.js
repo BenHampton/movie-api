@@ -7,6 +7,7 @@ import {Dialog} from "primereact/components/dialog/Dialog";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import Movie from "./Movie";
+import {Link} from "react-router-dom";
 
 class Movies extends Component{
     constructor(props){
@@ -84,9 +85,11 @@ class Movies extends Component{
 
     renderImageHeader(movie) {
         return (
-            <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
-                {movie.title}
-            </div>
+            <Link to={'/movie'}>
+                <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
+                    {movie.title}
+                </div>
+            </Link>
         );
     }
 
@@ -112,16 +115,14 @@ class Movies extends Component{
                         {/*{movie.title}*/}
                     </div>
                     <hr className="ui-widget-content" style={{ borderTop: 0 }} />
-                    <Button icon="pi pi-search" onClick={(e) => this.renderMovieSelected(movie, this.state.movieTrailerKey)}></Button>
-
+                    <Button icon="pi pi-search" onClick={(e) => this.setState(movie, this.state.movieTrailerKey)}></Button>
+                    {/*<Button icon="pi pi-search" onClick={(e) => this.renderMovieSelected(movie, this.state.movieTrailerKey)}></Button>*/}
                 </Panel>
             </div>
         );
     }
 
-    renderMovieSelected(movie, trailer){
-        <Movie movie={movie} movieTrailer={trailer}/>
-    }
+
 
     renderCarDialogContent() {
         if (this.state.selectedMovie) {

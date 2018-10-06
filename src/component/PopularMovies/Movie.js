@@ -7,9 +7,10 @@ class Movie extends Component{
     }
 
     render(){
+        console.log(this.props)
         return(
             <div>
-                Movie
+                dddddddddd
             </div>
         )
     }
