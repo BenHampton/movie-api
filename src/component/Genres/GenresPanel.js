@@ -10,14 +10,14 @@ class GenresPanel extends Component{
                 <div>
                     <div>
                         <Genres />
-                        <Row className="show-grid" style={{width: '1296px'}}>
-                            <Col md={8} style={{background: 'purple'}}>
+                        <div className="p-grid p-nogutter ">
+                            <div className="p-col-8" style={{background: 'purple'}}>
                                 <p>1</p>
-                            </Col>
-                            <Col md={4} style={{background: 'blue'}}>
+                            </div>
+                            <div className="p-col-4" style={{background: 'blue'}}>
                                 <p>2</p>
-                            </Col>
-                        </Row>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,63 +1,93 @@
+
 .sidebar {
     display: block;
-    width: 230px;
+    width: 100%;
     z-index: 1;
-    color: #fff;
-    height: 100vh;
+    height: 100%;
     font-weight: 200;
-    background-size: cover;
-    background: #222 center center;
+    /*                 background-size: cover;
+                       background: #222 center center;  */
+    background: #333;
     display: block;
     text-align: center;
 }
-/*.nav{*/
 
+
+/* height of sidebar*/
+.sidebar-wrapper{
+    position: relative;
+    height: calc(100vh - 75px);
+    overflow: auto;
+    width: 260px;
+    z-index: 4;
+    padding-bottom: 30px;
+}
+
+/*nav text positioning*/
+.sidebar .nav {
+    margin-top: 20%;
+}
+
+.navLink-hoverBox{
+    width: 100%;
+}
+
+/*menu item is highlighted when hovering*/
+.sidebar .nav .open > a,
+.sidebar .nav li.dropdown .dropdown-menu li:hover > a,
+.sidebar .nav li:hover > a {
+    background-color: rgba(255, 255, 255, 0.13);
+    opacity: 1;
+}
+
+/*nav text color and space between text*/
+.sidebar .nav li > a {
+    color: #FFFFFF;
+    margin: 5px 15px;
+    opacity: .86;
+    border-radius: 4px;
+    display: block;
+}
+
+/*when menu item selected keeps highlighted*/
+.sidebar .nav li.active > a {
+    color: #FFFFFF;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.23);
+}
+
+/*makes nav menu items align up to down idk if its up to down or down to up lol*/
+.sidebar .nav p {
+    margin: 0;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 45px;
+}
+
+
+
+
+/* opacity what whole screen light grey opacity!!*/
+
+/*.sidebar:before {*/
+/*opacity: .33;*/
+/*background: #000000;*/
 /*}*/
 
-/*.sidebar .nav {*/
-    /*margin-top: 20px;*/
-    /*float: none;*/
-/*}*/
 
-/*.sidebar .nav .open > a,*/
-/*.sidebar .nav li.dropdown .dropdown-menu li:hover > a,*/
-/*.sidebar .nav li:hover > a {*/
-    /*background-color: rgba(255, 255, 255, 0.13);*/
-    /*opacity: 1;*/
-/*}*/
 
-/*.sidebar .nav li > a {*/
-    /*color: #FFFFFF;*/
-    /*margin: 5px 15px;*/
-    /*opacity: .86;*/
-    /*border-radius: 4px;*/
-    /*display: block;*/
-/*}*/
-
-/*.sidebar .nav li.active > a {*/
-    /*color: #FFFFFF;*/
-    /*opacity: 1;*/
-    /*background: rgba(255, 255, 255, 0.23);*/
-/*}*/
-
-/*.sidebar .nav p {*/
-    /*margin: 0;*/
-    /*line-height: 30px;*/
-    /*font-size: 12px;*/
-    /*font-weight: 600;*/
-    /*text-transform: uppercase;*/
-    /*margin-left: 45px;*/
-/*}*/
+/*    if removed idk   for all below    */
 
 /*.sidebar .nav i {*/
-    /*font-size: 28px;*/
-    /*float: left;*/
-    /*margin-right: 15px;*/
-    /*line-height: 30px;*/
-    /*width: 30px;*/
-    /*text-align: center;*/
-/*}*/
-
+     /*font-size: 28px;*/
+     /*float: left;*/
+     /*margin-right: 15px;*/
+     /*line-height: 30px;*/
+     /*width: 30px;*/
+     /*text-align: center;*/
+ /*}*/
 
 
 /*.sidebar:after, .sidebar:before {*/
@@ -71,7 +101,38 @@
     /*z-index: 2;*/
 /*}*/
 
-/*.sidebar:before {*/
-    /*opacity: .33;*/
-    /*background: #000000;*/
+
+/*.sidebar .sidebar-background {*/
+/*position: absolute;*/
+/*z-index: 1;*/
+/*height: 100%;*/
+/*width: 100%;*/
+/*display: block;*/
+/*top: 0;*/
+/*left: 0;*/
+/*background-size: cover;*/
+/*background-position: center center;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+/******      puts className at the bottom of the page -- would need to have a FIX Position possibly           *****/
+
+/*.sidebar .nav > li.active-pro a{*/
+/*background: rgba(255, 255, 255, 0.14);*/
+/*opacity: 1;*/
+/*color: #FFFFFF;*/
+/*}*/
+
+/*.sidebar .nav > li.active-pro{*/
+/*position: absolute;*/
+/*width: 100%;*/
+/*bottom: 10px;*/
 /*}*/

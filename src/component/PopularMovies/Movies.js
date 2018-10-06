@@ -12,7 +12,7 @@ class Movies extends Component{
         super(props);
         this.state = {
             popularMovies: [],
-            layout: 'imageGrid',
+            layout: 'grid',
             movieTrailerKey: null,
             selectedMovie: null,
             movieIds: null,
@@ -35,12 +35,10 @@ class Movies extends Component{
         if (!movie) {
             return;
         }
-        if(layout === 'imageGrid'){
-            return this.renderImageGrid(movie)
-        }else if (layout === 'list') {
+        if (layout === 'list') {
             return this.renderListItem(movie);
         } else if (layout === 'grid'){
-            return this.renderGridItem(movie)
+            return this.renderImageGrid(movie)
         }
     }
 
@@ -55,7 +53,7 @@ class Movies extends Component{
 
     renderListItem(movie) {
         return (
-            <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}} className={'p-grid'}>
+            <div className={'p-grid dataview-listItem'} style={{marginLeft: '10px'}}>
                 <div className={'p-col-3'}>
                     <Lightbox type={'content'}>
                         <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
@@ -80,34 +78,6 @@ class Movies extends Component{
                     </div>
                 </div>
             </div>
-        );
-    }
-
-    renderGridItem(movie) {
-        return (
-                <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
-                    <Panel header={movie.title} style={{ textAlign: 'center'}}>
-                        <Lightbox type={'content'}>
-                            <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
-                                <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>
-                            </a>
-                                <div>
-                                    <iframe title="Video"
-                                            width="560"
-                                            height="315"
-                                            src={"https://www.youtube.com/embed/" + this.state.movieTrailerKey}
-                                            frameBorder="0"
-                                            allowFullScreen>
-                                    </iframe>
-                                </div>
-                        </Lightbox>
-                        <div className="car-detail">
-                            {/*{movie.title}*/}
-                        </div>
-                        <hr className="ui-widget-content" style={{ borderTop: 0 }} />
-                            <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedMovie: movie, isDialogVisible: true })}></Button>
-                    </Panel>
-                </div>
         );
     }
 
@@ -187,6 +157,7 @@ class Movies extends Component{
                               layout={this.state.layout}
                               itemTemplate={this.itemTemplate}
                               header={header}
+                              className={'p-nogutter'}
                     />
                     <Dialog header="Movie Details"
                             visible={this.state.isDialogVisible}

@@ -23,44 +23,38 @@ class Dashboard extends Component {
   render() {
 
     return (
-      <div className="container-fluid">
-          <Row className={"show-grid"}>
-              <Col md={12} className={'header'}>
-                <div>
-                    <Header/>
-                </div>
-              </Col>
-          </Row>
-          <Row className={"show-grid "}>
-              <Col md={2} className={'sidebar d-flex align-content-stretch'}>
-                <div>
-                    <Sidebar {...this.props} className={'sidebar'}/>
-                </div>
-              </Col>
-                <Col md={10}>
-                <Switch>
-                    {dashboardRoutes.map((prop, key) => {
-                      if (prop.name === "Notifications")
-                        return (
-                          <Route
-                            path={prop.path}
-                            key={key}
-                            render={routeProps => (
-                              <prop.component
-                                {...routeProps}
+      <div className="p-grid p-nogutter">
+          <div className={'p-col-12'}>
+                <Header/>
+          </div>
+          <div className={'p-grid p-col-12 p-nogutter p-align-stretch vertical-container sidebar'}>
+              <div className={'p-col-2'}>
+                  <Sidebar {...this.props} className={'sidebar'}/>
+              </div>
+              <Switch>
+                  <div className={'p-col-10 dashbaord-route'}>
+                      {dashboardRoutes.map((prop, key) => {
+                          if (prop.name === "Notifications")
+                            return (
+                              <Route
+                                path={prop.path}
+                                key={key}
+                                render={routeProps => (
+                                  <prop.component
+                                    {...routeProps}
+                                  />
+                                )}
                               />
-                            )}
-                          />
-                        );
-                      if (prop.redirect)
-                        return <Redirect from={prop.path} to={prop.to} key={key} />;
-                      return (
-                            <Route path={prop.path} component={prop.component} key={key} />
-                      );
-                    })}
-                    </Switch>
-                </Col>
-          </Row>
+                            );
+                          if (prop.redirect)
+                            return <Redirect from={prop.path} to={prop.to} key={key} />;
+                          return (
+                                <Route path={prop.path} component={prop.component} key={key} />
+                          );
+                      })}
+                  </div>
+              </Switch>
+          </div>
       </div>
     );
   }
