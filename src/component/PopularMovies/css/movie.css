@@ -19,6 +19,15 @@
      /*font-size: 15px;*/
      /*font-weight: bold;*/
  /*}*/
+.dataview-listItem {
+    padding: 2em;
+    border-bottom: 1px solid s#222;
+    width: 10px;
+}
+
+.dashbaord-route{
+    background: white;
+}
 
 .image-poster {
     max-width: 90%;
