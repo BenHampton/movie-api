@@ -83,6 +83,8 @@ class Movies extends Component{
         );
     }
 
+
+
     renderImageHeader(movie) {
         return (
             <Link to={'/movie'}>
