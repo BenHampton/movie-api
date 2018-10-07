@@ -15,25 +15,73 @@ class Movie extends Component{
     render(){
         console.log(this.state.trailer)
         return(
-            <div>
-                {this.state.movie.title}
-                <Lightbox type={'content'}>
-                    <a className={'group'} >
-                        <img src={`${IMG_URL}${this.state.movie.poster_path}`} alt={this.state.movie.original_title} className={'image-poster'}/>
-                    </a>
-                    <div>
-                        <iframe title="Video"
-                                width="560"
-                                height="315"
-                                src={"https://www.youtube.com/embed/" + this.state.trailer}
-                                frameBorder="0"
-                                allowFullScreen>
+            <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'} style={{background: 'red'}}>
+                <div className={'p-grid p-nogutter p-col-12 '} style={{background: 'blue'}}>
+                    <div className={'p-col-5'} style={{background: 'green'}}>
+                        <Lightbox type={'content'}>
+                            <a className={'group'} >
+                                <img src={`${IMG_URL}${this.state.movie.poster_path}`} alt={this.state.movie.original_title} className={'image-poster'}/>
+                            </a>
+                            <div>
+                                <iframe title="Video"
+                                        width="560"
+                                        height="315"
+                                        src={"https://www.youtube.com/embed/" + this.state.trailer}
+                                        frameBorder="0"
+                                        allowFullScreen>
 
-                        </iframe>
+                                </iframe>
+                            </div>
+                        </Lightbox>
+                        <div className={'p-col-12'} style={{background: 'pink'}}>
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                            OVERVIEW this is a place holer for overview
+                        </div>
                     </div>
-                </Lightbox>
+                    <div className={'p-col-7'} style={{background: 'purple'}}>
+                        {this.state.movie.title}
+                        <div className={'p-grid p-nogutter p-col-12'} style={{background: 'grey'}}>
+                            COMMENTS / REVIEWS
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
 }
 export default Movie;
+

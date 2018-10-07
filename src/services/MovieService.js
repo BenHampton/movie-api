@@ -8,7 +8,7 @@ import{ API_URL,
         GET_DETAILS,
         APPEND_TO_RESPONSE} from '../config';
 
-import '../component/PopularMovies/css/movie.css';
+import '../component/PopularMovies/css/movies.css';
 
 export class MovieService {
     getPopularMovies(_this) {

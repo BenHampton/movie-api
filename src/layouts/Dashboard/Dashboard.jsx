@@ -13,6 +13,8 @@ import '../../../node_modules/primereact/resources/primereact.css'
 import '../../../node_modules/primeflex/primeflex.css'
 import '../../../node_modules/primeicons/primeicons.css'
 import '../../component/Header/css/header.css'
+
+import '../../component/PopularMovies/css/movies.css';
 import '../../component/PopularMovies/css/movie.css';
 
 class Dashboard extends Component {
