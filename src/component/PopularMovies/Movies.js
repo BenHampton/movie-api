@@ -92,7 +92,7 @@ class Movies extends Component{
                 <Link
                     to={{
                         pathname: "/movie",
-                        state: { fromDashboard: movie }
+                        state: { movie: movie }
                     }} >
                     <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
                         {movie.title}
