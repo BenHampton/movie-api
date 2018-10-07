@@ -14,6 +14,7 @@ import '../../../node_modules/primeflex/primeflex.css'
 import '../../../node_modules/primeicons/primeicons.css'
 import '../../component/Header/css/header.css'
 import '../../component/PopularMovies/css/movie.css';
+import Movie from "../../component/PopularMovies/Movie";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class Dashboard extends Component {
               <div className={'p-col-10 dashboard-route'}>
                   <Switch>
                           {dashboardRoutes.map((prop, key) => {
-                              if (prop.name === "Notifications")
+                              if (prop.name === "/movie")
                                 return (
                                   <Route
                                     path={prop.path}
@@ -46,8 +47,9 @@ class Dashboard extends Component {
                                     )}
                                   />
                                 );
-                              if (prop.redirect)
-                                return <Redirect from={prop.path} to={prop.to} key={key} />;
+                              if (prop.redirect) {
+                                  return <Redirect from={prop.path} to={prop.to} key={key}/>;
+                              }
                               return (
                                     <Route path={prop.path} component={prop.component} key={key} />
                               );

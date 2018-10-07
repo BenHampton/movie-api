@@ -7,7 +7,8 @@ import {Dialog} from "primereact/components/dialog/Dialog";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import Movie from "./Movie";
-import {Link} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
+import dashboardRoutes from "../../routes/dashboard";
 
 class Movies extends Component{
     constructor(props){
@@ -87,11 +88,17 @@ class Movies extends Component{
 
     renderImageHeader(movie) {
         return (
-            <Link to={'/movie'}>
-                <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
-                    {movie.title}
-                </div>
-            </Link>
+            <div>
+                <Link
+                    to={{
+                        pathname: "/movie",
+                        state: { fromDashboard: movie }
+                    }} >
+                    <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
+                        {movie.title}
+                    </div>
+                </Link>
+            </div>
         );
     }
 
