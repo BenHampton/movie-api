@@ -2,13 +2,12 @@ import axios from 'axios';
 import{ API_URL,
         API_KEY,
         GET_POPULAR_MOVIES,
-        GET_TV_GENRES,
         GET_MOVIE_GENRES,
         GET_NOW_PLAYING,
         GET_DETAILS,
+        GET_MOVIE_REVIEWS,
         APPEND_TO_RESPONSE} from '../config';
 
-import '../component/PopularMovies/css/movies.css';
 
 export class MovieService {
     getPopularMovies(_this) {
@@ -58,18 +57,18 @@ export class MovieService {
         return
     }
 
-    getMovieGenres(_this) {
-        axios.get(`${API_URL}${GET_MOVIE_GENRES}${API_KEY}`)
+    getMovieReviews(_this, movieId){
+        var MOVIE_REVIEWS = GET_MOVIE_REVIEWS.replace('MovieId', movieId)
+        axios.get(`${API_URL}${MOVIE_REVIEWS}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
-                console.log(data)
-                var p = _this;
+                _this.setState({movieReviews: data.results})
+                return data;
             });
-
     }
 
-    getTVGenres(_this) {
-        axios.get(`${API_URL}${GET_TV_GENRES}${API_KEY}`)
+    getMovieGenres(_this) {
+        axios.get(`${API_URL}${GET_MOVIE_GENRES}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
                 console.log(data)

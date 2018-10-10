@@ -6,5 +6,6 @@ module.exports = {
     GET_MOVIE_GENRES: '/genre/movie/list',
     GET_TV_GENRES: '/genre/tv/list',
     GET_DETAILS: '/movie/', // -> /movie/{movie_id}
-    APPEND_TO_RESPONSE: '&append_to_response=' //  ->  https://api.themoviedb.org/3/movie/{movieId}?api_key={api_key}&append_to_response={appendedItem}
+    APPEND_TO_RESPONSE: '&append_to_response=', //  ->  https://api.themoviedb.org/3/movie/{movieId}?api_key={api_key}&append_to_response={appendedItem}
+    GET_MOVIE_REVIEWS: `/movie/MovieId/reviews` // -> /movie/{movie_id}/reviews
 }
