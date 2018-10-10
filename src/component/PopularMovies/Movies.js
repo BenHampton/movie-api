@@ -164,7 +164,6 @@ class Movies extends Component{
 
     render(){
         const header = this.renderHeader();
-
         return(
             <div  className={'content-section implementation'} >
                 <div className={'content-section implementation'}>

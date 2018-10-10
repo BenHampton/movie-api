@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Route, Switch, Redirect, Link} from "react-router-dom";
 
 import Sidebar from "../../component/Sidebar/Sidebar";
-import {Col, Row} from "react-bootstrap";
+
 import dashboardRoutes from "../../routes/dashboard.jsx";
 import Header from "../../component/Header/Header";
 
@@ -16,6 +16,7 @@ import '../../component/Header/css/header.css'
 
 import '../../component/PopularMovies/css/movies.css';
 import '../../component/PopularMovies/css/movie.css';
+import MoviePanel from "../../component/PopularMovies/MoviePanel";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -23,13 +24,6 @@ class Dashboard extends Component {
     this.state = {hasError: false}
 
     };
-
-    componentDidCatch() {
-        // Display fallback UI
-        this.setState({hasError: true});
-        // You can also log the error to an error reporting service
-        console.log("catch");
-    }
 
   render() {
     return (
@@ -44,29 +38,24 @@ class Dashboard extends Component {
               <div className={'p-col-10 dashboard-route'}>
                   <Switch>
                           {dashboardRoutes.map((prop, key) => {
-                              // if(this.state.hasError){
-                              //     <Link to={'/dashboard'}></Link>
-                              //     return <Redirect from={prop.path} to={prop.to} key={key}/>;
-                              // }else {
-                                  if (prop.name === "/movie") {
-                                      return (
-                                          <Route
-                                              path={prop.path}
-                                              key={key}
-                                              render={routeProps => (
-                                                  <prop.component
-                                                      {...routeProps}
-                                                  />
-                                              )}
-                                          />
-                                      );
-                                  }else if (prop.redirect) {
-                                      return <Redirect from={prop.path} to={prop.to} key={key}/>;
-                                  }
+                              if (prop.name === "/movie") {
                                   return (
-                                      <Route path={prop.path} component={prop.component} key={key}/>
+                                      <Route
+                                          path={prop.path}
+                                          key={key}
+                                          render={routeProps => (
+                                              <prop.component
+                                                  {...routeProps}
+                                              />
+                                          )}
+                                      />
                                   );
-                              //}
+                              }else if (prop.redirect) {
+                                  return <Redirect from={prop.path} to={prop.to} key={key}/>;
+                              }
+                              return (
+                                  <Route path={prop.path} component={prop.component} key={key}/>
+                              );
                           })}
                   </Switch>
               </div>

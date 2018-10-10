@@ -13,11 +13,10 @@ class Movie extends Component{
     }
 
     render(){
-        console.log(this.state.trailer)
         return(
-            <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'} style={{background: 'red'}}>
-                <div className={'p-grid p-nogutter p-col-12 '} style={{background: 'blue'}}>
-                    <div className={'p-col-5'} style={{background: 'green'}}>
+            <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'}>
+                <div className={'p-grid p-nogutter p-col-12 '}>
+                    <div className={'p-col-5'}>
                         <Lightbox type={'content'}>
                             <a className={'group'} >
                                 <img src={`${IMG_URL}${this.state.movie.poster_path}`} alt={this.state.movie.original_title} className={'image-poster'}/>
@@ -33,48 +32,13 @@ class Movie extends Component{
                                 </iframe>
                             </div>
                         </Lightbox>
-                        <div className={'p-col-12'} style={{background: 'pink'}}>
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
-                            OVERVIEW this is a place holer for overview
+                        <div className={'p-col-12'}>
+                            {this.state.movie.overview}
                         </div>
                     </div>
-                    <div className={'p-col-7'} style={{background: 'purple'}}>
+                    <div className={'p-col-7'}>
                         {this.state.movie.title}
-                        <div className={'p-grid p-nogutter p-col-12'} style={{background: 'grey'}}>
+                        <div className={'p-grid p-nogutter p-col-12'}>
                             COMMENTS / REVIEWS
                         </div>
                     </div>

@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {HashRouter, Route, Switch} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import indexRoutes from "./routes/index";
+import BrowserRouter from "react-router-dom/es/BrowserRouter";
 
 ReactDOM.render(
-    <HashRouter>
+    <BrowserRouter>
         <Switch>
             {indexRoutes.map((prop, key) => {
                 return <Route path={prop.path} component={prop.component} key={key} />;
             })}
         </Switch>
-    </HashRouter>,
+    </BrowserRouter>,
     document.getElementById('root')
 );
