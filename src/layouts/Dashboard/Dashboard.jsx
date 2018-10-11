@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import {Route, Switch, Redirect, Link} from "react-router-dom";
+import React, {Component} from "react";
+import {Redirect, Route, Switch} from "react-router-dom";
 
 import Sidebar from "../../component/Sidebar/Sidebar";
 
@@ -16,12 +16,10 @@ import '../../component/Header/css/header.css'
 
 import '../../component/PopularMovies/css/movies.css';
 import '../../component/PopularMovies/css/movie.css';
-import MoviePanel from "../../component/PopularMovies/MoviePanel";
 
 class Dashboard extends Component {
   constructor(props) {
     super(props);
-    this.state = {hasError: false}
 
     };
 

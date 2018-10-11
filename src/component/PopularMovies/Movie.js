@@ -37,20 +37,14 @@ class Movie extends Component{
         )
     }
 
-    renderReviewsFieldSetToggle(boolean){
-        return(
-            <div className={'movie-reviewToggle'}>
-                {boolean}
-            </div>
-        )
-    }
-
     renderCommentsAndReviews(){
         let reviews = this.state.movieReviews;
-        if(this.isEmpty(reviews)){
+        if(reviews.length === 0){
             return(
                 <div>
-                    There are no reviews at this time.
+                    <Card className={'movie-reviewsHeader'}>
+                        There are no reviews at this time.
+                    </Card>
                 </div>
             )
         }
@@ -60,7 +54,8 @@ class Movie extends Component{
                     <div className="feature-intro">
                         <Fieldset legend={this.renderReviewFeildSetLegend(review.author)}
                                   className={'p-fieldset-content movie-review'}
-                                  toggleable={this.renderReviewsFieldSetToggle(true)} >
+                                  toggleable={true}
+                                  collapsed={true}>
                             <ScrollPanel className={"movie-reviewScrollPanel"}>
                                 <div className={'movie-reviewContent'}>
                                     {review.content}
@@ -79,8 +74,20 @@ class Movie extends Component{
 
     }
 
+    renderMovieOverview(){
+        return(
+            <div className="content-section implementation scrollpanel-demo">
+                <Card subTitle={"Overview"}>
+                    <ScrollPanel className={"movie-overview"}>
+                        {this.state.movie.overview}
+                    </ScrollPanel>
+                </Card>
+            </div>
+        )
+    }
+
     render(){
-        //console.log(this.state.movieReviews)
+        console.log(this.state.movieReviews)
         return(
             <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'}>
                 <div className={'p-grid p-nogutter p-col-12 '}>
@@ -102,13 +109,7 @@ class Movie extends Component{
                                 </div>
                             </Lightbox>
                             <div className={'p-col-12'}>
-                                <div className="content-section implementation scrollpanel-demo">
-                                    <Card subTitle={"Overview"}>
-                                        <ScrollPanel className={"movie-overview"}>
-                                            {this.state.movie.overview}
-                                        </ScrollPanel>
-                                    </Card>
-                                </div>
+                                {this.renderMovieOverview()}
                             </div>
                         </div>
                     </div>
@@ -116,10 +117,15 @@ class Movie extends Component{
                         <div className={'movie-title'}>
                             {this.state.movie.title}
                         </div>
-                        <div className={'p-grid p-nogutter p-col-12'}>
+                        <div className={'p-grid p-nogutter p-col-12'} style={{textAlign: 'center'}}>
                             <div className={"movie-commentsAndReviews"}>
                                 <div className={'movie-reviewsHeader'}>
                                     Reviews
+                                    {this.state.movieReviews.length !== 0 ?
+                                        <div className={'movie-reviewText'}>
+                                            Click the name to show review
+                                        </div> : ''
+                                    }
                                 </div>
                                 {this.renderCommentsAndReviews()}
                             </div>

@@ -4,7 +4,7 @@ import{ API_URL,
         GET_POPULAR_MOVIES,
         GET_MOVIE_GENRES,
         GET_NOW_PLAYING,
-        GET_DETAILS,
+        GET_MOVIE_VIDEOS,
         GET_MOVIE_REVIEWS,
         APPEND_TO_RESPONSE} from '../config';
 
@@ -21,7 +21,8 @@ export class MovieService {
     }
 
     getMovieTrailer(_this, movieId) {
-        axios.get(`${API_URL}` + '/movie/' + movieId + '/videos' + `${API_KEY}`)
+        var MOVIE_VIDEOS = GET_MOVIE_VIDEOS.replace('{movie_id}', movieId)
+        axios.get(`${API_URL}${MOVIE_VIDEOS}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
                 _this.setState({movieTrailerKey: data.results[0].key})
@@ -58,7 +59,7 @@ export class MovieService {
     }
 
     getMovieReviews(_this, movieId){
-        var MOVIE_REVIEWS = GET_MOVIE_REVIEWS.replace('MovieId', movieId)
+        var MOVIE_REVIEWS = GET_MOVIE_REVIEWS.replace('{movie_id}', movieId)
         axios.get(`${API_URL}${MOVIE_REVIEWS}${API_KEY}`)
             .then(response => response.data)
             .then(data => {

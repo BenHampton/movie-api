@@ -4,7 +4,8 @@
 
 .image-poster{
     height: 70vh;
-    width: 63%
+    width: 80%;
+    cursor: pointer;
 }
 
 .movie-title{
@@ -38,4 +39,8 @@
 
 .movie-reviewsHeader{
     font-size: 30px;
+}
+
+.movie-reviewText{
+    font-size: 11px;
 }
