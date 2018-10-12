@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a732bef1-ca0b-4870-92c8-0b7bc2f0256a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/component/PopularMovies/Movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PopularMovies/Movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/PopularMovies/css/movie.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PopularMovies/css/movie.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Dashboard/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/MovieService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MovieService.js" afterDir="false" />
-    </list>
+    <list default="true" id="a732bef1-ca0b-4870-92c8-0b7bc2f0256a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +17,8 @@
       <file leaf-file-name="Movie.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/Movie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+            <state relative-caret-position="140">
+              <caret line="44" column="60" lean-forward="true" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -368,16 +362,15 @@
       <workItem from="1538796554479" duration="4957000" />
       <workItem from="1538835579603" duration="3618000" />
       <workItem from="1538873411156" duration="2090000" />
-      <workItem from="1539228701190" duration="2329000" />
+      <workItem from="1539228701190" duration="2498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155315000" />
+    <option name="totallyTimeSpent" value="155484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="11" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -389,10 +382,10 @@
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32905984" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.33048433" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.33048433" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1295302" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1295302" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="13" weight="0.25" />
@@ -752,8 +745,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/Movie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="44" column="25" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+        <state relative-caret-position="140">
+          <caret line="44" column="60" lean-forward="true" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
