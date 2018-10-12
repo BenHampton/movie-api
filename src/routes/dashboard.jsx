@@ -10,6 +10,7 @@ const dashboardRoutes = [
     path: "/app",
     name: "Home",
     icon: "pe-7s-graph",
+    hide: false,
     component: Dashboard
   },
   {
@@ -28,12 +29,8 @@ const dashboardRoutes = [
     path: "/now-playing",
     name: "Now Playing",
     icon: "pe-7s-news-paper",
+    hide: false,
     component: NowPlayingPanel
-  },
-  {
-      path: "/movie",
-      icon: "pe-7s-news-paper",
-      component: Movie
   },
   // { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
   // { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
@@ -43,6 +40,12 @@ const dashboardRoutes = [
     name: "Upgrade to PRO",
     icon: "pe-7s-rocket",
     component: App
+  },
+  {
+      path: "/movie",
+      icon: "pe-7s-news-paper",
+      hide: true,
+      component: Movie
   },
   { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
 ];

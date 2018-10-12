@@ -23,6 +23,10 @@
     padding-bottom: 30px;
 }
 
+.sidebar-hide{
+    visibility: hidden;
+}
+
 /*nav text positioning*/
 .sidebar .nav {
     margin-top: 20%;
@@ -58,12 +62,11 @@
 
 /*makes nav menu items align up to down idk if its up to down or down to up lol*/
 .sidebar .nav p {
-    margin: 0;
     line-height: 30px;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-left: 45px;
+    margin: 0 0 0 45px;
 }
 
 

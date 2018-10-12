@@ -31,7 +31,7 @@ class Sidebar extends Component {
                 if (!prop.redirect)
                   return (
                     <li className={ prop.upgrade ? "active active-pro" : this.activeRoute(prop.path) } key={key} >
-                      <NavLink to={prop.path} className="nav-link navLink-hoverBox" activeClassName="active" >
+                      <NavLink to={prop.path} className={prop.hide ? "nav-link navLink-hoverBox sidebar-hide" : "nav-link navLink-hoverBox"} activeClassName="active" >
                         <i className={prop.icon} />
                         <p>{prop.name}</p>
                       </NavLink>
