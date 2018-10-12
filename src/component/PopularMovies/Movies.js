@@ -6,6 +6,9 @@ import {Panel} from '../../../node_modules/primereact/panel'
 import {Dialog} from "primereact/components/dialog/Dialog";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
+import Movie from "./Movie";
+import {Link, Route, Switch} from "react-router-dom";
+import dashboardRoutes from "../../routes/dashboard";
 
 class Movies extends Component{
     constructor(props){
@@ -81,10 +84,20 @@ class Movies extends Component{
         );
     }
 
+
+
     renderImageHeader(movie) {
         return (
-            <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
-                {movie.title}
+            <div>
+                <Link
+                    to={{
+                        pathname: "/movie",
+                        state: { movie: movie }
+                    }} >
+                    <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
+                        {movie.title}
+                    </div>
+                </Link>
             </div>
         );
     }
@@ -111,12 +124,14 @@ class Movies extends Component{
                         {/*{movie.title}*/}
                     </div>
                     <hr className="ui-widget-content" style={{ borderTop: 0 }} />
-                    <Button icon="pi pi-search" onClick={(e) => this.setState({ selectedMovie: movie, isDialogVisible: true })}></Button>
-
+                    <Button icon="pi pi-search" onClick={(e) => this.setState(movie, this.state.movieTrailerKey)}></Button>
+                    {/*<Button icon="pi pi-search" onClick={(e) => this.renderMovieSelected(movie, this.state.movieTrailerKey)}></Button>*/}
                 </Panel>
             </div>
         );
     }
+
+
 
     renderCarDialogContent() {
         if (this.state.selectedMovie) {
@@ -149,7 +164,6 @@ class Movies extends Component{
 
     render(){
         const header = this.renderHeader();
-
         return(
             <div  className={'content-section implementation'} >
                 <div className={'content-section implementation'}>

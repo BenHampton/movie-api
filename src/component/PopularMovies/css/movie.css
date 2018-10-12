@@ -1,62 +1,46 @@
-
-/*.movieBox {*/
-    /*width: 80%;*/
-    /*margin : auto auto auto auto;*/
-    /*text-align: center;*/
-    /*display: flex;*/
-    /*flex-flow: row wrap;*/
-    /*justify-content: center;*/
-    /*background: pink;*/
-
-/*}*/
-/*.movie-title{*/
-     /*text-align: center;*/
-     /*margin: auto auto;*/
-     /*display: flex;*/
-     /*justify-content: center;*/
-     /*max-width: 100%;*/
-     /*max-height: 80%;*/
-     /*font-size: 15px;*/
-     /*font-weight: bold;*/
- /*}*/
-.dataview-listItem {
-    padding: 2em;
-    border-bottom: 1px solid s#222;
-    width: 10px;
+.movie-imageContainer{
+    margin: 10%;
 }
 
-.dashbaord-route{
-    background: white;
+.image-poster{
+    height: 70vh;
+    width: 80%;
+    cursor: pointer;
 }
 
-.image-poster {
-    max-width: 90%;
-    height: 30vh;
+.movie-title{
+    font-size: 35px;
 }
 
-.image-poster-grid {
-    max-width: 111%;
-    height: 64vh;
+.movie-overview{
+    font-size: 15px;
+    text-align: left;
+    width: 100%;
+    height: 100px;
 }
-.movieList-text{
-    margin: auto auto;
+
+.movie-review{
+    border: solid;
+}
+
+.movie-reviewContent{
     font-size: 15px;
 }
 
-.gridMovie-titles{
-    max-height: 10%;
+.movie-reviewScrollPanel{
+    text-align: left;
+    width: 100%;
+    height: 150px;
 }
 
-p-dataview-content{
-    margin-left: 50px;
+.movie-reviewLegend{
+    font-size: 20px;
 }
 
+.movie-reviewsHeader{
+    font-size: 30px;
+}
 
-/*text-align: center;*/
-/*margin: auto auto;*/
-/*display: flex;*/
-/*justify-content: center;*/
-/*max-width: 100%;*/
-/*max-height: 80%;*/
-/*font-size: 15px;*/
-/*font-weight: bold;*/
+.movie-reviewText{
+    font-size: 11px;
+}

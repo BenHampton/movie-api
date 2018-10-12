@@ -2,13 +2,12 @@ import axios from 'axios';
 import{ API_URL,
         API_KEY,
         GET_POPULAR_MOVIES,
-        GET_TV_GENRES,
         GET_MOVIE_GENRES,
         GET_NOW_PLAYING,
-        GET_DETAILS,
+        GET_MOVIE_VIDEOS,
+        GET_MOVIE_REVIEWS,
         APPEND_TO_RESPONSE} from '../config';
 
-import '../component/PopularMovies/css/movie.css';
 
 export class MovieService {
     getPopularMovies(_this) {
@@ -22,7 +21,8 @@ export class MovieService {
     }
 
     getMovieTrailer(_this, movieId) {
-        axios.get(`${API_URL}` + '/movie/' + movieId + '/videos' + `${API_KEY}`)
+        var MOVIE_VIDEOS = GET_MOVIE_VIDEOS.replace('{movie_id}', movieId)
+        axios.get(`${API_URL}${MOVIE_VIDEOS}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
                 _this.setState({movieTrailerKey: data.results[0].key})
@@ -58,18 +58,18 @@ export class MovieService {
         return
     }
 
-    getMovieGenres(_this) {
-        axios.get(`${API_URL}${GET_MOVIE_GENRES}${API_KEY}`)
+    getMovieReviews(_this, movieId){
+        var MOVIE_REVIEWS = GET_MOVIE_REVIEWS.replace('{movie_id}', movieId)
+        axios.get(`${API_URL}${MOVIE_REVIEWS}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
-                console.log(data)
-                var p = _this;
+                _this.setState({movieReviews: data.results})
+                return data;
             });
-
     }
 
-    getTVGenres(_this) {
-        axios.get(`${API_URL}${GET_TV_GENRES}${API_KEY}`)
+    getMovieGenres(_this) {
+        axios.get(`${API_URL}${GET_MOVIE_GENRES}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
                 console.log(data)

@@ -3,6 +3,7 @@ import MoviePanel from "../component/PopularMovies/MoviePanel";
 import App from "../App";
 import GenresPanel from "../component/Genres/GenresPanel";
 import NowPlayingPanel from "../component/NowPlaying/NowPlayingPanel";
+import Movie from "../component/PopularMovies/Movie";
 
 const dashboardRoutes = [
   {
@@ -28,6 +29,11 @@ const dashboardRoutes = [
     name: "Now Playing",
     icon: "pe-7s-news-paper",
     component: NowPlayingPanel
+  },
+  {
+      path: "/movie",
+      icon: "pe-7s-news-paper",
+      component: Movie
   },
   // { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
   // { path: "/maps", name: "Maps", icon: "pe-7s-map-marker", component: Maps },
