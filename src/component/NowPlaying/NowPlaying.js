@@ -50,7 +50,7 @@ class NowPlaying extends Component{
 
     renderListItem(nowPlaying) {
         return (
-            <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9'}} className={'p-grid'}>
+            <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9', marginLeft: '10px'}} className={'p-grid dataview-listItem'}>
                 <div className={'p-col-3'}>
                     <Lightbox type={'content'}>
                         <a className={'group'} onClick={(e) => this.retrieveMovieId(nowPlaying.id)} >

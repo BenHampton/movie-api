@@ -37,3 +37,10 @@
     margin-left: 5%;
 }
 
+.dataview-listItem {
+    padding: 2em;
+    border-bottom: 1px solid #222;
+    width: 10px;
+}
+
+
