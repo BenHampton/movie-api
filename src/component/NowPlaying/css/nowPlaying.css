@@ -1,4 +1,39 @@
 .image-poster{
-    max-width: 90%;
-    height: 30vh;
+    width: 100%;
+    height: 60vh;
 }
+
+.list-text-container{
+    margin: 2%;
+    text-align: left;
+    font-size: 20px;
+    max-width: 90%;
+}
+
+.list-text{
+    margin: 2%;
+}
+
+.list-text b{
+    font-size: 17px;
+}
+
+.overview-container{
+    margin-left: 5%;
+}
+
+.list-overview-scrollPane{
+    font-size: 15px;
+    text-align: left;
+    width: 100%;
+    height: 25vh;
+}
+
+.list-text-overview {
+    font-size: 17px;
+}
+
+.list-text-overview b{
+    margin-left: 5%;
+}
+

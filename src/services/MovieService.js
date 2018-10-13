@@ -15,7 +15,7 @@ export class MovieService {
             .then(response => response.data.results)
             .then(data => {
                 _this.setState({popularMovies: data})
-                _this.setState({movieIds: data.id})
+                _this.setState({moiveIds: data.id})
                 return data;
             });
     }
@@ -25,7 +25,7 @@ export class MovieService {
         axios.get(`${API_URL}${MOVIE_VIDEOS}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
-                _this.setState({movieTrailerKey: data.results[0].key})
+                _this.setState({tvShowsTrailerKey: data.results[0].key})
             })
             .catch(function (error) {
                 console.log(error)
@@ -72,7 +72,6 @@ export class MovieService {
         axios.get(`${API_URL}${GET_MOVIE_GENRES}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
-                console.log(data)
                 var p = _this;
             });
 

@@ -1,14 +1,11 @@
-import React ,{ Component} from 'react';
+import React, {Component} from 'react';
 import {MovieService} from '../../services/MovieService';
 import {IMG_URL} from '../Constants/constants'
-import {Button} from "primereact/components/button/Button";
 import {Panel} from '../../../node_modules/primereact/panel'
 import {Dialog} from "primereact/components/dialog/Dialog";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
-import Movie from "./Movie";
-import {Link, Route, Switch} from "react-router-dom";
-import dashboardRoutes from "../../routes/dashboard";
+import {Link} from "react-router-dom";
 
 class Movies extends Component{
     constructor(props){
@@ -47,6 +44,7 @@ class Movies extends Component{
 
     retrieveMovieId(movie){
         this.getMovieDB.getMovieTrailer(this, movie.id);
+        console.log(this.state.movieTrailerKey)
         return(
             <div>
                 coming soon
@@ -69,7 +67,6 @@ class Movies extends Component{
                                         src={"https://www.youtube.com/embed/" + this.state.movieTrailerKey}
                                         frameBorder="0"
                                         allowFullScreen>
-
                                 </iframe>
                             </div>
                     </Lightbox>

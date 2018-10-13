@@ -6,23 +6,24 @@ import {Card} from "primereact/components/card/Card";
 import {MovieService} from "../../services/MovieService";
 import {Fieldset} from "primereact/components/fieldset/Fieldset";
 import '../../../node_modules/primereact/components/fieldset/Fieldset.css'
+import {TVServices} from "../../services/TVServices";
 
-class Movie extends Component{
+class TvShow extends Component{
     constructor(props){
         super(props)
         this.state = {
-            movie: this.props.location.state.movie,
-            trailer: this.props.location.state.movieTrailerKey,
-            movieReviews: [],
+            tvShow: this.props.location.state.tvShow,
+            trailer: this.props.location.state.tvShowsTrailerKey,
+            tvShowReviews: [],
             hasReviews: true
         }
-        this.getMovieDB = new MovieService();
+        this.getMovieDB = new TVServices();
         this.renderReviews = this.renderReviews.bind(this);
 
     }
 
     componentDidMount(){
-        this.movieReviews = this.getMovieDB.getMovieReviews(this, this.state.movie.id);
+        this.tvShowReviews = this.getMovieDB.getTVShowReviews(this, this.state.tvShow.id);
     }
 
     isEmpty(item){
@@ -38,7 +39,7 @@ class Movie extends Component{
     }
 
     renderReviews(){
-        let reviews = this.state.movieReviews;
+        let reviews = this.state.tvShowReviews;
         if(reviews.length === 0){
             return(
                 <div className={'p-grid movie-noReviews'}>
@@ -79,7 +80,7 @@ class Movie extends Component{
             <div className="content-section implementation scrollpanel-demo">
                 <Card subTitle={"Overview"}>
                     <ScrollPanel className={"movie-overview"}>
-                        {this.state.movie.overview}
+                        {this.state.tvShow.overview}
                     </ScrollPanel>
                 </Card>
             </div>
@@ -87,7 +88,7 @@ class Movie extends Component{
     }
 
     render(){
-        console.log(this.state.movieReviews)
+        console.log(this.props.location.state.tvShow)
         return(
             <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'}>
                 <div className={'p-grid p-nogutter p-col-12 '}>
@@ -95,7 +96,7 @@ class Movie extends Component{
                         <div className={'movie-imageContainer'}>
                             <Lightbox type={'content'}>
                                 <a className={'group'} >
-                                    <img src={`${IMG_URL}${this.state.movie.poster_path}`} alt={this.state.movie.original_title} className={'image-poster'}/>
+                                    <img src={`${IMG_URL}${this.state.tvShow.poster_path}`} alt={this.state.tvShow.name} className={'image-poster'}/>
                                 </a>
                                 <div>
                                     <iframe title="Video"
@@ -115,11 +116,11 @@ class Movie extends Component{
                     </div>
                     <div className={'p-col-7'}>
                         <div className={'movie-title'}>
-                            {this.state.movie.title}
+                            {this.state.tvShow.name}
                         </div>
                         <div className={'p-grid p-nogutter p-col-12'} style={{textAlign: 'center'}}>
                             <div className={"movie-commentsAndReviews"}>
-                                {this.state.movieReviews.length !== 0 ?
+                                {this.state.tvShowReviews.length !== 0 ?
                                     <Card subTitle="Reviews" className={'movie-reviewsHeader'}>
                                         <div className={'movie-reviewClickText'}>
                                             Click the name to show review
@@ -136,5 +137,5 @@ class Movie extends Component{
         )
     }
 }
-export default Movie;
+export default TvShow;
 

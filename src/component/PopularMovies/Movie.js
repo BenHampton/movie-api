@@ -12,7 +12,7 @@ class Movie extends Component{
         super(props)
         this.state = {
             movie: this.props.location.state.movie,
-            trailer: this.props.location.state.movieTrailerKey,
+            trailer: this.props.location.state.tvShowsTrailerKey,
             movieReviews: [],
             hasReviews: true
         }
@@ -87,7 +87,7 @@ class Movie extends Component{
     }
 
     render(){
-        console.log(this.state.movieReviews)
+        console.log(this.state.movie)
         return(
             <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'}>
                 <div className={'p-grid p-nogutter p-col-12 '}>

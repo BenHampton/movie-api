@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {MovieService} from '../../services/MovieService';
+import {TVServices} from '../../services/TVServices';
 import {IMG_URL} from '../Constants/constants'
 import {Panel} from '../../../node_modules/primereact/panel'
 import {Dialog} from "primereact/components/dialog/Dialog";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
+import 'primereact/components/lightbox/Lightbox.css'
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import {Link} from "react-router-dom";
 
@@ -11,39 +12,40 @@ class TvShows extends Component{
     constructor(props){
         super(props);
         this.state = {
-            popularMovies: [],
+            popularTvShows: [],
             layout: 'grid',
-            movieTrailerKey: null,
-            selectedMovie: null,
-            movieIds: null,
+            tvShowsTrailerKey: null,
+            selectedTvShow: null,
+            tvShowIds: null,
             isDialogVisible: false
 
         }
-        this.getMovieDB = new MovieService();
+        this.getMovieDB = new TVServices();
         this.itemTemplate = this.itemTemplate.bind(this)
-        this.retrieveMovieId = this.retrieveMovieId.bind(this);
+        this.retrieveTvShowId = this.retrieveTvShowId.bind(this);
     }
     componentDidMount(){
-        this.popularMovies = this.getMovieDB.getPopularMovies(this);
+        this.popularTvShows = this.getMovieDB.getPopularTvShows(this);
     }
 
     isEmpty(item){
         return item === null || item === undefined || item === '';
     }
 
-    itemTemplate(movie, layout) {
-        if (!movie) {
+    itemTemplate(tvShow, layout) {
+        if (!tvShow) {
             return;
         }
         if (layout === 'list') {
-            return this.renderListItem(movie);
+            return this.renderListItem(tvShow);
         } else if (layout === 'grid'){
-            return this.renderImageGrid(movie)
+            return this.renderImageGrid(tvShow)
         }
     }
 
-    retrieveMovieId(movie){
-        this.getMovieDB.getMovieTrailer(this, movie.id);
+    retrieveTvShowId(tvShow){
+        this.getMovieDB.getTvShowTrailer(this, tvShow.id);
+        console.log(this.state.tvShowsTrailerKey)
         return(
             <div>
                 coming soon
@@ -51,30 +53,32 @@ class TvShows extends Component{
         )
     }
 
-    renderListItem(movie) {
+    renderListItem(tvShow) {
         return (
             <div className={'p-grid dataview-listItem'} style={{marginLeft: '10px'}}>
                 <div className={'p-col-3'}>
                     <Lightbox type={'content'}>
-                        <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
-                            <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster'}/>
+                        <a className={'group'} onClick={(e) => this.retrieveTvShowId(tvShow)} >
+                            <img src={`${IMG_URL}${tvShow.poster_path}`} alt={tvShow.original_name} className={'image-poster'}/>
                         </a>
                         <div>
                             <iframe title="Video"
                                     width="560"
                                     height="315"
-                                    src={"https://www.youtube.com/embed/" + this.state.movieTrailerKey}
+                                    src={"https://www.youtube.com/embed/" + this.state.tvShowsTrailerKey}
                                     frameBorder="0"
                                     allowFullScreen>
-
                             </iframe>
                         </div>
                     </Lightbox>
+
+
+
                 </div>
                 <div>
                     <div className={'p-col movieList-text'}>
-                        <div>Title: <b>{movie.title}</b></div>
-                        <div>Genre: <b>{movie.genre_ids}</b></div>
+                        <div>Title: <b>{tvShow.name}</b></div>
+                        <div>Genre: <b>{tvShow.genre_ids}</b></div>
                     </div>
                 </div>
             </div>
@@ -83,45 +87,45 @@ class TvShows extends Component{
 
 
 
-    renderImageHeader(movie) {
+    renderImageHeader(tvShow) {
         return (
             <div>
                 <Link
                     to={{
-                        pathname: "/movie",
-                        state: { movie: movie }
+                        pathname: "/tv-show",
+                        state: { tvShow: tvShow }
                     }} >
                     <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
-                        {movie.title}
+                        {tvShow.name}
                     </div>
                 </Link>
             </div>
         );
     }
 
-    renderImageGrid(movie){
+    renderImageGrid(tvShow){
         return (
             <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
-                <Panel header={this.renderImageHeader(movie)} style={{ textAlign: 'center'}}>
+                <Panel header={this.renderImageHeader(tvShow)} style={{ textAlign: 'center'}}>
                     <Lightbox type={'content'}>
-                        <a className={'group'} onClick={(e) => this.retrieveMovieId(movie)} >
-                            <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster-grid'}/>
+                        <a className={'group'} onClick={(e) => this.retrieveTvShowId(tvShow)}>
+                            <img src={`${IMG_URL}${tvShow.poster_path}`} alt={tvShow.original_name} className={'image-poster-grid'}/>
                         </a>
                         <div>
                             <iframe title="Video"
                                     width="560"
                                     height="315"
-                                    src={"https://www.youtube.com/embed/" + this.state.movieTrailerKey}
+                                    src={"https://www.youtube.com/embed/" + this.state.tvShowsTrailerKey}
                                     frameBorder="0"
                                     allowFullScreen>
                             </iframe>
                         </div>
                     </Lightbox>
                     <div className="car-detail">
-                        {/*{movie.title}*/}
+                        {/*{tvShow.name}*/}
                     </div>
                     <hr className="ui-widget-content" style={{ borderTop: 0 }} />
-                    {/*<Button icon="pi pi-search" onClick={(e) => this.renderMovieSelected(movie, this.state.movieTrailerKey)}></Button>*/}
+                    {/*<Button icon="pi pi-search" onClick={(e) => this.renderMovieSelected(tvShow, this.state.movieTrailerKey)}></Button>*/}
                 </Panel>
             </div>
         );
@@ -130,16 +134,16 @@ class TvShows extends Component{
 
 
     renderCarDialogContent() {
-        if (this.state.selectedMovie) {
+        if (this.state.selectedTvShow) {
             return (
                 <div className="p-grid" style={{fontSize: '16px', textAlign: 'center', padding: '20px'}}>
                     <div className="p-col-12" style={{textAlign: 'center'}}>
-                        <img src={`${IMG_URL}${this.state.selectedMovie.poster_path}`} alt={this.state.selectedMovie.brand} className={'image-poster'}/>
+                        <img src={`${IMG_URL}${this.state.selectedTvShow.poster_path}`} alt={this.state.selectedTvShow.brand} className={'image-poster'}/>
                     </div>
                     <div className="p-col-4">Title: </div>
-                    <div className="p-col-8">{this.state.selectedMovie.title}</div>
+                    <div className="p-col-8">{this.state.selectedTvShow.name}</div>
                     <div className="p-col-4">Year: </div>
-                    <div className="p-col-8">{this.state.selectedMovie.genre_ids}</div>
+                    <div className="p-col-8">{this.state.selectedTvShow.genre_ids}</div>
                 </div>
             );
         }
@@ -163,13 +167,13 @@ class TvShows extends Component{
         return(
             <div  className={'content-section implementation'} >
                 <div className={'content-section implementation'}>
-                    <DataView value={this.state.popularMovies}
+                    <DataView value={this.state.popularTvShows}
                               layout={this.state.layout}
                               itemTemplate={this.itemTemplate}
                               header={header}
                               className={'p-nogutter'}
                     />
-                    <Dialog header="Movie Details"
+                    <Dialog header="Tv Show Details"
                             visible={this.state.isDialogVisible}
                             width="225px"
                             modal={true}

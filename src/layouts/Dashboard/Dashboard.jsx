@@ -16,6 +16,7 @@ import '../../component/Header/css/header.css'
 
 import '../../component/PopularMovies/css/movies.css';
 import '../../component/PopularMovies/css/movie.css';
+import '../../component/NowPlaying/css/nowPlaying.css'
 
 class Dashboard extends Component {
   constructor(props) {
@@ -37,6 +38,18 @@ class Dashboard extends Component {
                   <Switch>
                           {dashboardRoutes.map((prop, key) => {
                               if (prop.name === "/movie") {
+                                  return (
+                                      <Route
+                                          path={prop.path}
+                                          key={key}
+                                          render={routeProps => (
+                                              <prop.component
+                                                  {...routeProps}
+                                              />
+                                          )}
+                                      />
+                                  );
+                              }else if (prop.name === "/tv-show") {
                                   return (
                                       <Route
                                           path={prop.path}

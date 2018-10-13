@@ -6,6 +6,7 @@ import {Button} from "primereact/components/button/Button";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {Panel} from "primereact/components/panel/Panel";
 import {Dialog} from "primereact/components/dialog/Dialog";
+import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 
 class NowPlaying extends Component{
     constructor(props){
@@ -66,11 +67,23 @@ class NowPlaying extends Component{
                         </div>
                     </Lightbox>
                 </div>
-                <div>
-                    <div className={'p-col'}>
-                        <div>Title: <b>{nowPlaying.title}</b></div>
-                        <div>Genre: <b>{nowPlaying.genre_ids}</b></div>
-                        <div>Stars: <b>{nowPlaying.vote_average}</b></div>
+                <div className={'p-col-9 '}>
+                    <div className={'list-text-container'}>
+                        <div className={'list-text'}>Title: <b>{nowPlaying.title}</b></div>
+                        <div className={'list-text'}>Genre: <b>{nowPlaying.genre_ids}</b></div>
+                        <div className={'list-text'}>Stars: <b>{nowPlaying.vote_average}</b></div>
+                        <div>
+                            <div className={'list-text'}>
+                                Overview:
+                            </div>
+                            <div className={"overview-container"}>
+                                <ScrollPanel className={"list-overview-scrollPane"}>
+                                    <div className={'list-text-overview'}>
+                                        <b>{nowPlaying.overview}</b>
+                                    </div>
+                                </ScrollPanel>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
