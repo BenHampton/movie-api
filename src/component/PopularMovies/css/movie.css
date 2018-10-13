@@ -10,6 +10,7 @@
 
 .movie-title{
     font-size: 35px;
+    margin-top: 5%;
 }
 
 .movie-overview{
@@ -38,9 +39,13 @@
 }
 
 .movie-reviewsHeader{
-    font-size: 30px;
+    font-size: 20px;
 }
 
-.movie-reviewText{
-    font-size: 11px;
+.movie-reviewText {
+    font-size: 15px;
+    margin: 20% auto auto 65%;
+}
+.movie-reviewClickText{
+    font-size: 11px
 }

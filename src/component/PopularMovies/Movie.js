@@ -17,7 +17,7 @@ class Movie extends Component{
             hasReviews: true
         }
         this.getMovieDB = new MovieService();
-        this.renderCommentsAndReviews = this.renderCommentsAndReviews.bind(this);
+        this.renderReviews = this.renderReviews.bind(this);
 
     }
 
@@ -29,7 +29,7 @@ class Movie extends Component{
         return item === null || item === undefined || item === '';
     }
 
-    renderReviewFeildSetLegend(author){
+    renderReviewFieldSetLegend(author){
         return(
             <div className={'movie-reviewLegend'}>
                 {author}
@@ -37,13 +37,13 @@ class Movie extends Component{
         )
     }
 
-    renderCommentsAndReviews(){
+    renderReviews(){
         let reviews = this.state.movieReviews;
         if(reviews.length === 0){
             return(
-                <div>
-                    <Card className={'movie-reviewsHeader'}>
-                        There are no reviews at this time.
+                <div className={'p-grid movie-noReviews'}>
+                    <Card subTitle={"Reviews"} className={'movie-reviewsHeader movie-reviewText p-col-12'}>
+                        There are no reviews at this time
                     </Card>
                 </div>
             )
@@ -52,7 +52,7 @@ class Movie extends Component{
             return(
                 <div key={key} className="content-section introduction">
                     <div className="feature-intro">
-                        <Fieldset legend={this.renderReviewFeildSetLegend(review.author)}
+                        <Fieldset legend={this.renderReviewFieldSetLegend(review.author)}
                                   className={'p-fieldset-content movie-review'}
                                   toggleable={true}
                                   collapsed={true}>
@@ -119,15 +119,15 @@ class Movie extends Component{
                         </div>
                         <div className={'p-grid p-nogutter p-col-12'} style={{textAlign: 'center'}}>
                             <div className={"movie-commentsAndReviews"}>
-                                <div className={'movie-reviewsHeader'}>
-                                    Reviews
-                                    {this.state.movieReviews.length !== 0 ?
-                                        <div className={'movie-reviewText'}>
+                                {this.state.movieReviews.length !== 0 ?
+                                    <Card subTitle="Reviews" className={'movie-reviewsHeader'}>
+                                        <div className={'movie-reviewClickText'}>
                                             Click the name to show review
-                                        </div> : ''
-                                    }
-                                </div>
-                                {this.renderCommentsAndReviews()}
+                                        </div>
+                                    </Card>
+                                    : ''
+                                }
+                                {this.renderReviews()}
                             </div>
                         </div>
                     </div>

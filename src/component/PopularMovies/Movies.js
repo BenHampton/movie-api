@@ -124,7 +124,6 @@ class Movies extends Component{
                         {/*{movie.title}*/}
                     </div>
                     <hr className="ui-widget-content" style={{ borderTop: 0 }} />
-                    <Button icon="pi pi-search" onClick={(e) => this.setState(movie, this.state.movieTrailerKey)}></Button>
                     {/*<Button icon="pi pi-search" onClick={(e) => this.renderMovieSelected(movie, this.state.movieTrailerKey)}></Button>*/}
                 </Panel>
             </div>

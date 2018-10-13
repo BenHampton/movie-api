@@ -29,7 +29,7 @@ class Dashboard extends Component {
           <div className={'p-col-12'}>
                 <Header/>
           </div>
-          <div className={'p-grid p-col-12 p-nogutter p-align-stretch vertical-container sidebar'}>
+          <div className={'p-grid p-col-12 p-nogutter p-align-stretch vertical-container sidebar'} style={{background: 'red'}}>
               <div className={'p-col-2'}>
                   <Sidebar {...this.props} className={'sidebar'}/>
               </div>
