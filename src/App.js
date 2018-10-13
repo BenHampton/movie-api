@@ -9,10 +9,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+          <h4 className="App-title">web page is using React</h4>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          In the web application axios is used to call the end points supplied by MoiveDB.
         </p>
       </div>
     );
