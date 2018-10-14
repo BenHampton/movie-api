@@ -9,7 +9,7 @@
                        background: #222 center center;  */
     background: #222;
     display: block;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -38,7 +38,7 @@
 
 /*nav text positioning*/
 .sidebar .nav {
-    margin-top: 20%;
+    margin-top: 0%;
 }
 
 .navLink-hoverBox{

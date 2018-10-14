@@ -6,6 +6,7 @@ import {Card} from "primereact/components/card/Card";
 import {MovieService} from "../../services/MovieService";
 import {Fieldset} from "primereact/components/fieldset/Fieldset";
 import '../../../node_modules/primereact/components/fieldset/Fieldset.css'
+import SimilarMedia from "../SimilarMedia/SimilarMedia";
 
 class Movie extends Component{
     constructor(props){
@@ -87,15 +88,14 @@ class Movie extends Component{
     }
 
     render(){
-        console.log(this.state.movie)
         return(
-            <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'}>
+            <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'} style={{background: "#D3D3D3"}}>
                 <div className={'p-grid p-nogutter p-col-12 '}>
                     <div className={'p-col-5'}>
                         <div className={'movie-imageContainer'}>
                             <Lightbox type={'content'}>
                                 <a className={'group'} >
-                                    <img src={`${IMG_URL}${this.state.movie.poster_path}`} alt={this.state.movie.original_title} className={'image-poster'}/>
+                                    <img src={`${IMG_URL}${this.state.movie.poster_path}`} alt={this.state.movie.original_title} className={'image-movie-poster'}/>
                                 </a>
                                 <div>
                                     <iframe title="Video"
@@ -130,6 +130,11 @@ class Movie extends Component{
                                 {this.renderReviews()}
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className={'p-grid p-col-12 p-nogutter'} style={{background: 'red'}}>
+                    <div className={'p-col-12'} style={{background: 'blue'}}>
+                        <SimilarMedia id={this.state.movie.id} title={this.state.movie.title}/>
                     </div>
                 </div>
             </div>

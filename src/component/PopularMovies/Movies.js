@@ -159,9 +159,10 @@ class Movies extends Component{
     }
 
     render(){
+        console.log(this.state.popularMovies)
         const header = this.renderHeader();
         return(
-            <div  className={'content-section implementation'} >
+            <div  className={'content-section implementation'} style={{background: '#F0FFF0'}}>
                 <div className={'content-section implementation'}>
                     <DataView value={this.state.popularMovies}
                               layout={this.state.layout}

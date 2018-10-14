@@ -90,13 +90,13 @@ class TvShow extends Component{
     render(){
         console.log(this.props.location.state.tvShow)
         return(
-            <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'}>
+            <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'} style={{background: "#D3D3D3"}}>
                 <div className={'p-grid p-nogutter p-col-12 '}>
                     <div className={'p-col-5'}>
                         <div className={'movie-imageContainer'}>
                             <Lightbox type={'content'}>
                                 <a className={'group'} >
-                                    <img src={`${IMG_URL}${this.state.tvShow.poster_path}`} alt={this.state.tvShow.name} className={'image-poster'}/>
+                                    <img src={`${IMG_URL}${this.state.tvShow.poster_path}`} alt={this.state.tvShow.name} className={'image-movie-poster'}/>
                                 </a>
                                 <div>
                                     <iframe title="Video"

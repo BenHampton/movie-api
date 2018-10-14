@@ -11,5 +11,6 @@ module.exports = {
     GET_MOVIE_VIDEOS: '/movie/{movie_id}/videos',
     GET_TV_SHOW_VIDEOS: '/tv/{tv_id}/videos',
     GET_TV_SHOW_REVIEWS: '/tv/{tv_id}/reviews',
-    GET_POPULAR_TV_SHOWS: '/tv/popular'
+    GET_POPULAR_TV_SHOWS: '/tv/popular',
+    GET_SIMILAR_MEDIA: '/movie/{movie_id}/similar'
 }
