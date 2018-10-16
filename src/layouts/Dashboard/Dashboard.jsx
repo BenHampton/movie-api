@@ -17,6 +17,7 @@ import '../../component/Header/css/header.css'
 import '../../component/PopularMovies/css/movies.css';
 import '../../component/PopularMovies/css/movie.css';
 import '../../component/NowPlaying/css/nowPlaying.css'
+import '../../component/SimilarMedia/css/similarMedia.css'
 
 class Dashboard extends Component {
   constructor(props) {

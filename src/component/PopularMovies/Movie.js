@@ -132,9 +132,11 @@ class Movie extends Component{
                         </div>
                     </div>
                 </div>
-                <div className={'p-grid p-col-12 p-nogutter'} style={{background: 'red'}}>
-                    <div className={'p-col-12'} style={{background: 'blue'}}>
-                        <SimilarMedia id={this.state.movie.id} title={this.state.movie.title}/>
+                <div className={'similar-margin-top-10'}>
+                    <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'} style={{background: '#F0FFF0'}}>
+                        <div className={'p-offset-1 p-col-10'}>
+                            <SimilarMedia id={this.state.movie.id} title={this.state.movie.title}/>
+                        </div>
                     </div>
                 </div>
             </div>

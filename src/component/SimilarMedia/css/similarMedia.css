@@ -1,0 +1,30 @@
+.similar-margin-top-20{
+    margin-top: 15%;
+}
+
+.similar-margin-top-10{
+    margin-top: 10%;
+}
+
+.similar-margin-top-5{
+    margin-top: 5%;
+}
+
+.similar-margin-bottom-5{
+    margin-bottom: 5%;
+}
+
+.similar-header{
+    margin-top: 5%;
+}
+
+.similar-image-poster{
+    height: 40vh;
+    width: 100%;
+    cursor: pointer;
+}
+
+.similar-scrollPanel{
+    width: 100%;
+    height: 90vh;
+}

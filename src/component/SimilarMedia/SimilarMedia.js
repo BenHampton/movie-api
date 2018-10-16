@@ -6,6 +6,7 @@ import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import {Link} from "react-router-dom";
 import {MediaService} from "../../services/MediaService";
+import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 
 class SimilarMedia extends Component{
     constructor(props){
@@ -64,7 +65,7 @@ class SimilarMedia extends Component{
 
     renderImageGrid(similarMedia){
         return (
-            <div style={{ padding: '.5em' }} className="p-g-12 p-md-3">
+            <div style={{ padding: '.5em' }} className="p-g-12 p-md-3 similar-margin-top-5">
                 {/*<Panel header={this.renderImageHeader(similarMedia)} style={{ textAlign: 'center'}}>*/}
                 <Panel style={{ textAlign: 'center'}}>
                     <Link
@@ -74,7 +75,7 @@ class SimilarMedia extends Component{
                             state: { movie: similarMedia }
                         }} >
                     <a className={'group'}>
-                        <img src={`${IMG_URL}${similarMedia.poster_path}`} alt={similarMedia.original_title} className={'image-poster-grid'}/>
+                        <img src={`${IMG_URL}${similarMedia.poster_path}`} alt={similarMedia.original_title} className={'similar-image-poster'}/>
                     </a>
                     </Link>
                 </Panel>
@@ -84,23 +85,25 @@ class SimilarMedia extends Component{
 
     renderHeader() {
         return (
-            <div>
+            <h4 className={'similar-header'}>
                Similar movies related to {this.props.title}
-            </div>
+            </h4>
         );
     }
 
     render(){
         const header = this.renderHeader();
         return(
-            <div  className={'content-section implementation'} style={{background: '#F0FFF0'}}>
-                <div className={'content-section implementation'}>
-                    <DataView value={this.state.similarMedia}
-                              layout={this.state.layout}
-                              itemTemplate={this.itemTemplate}
-                              header={header}
-                              className={'p-nogutter'}
-                    />
+            <div  className={'content-section implementation'}>
+                <div className={'content-section implementation '}>
+                    <ScrollPanel className={'similar-scrollPanel'}>
+                        <DataView value={this.state.similarMedia}
+                                  layout={this.state.layout}
+                                  itemTemplate={this.itemTemplate}
+                                  header={header}
+                                  className={'p-nogutter'}
+                        />
+                    </ScrollPanel>
                 </div>
             </div>
         )
