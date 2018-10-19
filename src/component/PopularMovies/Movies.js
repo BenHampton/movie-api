@@ -44,7 +44,6 @@ class Movies extends Component{
 
     retrieveMovieId(movie){
         this.getMovieDB.getMovieTrailer(this, movie.id);
-        console.log(this.state.movieTrailerKey)
         return(
             <div>
                 coming soon
@@ -159,7 +158,6 @@ class Movies extends Component{
     }
 
     render(){
-        console.log(this.state.popularMovies)
         const header = this.renderHeader();
         return(
             <div  className={'content-section implementation'} style={{background: '#F0FFF0'}}>

@@ -44,7 +44,6 @@ export class TVServices {
         axios.get(`${API_URL}${GET_TV_GENRES}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
-                console.log(data)
             });
 
     }

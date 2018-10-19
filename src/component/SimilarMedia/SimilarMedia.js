@@ -39,7 +39,6 @@ class SimilarMedia extends Component{
 
     retrieveMovieId(movie){
         this.getMovieDB.getMovieTrailer(this, movie.id);
-        console.log(this.state.movieTrailerKey)
         return(
             <div>
                 coming soon
@@ -47,26 +46,9 @@ class SimilarMedia extends Component{
         )
     }
 
-    renderImageHeader(similarMedia) {
-        return (
-            <div>
-                <Link
-                    to={{
-                        pathname: "/movie",
-                        state: { movie: similarMedia }
-                    }} >
-                    <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
-                        {similarMedia.title}
-                    </div>
-                </Link>
-            </div>
-        );
-    }
-
     renderImageGrid(similarMedia){
         return (
             <div style={{ padding: '.5em' }} className="p-g-12 p-md-3 similar-margin-top-5">
-                {/*<Panel header={this.renderImageHeader(similarMedia)} style={{ textAlign: 'center'}}>*/}
                 <Panel style={{ textAlign: 'center'}}>
                     <Link
                         //get movie information to send to Movie then were good
@@ -74,9 +56,8 @@ class SimilarMedia extends Component{
                             pathname: "/movie",
                             state: { movie: similarMedia }
                         }} >
-                    <a className={'group'}>
                         <img src={`${IMG_URL}${similarMedia.poster_path}`} alt={similarMedia.original_title} className={'similar-image-poster'}/>
-                    </a>
+
                     </Link>
                 </Panel>
             </div>

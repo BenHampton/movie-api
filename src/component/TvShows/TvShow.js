@@ -88,7 +88,6 @@ class TvShow extends Component{
     }
 
     render(){
-        console.log(this.props.location.state.tvShow)
         return(
             <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'} style={{background: "#D3D3D3"}}>
                 <div className={'p-grid p-nogutter p-col-12 '}>

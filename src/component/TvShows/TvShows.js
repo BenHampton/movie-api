@@ -45,7 +45,6 @@ class TvShows extends Component{
 
     retrieveTvShowId(tvShow){
         this.getMovieDB.getTvShowTrailer(this, tvShow.id);
-        console.log(this.state.tvShowsTrailerKey)
         return(
             <div>
                 coming soon
