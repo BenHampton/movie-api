@@ -28,7 +28,7 @@ class Sidebar extends Component {
   }
 
   render() {
-
+    //p-grid is on Dashboard and is good... SideBar had no p-grid and is not bootstrapped.. needs bootstrap and styling
     return (
       <div id="sidebar" className="sidebar" >
         <div className={'sidebar-wrapper'}>
@@ -38,10 +38,10 @@ class Sidebar extends Component {
                   if (!prop.redirect)
                     return (
                       <li className={ prop.upgrade ? "active active-pro" : this.activeRoute(prop.path) } key={key} >
-                        <NavLink to={prop.path} className={prop.hide ? "nav-link navLink-hoverBox sidebar-hide" : "nav-link navLink-hoverBox"} activeClassName="active" >
-                          <i className={prop.icon} />
-                          <p>{prop.name}</p>
-                        </NavLink>
+                          <NavLink to={prop.path} className={prop.hide ? "nav-link navLink-hoverBox sidebar-hide" : "nav-link navLink-hoverBox"} activeClassName="active" >
+                            <i className={prop.icon} />
+                            <p>{prop.name}</p>
+                          </NavLink>
                       </li>
                     );
                   return null;
