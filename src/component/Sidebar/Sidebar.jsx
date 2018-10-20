@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import './css/sidebard.css';
 
 import dashboardRoutes from "../../routes/dashboard.jsx";
+import * as ReactDOM from "react-dom";
 
 class Sidebar extends Component {
   constructor(props) {
@@ -21,6 +22,11 @@ class Sidebar extends Component {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
+
+  componentDidUpdate(){
+    window.scrollTo(0,0);
+  }
+
   render() {
 
     return (

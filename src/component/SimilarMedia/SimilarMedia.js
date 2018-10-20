@@ -45,20 +45,27 @@ class SimilarMedia extends Component{
             </div>
         )
     }
+    //
+    // renderSimilarMedia(similarMedia){
+    //     return(
+    //         <div>
+    //             <Link
+    //                 to={{
+    //                     pathname: "/movie",
+    //                     state: { movie: similarMedia }
+    //                 }} >
+    //             </Link>
+    //         </div>
+    //     )
+    // }
 
     renderImageGrid(similarMedia){
         return (
             <div style={{ padding: '.5em' }} className="p-g-12 p-md-3 similar-margin-top-5">
                 <Panel style={{ textAlign: 'center'}}>
-                    <Link
-                        //get movie information to send to Movie then were good
-                        to={{
-                            pathname: "/movie",
-                            state: { movie: similarMedia }
-                        }} >
+                    <a onClick={(e) => this.props.refreshPage(similarMedia)} >
                         <img src={`${IMG_URL}${similarMedia.poster_path}`} alt={similarMedia.original_title} className={'similar-image-poster'}/>
-
-                    </Link>
+                    </a>
                 </Panel>
             </div>
         );

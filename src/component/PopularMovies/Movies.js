@@ -80,8 +80,6 @@ class Movies extends Component{
         );
     }
 
-
-
     renderImageHeader(movie) {
         return (
             <div>
@@ -125,8 +123,6 @@ class Movies extends Component{
             </div>
         );
     }
-
-
 
     renderCarDialogContent() {
         if (this.state.selectedMovie) {

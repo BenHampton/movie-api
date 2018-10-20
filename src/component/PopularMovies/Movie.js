@@ -19,11 +19,16 @@ class Movie extends Component{
         }
         this.getMovieDB = new MovieService();
         this.renderReviews = this.renderReviews.bind(this);
+        this.refreshPage = this.refreshPage.bind(this);
 
     }
 
     componentDidMount(){
         this.movieReviews = this.getMovieDB.getMovieReviews(this, this.state.movie.id);
+    }
+
+    componentDidUpdate(){
+        window.scrollTo(0,0);
     }
 
     isEmpty(item){
@@ -87,6 +92,12 @@ class Movie extends Component{
         )
     }
 
+    refreshPage(similarMedia){
+        this.setState({movie: similarMedia});
+        this.movieReviews = this.getMovieDB.getMovieReviews(this, this.state.movie.id);
+    }
+
+
     render(){
         return(
             <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'} style={{background: "#D3D3D3"}}>
@@ -135,7 +146,7 @@ class Movie extends Component{
                 <div className={'similar-margin-top-10'}>
                     <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'} style={{background: '#F0FFF0'}}>
                         <div className={'p-offset-1 p-col-10'}>
-                            <SimilarMedia id={this.state.movie.id} title={this.state.movie.title}/>
+                            <SimilarMedia id={this.state.movie.id} title={this.state.movie.title} refreshPage={this.refreshPage}/>
                         </div>
                     </div>
                 </div>
