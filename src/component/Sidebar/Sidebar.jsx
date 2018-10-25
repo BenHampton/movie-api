@@ -34,6 +34,7 @@ class Sidebar extends Component {
         <div className={'sidebar-wrapper'}>
           <div className={'sidebar-fixed'}>
             <ul className={'nav'}>
+              <div>
                 {dashboardRoutes.map((prop, key) => {
                   if (!prop.redirect)
                     return (
@@ -46,6 +47,7 @@ class Sidebar extends Component {
                     );
                   return null;
                 })}
+              </div>
             </ul>
           </div>
         </div>

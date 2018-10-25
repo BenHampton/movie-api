@@ -16,17 +16,15 @@
 .sidebar-wrapper{
     position: relative;
     height: calc(100vh - 75px);
-    overflow: auto;
-    width: 260px;
+    /*overflow: auto;*/
+    width: 100%;
     z-index: 4;
     padding-bottom: 30px;
 }
 
 .sidebar-fixed{
-    position: fixed;
-    height: calc(100vh - 75px);
-    overflow: auto;
-    width: 260px;
+    /*height: calc(100vh - 75px);*/
+    /*overflow: auto;*/
     z-index: 4;
     padding-bottom: 30px;
 }
