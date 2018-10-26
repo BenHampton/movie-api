@@ -35,6 +35,7 @@
 
 /*nav text positioning*/
 .sidebar .nav {
+    position: fixed;
     margin-top: 0%;
 }
 
@@ -48,13 +49,15 @@
 .sidebar .nav li:hover > a {
     background-color: rgba(255, 255, 255, 0.13);
     opacity: 1;
+    width: 100%;
 }
 
 /*nav text color and space between text*/
 .sidebar .nav li > a {
     color: #FFFFFF;
-    margin: 5px 15px;
+    /*margin: 5px 15px;*/
     opacity: .86;
+    margin-top: 15px;
     border-radius: 4px;
     display: block;
 }
@@ -64,6 +67,10 @@
     color: #FFFFFF;
     opacity: 1;
     background: rgba(255, 255, 255, 0.23);
+}
+
+.nav{
+    position: fixed;
 }
 
 /*makes nav menu items align up to down idk if its up to down or down to up lol*/
