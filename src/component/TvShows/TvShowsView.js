@@ -5,6 +5,7 @@ import {IMG_URL} from "../Constants/constants";
 import {Link} from "react-router-dom";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {Panel} from "primereact/components/panel/Panel";
+import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 
 const TvShowsView = props => {
 
@@ -53,14 +54,24 @@ const TvShowsView = props => {
                             </iframe>
                         </div>
                     </Lightbox>
-
-
-
                 </div>
-                <div>
-                    <div className={'p-col movieList-text'}>
-                        <div>Title: <b>{tvShow.name}</b></div>
-                        <div>Genre: <b>{tvShow.genre_ids}</b></div>
+                <div className={'p-col-9'}>
+                    <div className={'list-text-container'}>
+                        <div className={'list-text'}>Title: <b>{tvShow.name}</b></div>
+                        <div className={'list-text'}>Genre: <b>{tvShow.genre_ids}</b></div>
+                        <div className={'list-text'}>Stars: <b>{tvShow.vote_average}</b></div>
+                        <div>
+                            <div className={'list-text'}>
+                                Overview:
+                            </div>
+                            <div className={"overview-container"}>
+                                <ScrollPanel className={"list-overview-scrollPane"}>
+                                    <div className={'list-text-overview'}>
+                                        <b>{tvShow.overview}</b>
+                                    </div>
+                                </ScrollPanel>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

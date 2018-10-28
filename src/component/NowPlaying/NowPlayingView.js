@@ -39,7 +39,7 @@ const NowPlayingView = props => {
                         </div>
                     </Lightbox>
                 </div>
-                <div className={'p-col-9 '}>
+                <div className={'p-col-9'}>
                     <div className={'list-text-container'}>
                         <div className={'list-text'}>Title: <b>{nowPlaying.title}</b></div>
                         <div className={'list-text'}>Genre: <b>{nowPlaying.genre_ids}</b></div>

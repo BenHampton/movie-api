@@ -4,6 +4,7 @@ import {Dialog} from "primereact/components/dialog/Dialog";
 import {DataView} from "primereact/components/dataview/DataView";
 import {Panel} from "primereact/components/panel/Panel";
 import {Lightbox} from "primereact/components/lightbox/Lightbox";
+import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 
 const MoviesView = props => {
 
@@ -37,10 +38,23 @@ const MoviesView = props => {
                         </div>
                     </Lightbox>
                 </div>
-                <div>
-                    <div className={'p-col movieList-text'}>
-                        <div>Title: <b>{movie.title}</b></div>
-                        <div>Genre: <b>{movie.genre_ids}</b></div>
+                <div className={'p-col-9'}>
+                    <div className={'list-text-container'}>
+                        <div className={'list-text'}>Title: <b>{movie.title}</b></div>
+                        <div className={'list-text'}>Genre: <b>{movie.genre_ids}</b></div>
+                        <div className={'list-text'}>Stars: <b>{movie.vote_average}</b></div>
+                        <div>
+                            <div className={'list-text'}>
+                                Overview:
+                            </div>
+                            <div className={"overview-container"}>
+                                <ScrollPanel className={"list-overview-scrollPane"}>
+                                    <div className={'list-text-overview'}>
+                                        <b>{movie.overview}</b>
+                                    </div>
+                                </ScrollPanel>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
