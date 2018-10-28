@@ -4,7 +4,7 @@ import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 import {Card} from "primereact/components/card/Card";
 import {Fieldset} from "primereact/components/fieldset/Fieldset";
-import SimilarMedia from "../SimilarMedia/SimilarMedia";
+import SimilarMediaComponent from "../SimilarMedia/SimilarMediaComponent";
 
 const MovieView = props => {
 
@@ -112,7 +112,8 @@ const MovieView = props => {
             <div className={'similar-margin-top-10'}>
                 <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'} style={{background: '#F0FFF0'}}>
                     <div className={'p-offset-1 p-col-10'}>
-                        <SimilarMedia id={props.movie.id} title={props.movie.title} refreshPage={props.refreshMoviePage}/>
+                        {/*<SimilarMedia id={props.movie.id} title={props.movie.title} refreshPage={props.refreshMoviePage}/>*/}
+                        <SimilarMediaComponent id={props.movie.id} title={props.movie.title} refreshMoviePage={props.refreshMoviePage} />
                     </div>
                 </div>
             </div>
