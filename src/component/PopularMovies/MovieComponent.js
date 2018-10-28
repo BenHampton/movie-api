@@ -27,11 +27,9 @@ class MovieComponent extends Component {
         this.setState({movie: similarMedia}, () => {
             this.movieReviews = this.getMovieDB.getMovieReviews(this, this.state.movie.id);
         });
-
     }
 
     render(){
-        //console.log(this.state.movie)
         return(
             <MovieView movie={this.state.movie}
                        trailer={this.state.trailer}

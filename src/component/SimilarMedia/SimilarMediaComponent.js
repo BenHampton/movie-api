@@ -1,12 +1,5 @@
 import React, {Component} from 'react';
-import {IMG_URL} from '../Constants/constants'
-import {Panel} from '../../../node_modules/primereact/panel'
-import {Dialog} from "primereact/components/dialog/Dialog";
-import {Lightbox} from "primereact/components/lightbox/Lightbox";
-import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
-import {Link} from "react-router-dom";
 import {MediaService} from "../../services/MediaService";
-import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 import SimilarMediaView from "./SimilarMediaView";
 
 class SimilarMediaComponent extends Component{
@@ -23,6 +16,7 @@ class SimilarMediaComponent extends Component{
         this.getMovieDB = new MediaService();
         this.retrieveMovieId = this.retrieveMovieId.bind(this);
         this.refreshSimPage = this.refreshSimPage.bind(this);
+        this.renderSimilarMovieHeader = this.renderSimilarMovieHeader.bind(this);
     }
     componentDidMount(){
         this.similarMedia = this.getMovieDB.getSimilarMedia(this, this.props.id);
@@ -62,7 +56,7 @@ class SimilarMediaComponent extends Component{
                               layout={this.state.layout}
                               selectedMovie={this.state.selectedMovie}
                               movieTrailerKey={this.state.movieTrailerKey}
-                              header={this.renderSimilarMovieHeader}
+                              renderSimilarMovieHeader={this.renderSimilarMovieHeader()}
                               refreshSimPage={this.refreshSimPage.bind(this)}
             />
         )
