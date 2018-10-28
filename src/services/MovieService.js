@@ -25,7 +25,7 @@ export class MovieService {
         axios.get(`${API_URL}${MOVIE_VIDEOS}${API_KEY}`)
             .then(response => response.data)
             .then(data => {
-                _this.setState({tvShowsTrailerKey: data.results[0].key})
+                _this.setState({movieTrailerKey: data.results[0].key})
             })
             .catch(function (error) {
                 console.log(error)

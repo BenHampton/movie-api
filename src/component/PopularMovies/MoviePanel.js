@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Movies from './Movies';
+import MoviesComponent from "./MoviesComponent";
 
 
 class MoviePanel extends Component{
@@ -11,7 +12,8 @@ class MoviePanel extends Component{
         return(
             <div>
                 <div className={'movie-container'}>
-                    <Movies />
+                    {/*<Movies />*/}
+                    <MoviesComponent />
                 </div>
             </div>
         )

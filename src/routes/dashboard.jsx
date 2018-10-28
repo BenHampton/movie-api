@@ -2,10 +2,9 @@ import Dashboard from "../layouts/Dashboard/Dashboard";
 import MoviePanel from "../component/PopularMovies/MoviePanel";
 import App from "../App";
 import NowPlayingPanel from "../component/NowPlaying/NowPlayingPanel";
-import Movie from "../component/PopularMovies/Movie";
 import TvShowPanel from "../component/TvShows/TvShowPanel";
-import TvShows from "../component/TvShows/TvShows";
 import TvShow from "../component/TvShows/TvShow";
+import MovieComponent from "../component/PopularMovies/MovieComponent";
 
 const dashboardRoutes = [
   {
@@ -38,7 +37,7 @@ const dashboardRoutes = [
       path: "/movie",
       icon: "pe-7s-news-paper",
       hide: true,
-      component: Movie
+      component: MovieComponent
   },
   {
       path: "/tv-show",
