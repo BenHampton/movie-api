@@ -62,7 +62,19 @@ class Dashboard extends Component {
                                           )}
                                       />
                                   );
-                              }else if (prop.redirect) {
+                              }else if(prop.name === "/now-playing-movie"){
+                                  return (
+                                      <Route
+                                          path={prop.path}
+                                          key={key}
+                                          render={routeProps => (
+                                              <prop.component
+                                                  {...routeProps}
+                                              />
+                                          )}
+                                      />
+                                  );
+                              } else if (prop.redirect) {
                                   return <Redirect from={prop.path} to={prop.to} key={key}/>;
                               }
                               return (

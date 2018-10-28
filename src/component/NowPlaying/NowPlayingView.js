@@ -5,6 +5,7 @@ import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {Panel} from "primereact/components/panel/Panel";
 import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 import {Dialog} from "primereact/components/dialog/Dialog";
+import {Link} from "react-router-dom";
 
 
 const NowPlayingView = props => {
@@ -18,6 +19,22 @@ const NowPlayingView = props => {
         } else if (layout === 'grid'){
             return renderGridItem(nowPlaying)
         }
+    }
+
+    const renderNowPlayingGridHeader = (nowPlaying) => {
+        return (
+            <div>
+                <Link
+                    to={{
+                        pathname: "/now-playing-movie",
+                        state: { nowPlaying: nowPlaying }
+                    }} >
+                    <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
+                        {nowPlaying.title}
+                    </div>
+                </Link>
+            </div>
+        );
     }
 
     const renderListItem = (nowPlaying) => {
@@ -65,7 +82,7 @@ const NowPlayingView = props => {
     const renderGridItem = (nowPlaying) => {
         return (
             <div style={{ padding: '.5em'}} className="p-g-12 p-md-3">
-                <Panel header={nowPlaying.title} style={{ textAlign: 'center' }}>
+                <Panel header={renderNowPlayingGridHeader(nowPlaying)} style={{ textAlign: 'center' }}>
                     <Lightbox type={'content'}>
                         <a className={'group'} onClick={(e) => props.retrieveNowPlayingMovieId(nowPlaying)} >
                             <img src={`${IMG_URL}${nowPlaying.poster_path}`} alt={nowPlaying.original_title} className={'image-poster'}/>

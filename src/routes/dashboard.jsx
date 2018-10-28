@@ -5,6 +5,7 @@ import NowPlayingPanel from "../component/NowPlaying/NowPlayingPanel";
 import TvShowPanel from "../component/TvShows/TvShowPanel";
 import MovieComponent from "../component/PopularMovies/MovieComponent";
 import TvShowComponent from "../component/TvShows/TvShowComponent";
+import NowPlayingMovieComponent from "../component/NowPlaying/NowPlayingMovieComponent";
 
 const dashboardRoutes = [
   {
@@ -44,6 +45,12 @@ const dashboardRoutes = [
       icon: "pe-7s-news-paper",
       hide: true,
       component: TvShowComponent
+  },
+  {
+      path: "/now-playing-movie",
+      icon: "pe-7s-news-paper",
+      hide: true,
+      component: NowPlayingMovieComponent
   },
   { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
 ];

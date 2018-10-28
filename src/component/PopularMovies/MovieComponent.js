@@ -7,7 +7,7 @@ class MovieComponent extends Component {
         super(props)
         this.state = {
             movie: this.props.location.state.movie,
-            trailer: this.props.location.state.tvShowsTrailerKey,
+            trailer: this.props.location.state.movieTrailerKey,
             movieReviews: [],
             hasReviews: true
         }

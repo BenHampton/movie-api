@@ -3,6 +3,7 @@ import {MovieService} from "../../services/MovieService";
 import {DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import NowPlayingView from "./NowPlayingView";
 
+
 class NowPlayingComponent extends Component{
     constructor(props){
         super(props);
