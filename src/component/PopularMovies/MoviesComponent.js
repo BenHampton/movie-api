@@ -69,7 +69,7 @@ class MoviesComponent extends Component{
                         selectedMovie={this.state.selectedMovie}
                         movieIds={this.state.movieIds}
                         isDialogVisible={this.state.isDialogVisible}
-                        header={this.renderMovieHeader()}
+                        renderMovieHeader={this.renderMovieHeader.bind(this)}
                         renderMovieImageHeader={this.renderMovieImageHeader.bind(this)}
                         retrievePopularMovieId={this.retrievePopularMovieId.bind(this)}
                         showDiaog={this.showDialog.bind(this)}

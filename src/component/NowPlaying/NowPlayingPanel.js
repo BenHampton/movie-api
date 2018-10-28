@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-
-import NowPlaying from "./NowPlaying";
+import React, {Component} from 'react'
+import NowPlayingComponent from "./NowPlayingComponent";
 
 class NowPlayingPanel extends Component{
     constructor(props){
@@ -10,9 +9,8 @@ class NowPlayingPanel extends Component{
     render(){
         return(
             <div>
-                <div>
-                    <NowPlaying />
-                </div>
+                {/*<NowPlaying />*/}
+                <NowPlayingComponent />
             </div>
         )
     }

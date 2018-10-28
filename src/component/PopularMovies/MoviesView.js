@@ -99,7 +99,7 @@ const MoviesView = props => {
                     <DataView value={props.popularMovies}
                               layout={props.layout}
                               itemTemplate={itemTemplate}
-                              header={props.renderMovieHeader}
+                              header={props.renderMovieHeader()}
                               className={'p-nogutter'}
                     />
                     <Dialog header="Movie Details"

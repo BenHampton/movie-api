@@ -3,8 +3,8 @@ import MoviePanel from "../component/PopularMovies/MoviePanel";
 import App from "../App";
 import NowPlayingPanel from "../component/NowPlaying/NowPlayingPanel";
 import TvShowPanel from "../component/TvShows/TvShowPanel";
-import TvShow from "../component/TvShows/TvShow";
 import MovieComponent from "../component/PopularMovies/MovieComponent";
+import TvShowComponent from "../component/TvShows/TvShowComponent";
 
 const dashboardRoutes = [
   {
@@ -43,7 +43,7 @@ const dashboardRoutes = [
       path: "/tv-show",
       icon: "pe-7s-news-paper",
       hide: true,
-      component: TvShow
+      component: TvShowComponent
   },
   { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
 ];

@@ -41,19 +41,6 @@ class SimilarMediaComponent extends Component{
             </div>
         )
     }
-    //
-    // renderSimilarMedia(similarMedia){
-    //     return(
-    //         <div>
-    //             <Link
-    //                 to={{
-    //                     pathname: "/movie",
-    //                     state: { movie: similarMedia }
-    //                 }} >
-    //             </Link>
-    //         </div>
-    //     )
-    // }
 
     renderSimilarMovieHeader() {
         return (

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TvShows from "./TvShows";
+import TvShowsComponent from "./TvShowsComponent";
 
 
 class TvShowPanel extends Component{
@@ -11,7 +12,8 @@ class TvShowPanel extends Component{
         return(
             <div>
                 <div className={'movie-container'}>
-                    <TvShows />
+                    {/*<TvShows />*/}
+                    <TvShowsComponent />
                 </div>
             </div>
         )
