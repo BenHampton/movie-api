@@ -111,7 +111,7 @@ const TvShowView = props => {
             <div className={'similar-margin-top-10'}>
                 <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'} style={{background: '#F0FFF0'}}>
                     <div className={'p-offset-1 p-col-10'}>
-                        <SimilarMediaComponent id={props.tvShow.id} title={props.tvShow.title} refreshMoviePage={props.refreshTvShowPage} />
+                        <SimilarMediaComponent id={props.tvShow.id} title={props.tvShow.name} refreshMoviePage={props.refreshTvShowPage} />
                     </div>
                 </div>
             </div>
