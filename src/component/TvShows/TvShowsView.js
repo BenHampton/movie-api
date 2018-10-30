@@ -28,7 +28,7 @@ const TvShowsView = props => {
                         pathname: "/tv-show",
                         state: { tvShow: tvShow }
                     }} >
-                    <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
+                    <div className={'grid-header'}>
                         {tvShow.name}
                     </div>
                 </Link>

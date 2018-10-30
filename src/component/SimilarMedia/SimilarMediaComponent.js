@@ -34,7 +34,7 @@ class SimilarMediaComponent extends Component{
 
     renderSimilarMediaHeader() {
         return (
-            <h4 className={'similar-header'}>
+            <h4 className={'similar-header similarMovie-text'}>
                 Similar movies related to {this.props.title}
             </h4>
         );

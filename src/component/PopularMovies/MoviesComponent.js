@@ -39,7 +39,7 @@ class MoviesComponent extends Component{
                         pathname: "/movie",
                         state: { movie: movie }
                     }} >
-                    <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
+                    <div className={'grid-header'}>
                         {movie.title}
                     </div>
                 </Link>

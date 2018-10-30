@@ -29,7 +29,7 @@ const NowPlayingView = props => {
                         pathname: "/now-playing-movie",
                         state: { nowPlaying: nowPlaying }
                     }} >
-                    <div style={{fontSize: '18px', maxHeight: '5px', marginBottom: '30px'}}>
+                    <div className={'grid-header'}>
                         {nowPlaying.title}
                     </div>
                 </Link>

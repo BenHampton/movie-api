@@ -65,6 +65,7 @@ const NowPlayingMovieView = props => {
             </div>
         )
     }
+    console.log(props)
 
     return(
         <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container nowPlayingMovie'}>
@@ -92,8 +93,8 @@ const NowPlayingMovieView = props => {
                     </div>
                 </div>
                 <div className={'p-col-7'}>
-                    <div className={'movie-title'}>
-                        {props.title}
+                    <div className={'movie-title nowPlayingMovie-text'}>
+                        {props.nowPlayingMovie.title}
                     </div>
                     <div className={'p-grid p-nogutter p-col-12'} style={{textAlign: 'center'}}>
                         <div className={"movie-commentsAndReviews"}>
@@ -112,7 +113,7 @@ const NowPlayingMovieView = props => {
             </div>
             {props.similarMedia.length != 0 ?
                 <div className={'similar-margin-top-10'}>
-                    <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'} style={{background: '#F0FFF0'}}>
+                    <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'}>
                         <div className={'p-offset-1 p-col-10'}>
                             <SimilarMediaComponent id={props.nowPlayingMovie.id}
                                                    title={props.nowPlayingMovie.title}

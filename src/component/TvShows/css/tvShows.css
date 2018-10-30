@@ -5,3 +5,10 @@
 .tvShows-color{
     color: white;
 }
+
+.grid-header{
+    font-size: 18px;
+    max-height: 5px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+}

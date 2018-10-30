@@ -28,13 +28,13 @@ const SimilarMediaView = props => {
     }
 
     return(
-        <div  className={'content-section implementation'}>
+        <div  className={'content-section implementation similarMovie'}>
             <div className={'content-section implementation '}>
+                {props.renderSimilarMediaHeader}
                 <ScrollPanel className={'similar-scrollPanel'}>
                     <DataView value={props.similarMedia}
                               layout={props.layout}
                               itemTemplate={itemTemplate}
-                              header={props.renderSimilarMediaHeader}
                               className={'p-nogutter'}
                     />
                 </ScrollPanel>
