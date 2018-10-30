@@ -5,3 +5,12 @@
 .tvShow-color{
     color: white;
 }
+
+a {
+    transition: all 0.7s;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
