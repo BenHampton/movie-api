@@ -38,34 +38,10 @@ class Dashboard extends Component {
               <div className={'p-col-2'}>
                   <Sidebar {...this.props}/>
               </div>
-              <div className={'p-col-10 dashboard-route'}>
+              <div className={'p-col-10 dashboard-route'} style={{background: 'black'}}>
                   <Switch>
                           {dashboardRoutes.map((prop, key) => {
-                              if (prop.name === "/movie") {
-                                  return (
-                                      <Route
-                                          path={prop.path}
-                                          key={key}
-                                          render={routeProps => (
-                                              <prop.component
-                                                  {...routeProps}
-                                              />
-                                          )}
-                                      />
-                                  );
-                              }else if (prop.name === "/tv-show") {
-                                  return (
-                                      <Route
-                                          path={prop.path}
-                                          key={key}
-                                          render={routeProps => (
-                                              <prop.component
-                                                  {...routeProps}
-                                              />
-                                          )}
-                                      />
-                                  );
-                              }else if(prop.name === "/now-playing-movie"){
+                              if (prop.name === "/movie" || prop.name === "/tv-show" || prop.name === "/now-playing-movie") {
                                   return (
                                       <Route
                                           path={prop.path}
