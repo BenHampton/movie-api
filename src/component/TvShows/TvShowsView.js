@@ -57,15 +57,15 @@ const TvShowsView = props => {
                 </div>
                 <div className={'p-col-9'}>
                     <div className={'list-text-container'}>
-                        <div className={'list-text'}>Title: <b>{tvShow.name}</b></div>
-                        <div className={'list-text'}>Genre: <b>{tvShow.genre_ids}</b></div>
-                        <div className={'list-text'}>Stars: <b>{tvShow.vote_average}</b></div>
+                        <div className={'list-text tvShows-color'}>Title: <b>{tvShow.name}</b></div>
+                        <div className={'list-text tvShows-color'}>Genre: <b>{tvShow.genre_ids}</b></div>
+                        <div className={'list-text tvShows-color'}>Stars: <b>{tvShow.vote_average}</b></div>
                         <div>
-                            <div className={'list-text'}>
+                            <div className={'list-text tvShows-color'}>
                                 Overview:
                             </div>
                             <div className={"overview-container"}>
-                                <ScrollPanel className={"list-overview-scrollPane"}>
+                                <ScrollPanel className={"list-overview-scrollPane tvShows-color"}>
                                     <div className={'list-text-overview'}>
                                         <b>{tvShow.overview}</b>
                                     </div>
@@ -125,7 +125,7 @@ const TvShowsView = props => {
         }
     }
     return(
-        <div  className={'content-section implementation'} >
+        <div className={'tvShows'} >
             <div className={'content-section implementation'}>
                 <DataView value={props.popularTvShows}
                           layout={props.layout}

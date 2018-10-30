@@ -6,7 +6,7 @@ class SimilarMediaComponent extends Component{
     constructor(props){
         super(props);
         this.state = {
-            similarMedia: [],
+            similarMedia: props.similarMedia,
             layout: 'grid',
             movieTrailerKey: null,
             selectedMovie: null,
@@ -16,12 +16,8 @@ class SimilarMediaComponent extends Component{
         this.getMovieDB = new MediaService();
         this.retrieveMovieId = this.retrieveMovieId.bind(this);
         this.refreshSimPage = this.refreshSimPage.bind(this);
-        this.renderSimilarMovieHeader = this.renderSimilarMovieHeader.bind(this);
+        this.renderSimilarMediaHeader = this.renderSimilarMediaHeader.bind(this);
     }
-    componentDidMount(){
-        this.similarMedia = this.getMovieDB.getSimilarMedia(this, this.props.id);
-    }
-
 
     componentWillReceiveProps(){
         this.similarMedia = this.getMovieDB.getSimilarMedia(this, this.props.id);
@@ -36,7 +32,7 @@ class SimilarMediaComponent extends Component{
         )
     }
 
-    renderSimilarMovieHeader() {
+    renderSimilarMediaHeader() {
         return (
             <h4 className={'similar-header'}>
                 Similar movies related to {this.props.title}
@@ -56,7 +52,7 @@ class SimilarMediaComponent extends Component{
                               layout={this.state.layout}
                               selectedMovie={this.state.selectedMovie}
                               movieTrailerKey={this.state.movieTrailerKey}
-                              renderSimilarMovieHeader={this.renderSimilarMovieHeader()}
+                              renderSimilarMediaHeader={this.renderSimilarMediaHeader()}
                               refreshSimPage={this.refreshSimPage.bind(this)}
             />
         )

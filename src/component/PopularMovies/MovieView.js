@@ -12,7 +12,7 @@ const MovieView = props => {
         let reviews = props.movieReviews;
         if(reviews.length === 0){
             return(
-                <div className={'p-grid movie-noReviews'}>
+                <div className={'p-grid movie-noReviews movie-text'}>
                     <Card subTitle={"Reviews"} className={'movie-reviewsHeader movie-reviewText p-col-12'}>
                         There are no reviews at this time
                     </Card>
@@ -28,7 +28,7 @@ const MovieView = props => {
                                   toggleable={true}
                                   collapsed={true}>
                             <ScrollPanel className={"movie-reviewScrollPanel"}>
-                                <div className={'movie-reviewContent'}>
+                                <div className={'movie-reviewContent movie-text'}>
                                     {review.content}
                                 </div>
                             </ScrollPanel>
@@ -55,7 +55,7 @@ const MovieView = props => {
 
     const renderMovieOverview = (event) => {
         return(
-            <div className="content-section implementation scrollpanel-demo">
+            <div className="content-section implementation scrollpanel-demo movie-text">
                 <Card subTitle={"Overview"}>
                     <ScrollPanel className={"movie-overview"}>
                         {props.movie.overview}
@@ -66,7 +66,7 @@ const MovieView = props => {
     }
 
     return(
-        <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'} style={{background: "#D3D3D3"}}>
+        <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container movie'}>
             <div className={'p-grid p-nogutter p-col-12 '}>
                 <div className={'p-col-5'}>
                     <div className={'movie-imageContainer'}>
@@ -91,13 +91,13 @@ const MovieView = props => {
                     </div>
                 </div>
                 <div className={'p-col-7'}>
-                    <div className={'movie-title'}>
+                    <div className={'movie-title movie-text'}>
                         {props.movie.title}
                     </div>
                     <div className={'p-grid p-nogutter p-col-12'} style={{textAlign: 'center'}}>
                         <div className={"movie-commentsAndReviews"}>
                             {props.movieReviews.length !== 0 ?
-                                <Card subTitle="Reviews" className={'movie-reviewsHeader'}>
+                                <Card subTitle="Reviews" className={'movie-reviewsHeader movie-text'}>
                                     <div className={'movie-reviewClickText'}>
                                         Click the name to show review
                                     </div>
@@ -109,14 +109,20 @@ const MovieView = props => {
                     </div>
                 </div>
             </div>
-            <div className={'similar-margin-top-10'}>
-                <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'} style={{background: '#F0FFF0'}}>
-                    <div className={'p-offset-1 p-col-10'}>
-                        {/*<SimilarMedia id={props.movie.id} title={props.movie.title} refreshPage={props.refreshMoviePage}/>*/}
-                        <SimilarMediaComponent id={props.movie.id} title={props.movie.title} refreshMoviePage={props.refreshMoviePage} />
+            { props.similarMedia.length != 0 ?
+                <div className={'similar-margin-top-10'}>
+                    <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'} style={{background: '#F0FFF0'}}>
+                        <div className={'p-offset-1 p-col-10'}>
+                            <SimilarMediaComponent id={props.movie.id}
+                                                   title={props.movie.title}
+                                                   refreshMoviePage={props.refreshMoviePage}
+                                                   similarMedia={props.similarMedia}
+                            />
+                        </div>
                     </div>
                 </div>
-            </div>
+                : ''
+            }
         </div>
     )
 

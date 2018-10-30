@@ -107,8 +107,8 @@ const MoviesView = props => {
     }
 
     return(
-        <div>
-            <div  className={'content-section implementation'} style={{background: '#F0FFF0'}}>
+        <div className={"movies"}>
+            <div  className={'content-section implementation'}>
                 <div className={'content-section implementation'}>
                     <DataView value={props.popularMovies}
                               layout={props.layout}

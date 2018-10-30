@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {MovieService} from "../../services/MovieService";
 import NowPlayingMovieView from "./NowPlayingMovieView";
+import {MediaService} from "../../services/MediaService";
 
 class NowPlayingMovieComponent extends Component{
     constructor(props){
@@ -9,14 +10,17 @@ class NowPlayingMovieComponent extends Component{
             nowPlaying: this.props.location.state.nowPlaying,
             trailer: this.props.location.state.nowPlayingMovieTrailerKey,
             movieReviews: [],
+            similarMedia: [],
             hasReviews: true
         }
         this.getMovieDB = new MovieService();
+        this.getSimilarMovieDB = new MediaService();
     }
 
     componentDidMount(){
-        console.log("mount")
         this.movieReviews = this.getMovieDB.getMovieReviews(this, this.state.nowPlaying.id);
+        this.similarMedia = this.getSimilarMovieDB.getSimilarMedia(this, this.state.nowPlaying.id);
+
     }
 
     componentDidUpdate(){
@@ -36,6 +40,7 @@ class NowPlayingMovieComponent extends Component{
                                  nowPlayingMovieReviews={this.state.movieReviews}
                                  hasReviews={this.state.hasReviews}
                                  refreshMoviePage={this.refreshNowPlayingMoviePage.bind(this)}
+                                 similarMedia={this.state.similarMedia}
             />
         )
     }

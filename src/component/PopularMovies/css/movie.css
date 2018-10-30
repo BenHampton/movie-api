@@ -1,3 +1,7 @@
+.movie{
+    background: #0d0d0d;
+}
+
 .movie-imageContainer{
     margin: 10%;
 }
@@ -48,4 +52,8 @@
 }
 .movie-reviewClickText{
     font-size: 11px
+}
+
+.movie-text{
+    color: white;
 }

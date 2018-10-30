@@ -5,9 +5,7 @@
     z-index: 1;
     height: 100%;
     font-weight: 200;
-    /*                 background-size: cover;
-                       background: #222 center center;  */
-    background: #222;
+    background: #202020;
     display: block;
     text-align: left;
 }
@@ -54,7 +52,7 @@
 
 /*nav text color and space between text*/
 .sidebar .nav li > a {
-    color: #FFFFFF;
+    color: #007bff;
     /*margin: 5px 15px;*/
     opacity: .86;
     margin-top: 15px;

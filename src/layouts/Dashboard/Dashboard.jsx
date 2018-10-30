@@ -6,18 +6,21 @@ import Sidebar from "../../component/Sidebar/Sidebar";
 import dashboardRoutes from "../../routes/dashboard.jsx";
 import Header from "../../component/Header/Header";
 
-import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 
-import '../../../node_modules/primeicons/fonts/primeicons.svg'
-import '../../../node_modules/primereact/resources/primereact.css'
-import '../../../node_modules/primeflex/primeflex.css'
-import '../../../node_modules/primeicons/primeicons.css'
-import '../../component/Header/css/header.css'
+import '../../../node_modules/primeicons/fonts/primeicons.svg';
+import '../../../node_modules/primereact/resources/primereact.css';
+import '../../../node_modules/primeflex/primeflex.css';
+import '../../../node_modules/primeicons/primeicons.css';
+import '../../component/Header/css/header.css';
 
 import '../../component/PopularMovies/css/movies.css';
 import '../../component/PopularMovies/css/movie.css';
-import '../../component/NowPlaying/css/nowPlaying.css'
-import '../../component/SimilarMedia/css/similarMedia.css'
+import '../../component/NowPlaying/css/nowPlaying.css';
+import '../../component/NowPlaying/css/nowPlayingMovie.css';
+import '../../component/SimilarMedia/css/similarMedia.css';
+import '../../component/TvShows/css/tvShow.css';
+import '../../component/TvShows/css/tvShows.css';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -31,7 +34,7 @@ class Dashboard extends Component {
           <div className={'p-col-12'}>
                 <Header/>
           </div>
-          <div className={'p-grid p-col-12 p-nogutter p-align-stretch vertical-container'} style={{background: 'red'}}>
+          <div className={'p-grid p-col-12 p-nogutter p-align-stretch vertical-container'} style={{background: 'black'}}>
               <div className={'p-col-2'}>
                   <Sidebar {...this.props}/>
               </div>

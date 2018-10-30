@@ -58,14 +58,14 @@ const NowPlayingView = props => {
                 </div>
                 <div className={'p-col-9'}>
                     <div className={'list-text-container'}>
-                        <div className={'list-text'}>Title: <b>{nowPlaying.title}</b></div>
-                        <div className={'list-text'}>Genre: <b>{nowPlaying.genre_ids}</b></div>
-                        <div className={'list-text'}>Stars: <b>{nowPlaying.vote_average}</b></div>
+                        <div className={'list-text nowPlaying-text'}>Title: <b>{nowPlaying.title}</b></div>
+                        <div className={'list-text nowPlaying-text'}>Genre: <b>{nowPlaying.genre_ids}</b></div>
+                        <div className={'list-text nowPlaying-text'}>Stars: <b>{nowPlaying.vote_average}</b></div>
                         <div>
-                            <div className={'list-text'}>
+                            <div className={'list-text nowPlaying-text'}>
                                 Overview:
                             </div>
-                            <div className={"overview-container"}>
+                            <div className={"overview-container nowPlaying-text"}>
                                 <ScrollPanel className={"list-overview-scrollPane"}>
                                     <div className={'list-text-overview'}>
                                         <b>{nowPlaying.overview}</b>
@@ -125,7 +125,7 @@ const NowPlayingView = props => {
     }
 
     return(
-        <div className={'content-section implementation'}>
+        <div className={'content-section implementation nowPlaying'}>
             <DataView value={props.nowPlaying}
                       layout={props.layout}
                       itemTemplate={itemTemplate}

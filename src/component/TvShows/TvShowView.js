@@ -20,7 +20,7 @@ const TvShowView = props => {
         let reviews = props.tvShowReviews;
         if(reviews.length === 0){
             return(
-                <div className={'p-grid movie-noReviews'}>
+                <div className={'p-grid movie-noReviews tvShow-color'}>
                     <Card subTitle={"Reviews"} className={'movie-reviewsHeader movie-reviewText p-col-12'}>
                         There are no reviews at this time
                     </Card>
@@ -36,7 +36,7 @@ const TvShowView = props => {
                                   toggleable={true}
                                   collapsed={true}>
                             <ScrollPanel className={"movie-reviewScrollPanel"}>
-                                <div className={'movie-reviewContent'}>
+                                <div className={'movie-reviewContent tvShows-color'}>
                                     {review.content}
                                 </div>
                             </ScrollPanel>
@@ -55,7 +55,7 @@ const TvShowView = props => {
 
     const renderMovieOverview = () => {
         return(
-            <div className="content-section implementation scrollpanel-demo">
+            <div className="content-section implementation scrollpanel-demo tvShows-color">
                 <Card subTitle={"Overview"}>
                     <ScrollPanel className={"movie-overview"}>
                         {props.tvShow.overview}
@@ -64,8 +64,9 @@ const TvShowView = props => {
             </div>
         )
     }
+
     return(
-        <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container'} style={{background: "#D3D3D3"}}>
+        <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container tvShow'}>
             <div className={'p-grid p-nogutter p-col-12 '}>
                 <div className={'p-col-5'}>
                     <div className={'movie-imageContainer'}>
@@ -90,13 +91,13 @@ const TvShowView = props => {
                     </div>
                 </div>
                 <div className={'p-col-7'}>
-                    <div className={'movie-title'}>
+                    <div className={'movie-title tvShows-color'}>
                         {props.tvShow.name}
                     </div>
                     <div className={'p-grid p-nogutter p-col-12'} style={{textAlign: 'center'}}>
                         <div className={"movie-commentsAndReviews"}>
                             {props.tvShowReviews.length !== 0 ?
-                                <Card subTitle="Reviews" className={'movie-reviewsHeader'}>
+                                <Card subTitle="Reviews" className={'movie-reviewsHeader tvShows-color'}>
                                     <div className={'movie-reviewClickText'}>
                                         Click the name to show review
                                     </div>

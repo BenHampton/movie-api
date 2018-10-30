@@ -34,7 +34,7 @@ const SimilarMediaView = props => {
                     <DataView value={props.similarMedia}
                               layout={props.layout}
                               itemTemplate={itemTemplate}
-                              header={props.renderSimilarMovieHeader}
+                              header={props.renderSimilarMediaHeader}
                               className={'p-nogutter'}
                     />
                 </ScrollPanel>

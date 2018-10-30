@@ -43,7 +43,7 @@ class TvShowsComponent extends Component{
     renderTvShowHeader() {
         return (
             <div>
-                <div style={{textAlign: 'right'}}>
+                <div style={{textAlign: 'right', color: 'white'}}>
                     <DataViewLayoutOptions layout={this.state.layout} onChange={(e) => this.setState({layout: e.value})} />
                 </div>
             </div>

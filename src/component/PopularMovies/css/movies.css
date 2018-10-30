@@ -19,6 +19,11 @@
      /*font-size: 15px;*/
      /*font-weight: bold;*/
  /*}*/
+
+.movies{
+    background: #0d0d0d;
+}
+
 .dataview-listItem {
     padding: 2em;
     border-bottom: 1px solid #222;
