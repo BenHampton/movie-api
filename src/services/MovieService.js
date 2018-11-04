@@ -55,7 +55,6 @@ export class MovieService {
         axios.get(`${API_URL}${RELEASE_DATE}${API_KEY}`)
             .then(response => response.data)
             .then(newData => {
-                console.log(newData)
                 let allResults = newData.results;
                 for (let i=0; i < allResults.length; i++) {
 
@@ -71,17 +70,18 @@ export class MovieService {
                                 mediaAndRatings.push(objectToPush);
                                 break;
                             }else if (j === releaseDates.length-1){
-                                //console.log("test")
 
-                                //console.log(releaseDates[j].certification)
                                 objectToPush = Object.assign( {}, data, {rating: ''} );
                                 mediaAndRatings.push(objectToPush);
-                                console.log(mediaAndRatings)
                             }
                         }
                         _this.setState({ nowPlaying: mediaAndRatings });
+                        break;
+                    } else if (allResults[i].iso_3166_1 !== 'US' && i == allResults.length-1){
+                        objectToPush = Object.assign( {}, data, {rating: ''} );
+                        mediaAndRatings.push(objectToPush);
+                        _this.setState({ nowPlaying: mediaAndRatings });
                     }
-
                 }
 
                 return data;

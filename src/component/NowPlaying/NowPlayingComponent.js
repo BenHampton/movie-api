@@ -9,7 +9,7 @@ class NowPlayingComponent extends Component{
         super(props);
         this.state = {
             nowPlaying: [],
-            layout: 'grid',
+            layout: 'list',
             showReleaseDates: [],
             movieTrailerKey: null,
             selectedNowPlayingMovie: null,
