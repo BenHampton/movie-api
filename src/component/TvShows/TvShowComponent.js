@@ -35,7 +35,6 @@ class TvShowComponent extends Component{
     }
 
     render(){
-        console.log(this.props)
         return(
             <TvShowView tvShow={this.state.tvShow}
                          trailer={this.state.trailer}

@@ -10,7 +10,6 @@ const NowPlayingMovieView = props => {
 
     const renderMovieReviews = () => {
         let reviews = props.nowPlayingMovieReviews;
-        console.log(reviews)
         if(reviews.length === 0){
             return(
                 <div className={'p-grid movie-noReviews'}>
@@ -65,7 +64,6 @@ const NowPlayingMovieView = props => {
             </div>
         )
     }
-    console.log(props)
 
     return(
         <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container nowPlayingMovie'}>

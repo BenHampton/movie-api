@@ -1,12 +1,7 @@
 import React, {Component} from 'react';
 import {TVServices} from '../../services/TVServices';
-import {IMG_URL} from '../Constants/constants'
-import {Panel} from '../../../node_modules/primereact/panel'
-import {Dialog} from "primereact/components/dialog/Dialog";
-import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import 'primereact/components/lightbox/Lightbox.css'
-import {DataView, DataViewLayoutOptions} from "primereact/components/dataview/DataView";
-import {Link} from "react-router-dom";
+import {DataViewLayoutOptions} from "primereact/components/dataview/DataView";
 import TvShowsView from "./TvShowsView";
 
 class TvShowsComponent extends Component{
