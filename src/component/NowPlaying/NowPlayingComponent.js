@@ -9,13 +9,13 @@ class NowPlayingComponent extends Component{
         super(props);
         this.state = {
             nowPlaying: [],
-            layout: 'list',
+            layout: 'grid',
             showReleaseDates: [],
             movieTrailerKey: null,
             selectedNowPlayingMovie: null,
             movieIds: null,
             isDialogVisible: false
-        }
+        };
         this.getMovieDB = new MovieService();
     }
     componentDidMount(){
@@ -26,10 +26,6 @@ class NowPlayingComponent extends Component{
     retrieveNowPlayingMovieId(nowPlayingId){
         this.getMovieDB.getMovieTrailer(this, nowPlayingId);
 
-    }
-
-    retrieveNowPlayingMovieRating(nowPlayingId){
-        //this.getMovieDB.getNowPlayingMovieRating(nowPlayingId);
     }
 
     renderNowPlayingHeader() {
@@ -47,7 +43,6 @@ class NowPlayingComponent extends Component{
     }
 
     render(){
-        //console.log(this.state.rating);
         return(
             <NowPlayingView nowPlaying={this.state.nowPlaying}
                             layout={this.state.layout}
@@ -59,7 +54,6 @@ class NowPlayingComponent extends Component{
                             renderNowPlayingHeader={this.renderNowPlayingHeader.bind(this)}
                             showNowPlayingDialog={this.showNowPlayingDialog}
                             retrieveNowPlayingMovieId={this.retrieveNowPlayingMovieId.bind(this)}
-                            retrieveNowPlayingMovieRating={this.retrieveNowPlayingMovieRating}
             />
         )
     }

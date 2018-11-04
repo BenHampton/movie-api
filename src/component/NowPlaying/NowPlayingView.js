@@ -38,7 +38,6 @@ const NowPlayingView = props => {
     }
 
     const renderListItem = (nowPlaying) => {
-        {props.retrieveNowPlayingMovieRating(nowPlaying.id)}
         return (
             <div style={{padding: '2em', borderBottom: '1px solid #d9d9d9', marginLeft: '10px'}} className={'p-grid dataview-listItem'}>
                 <div className={'p-col-3'}>
@@ -59,10 +58,10 @@ const NowPlayingView = props => {
                 </div>
                 <div className={'p-col-9'}>
                     <div className={'list-text-container'}>
-                        <div className={'list-text nowPlaying-text'}>Title: <b>{nowPlaying.title}</b></div>
+                        <div className={'list-text nowPlaying-text'}>Title: <b>{nowPlaying.title} and {nowPlaying.id}</b></div>
                         <div className={'list-text nowPlaying-text'}>Genre: <b>{nowPlaying.genre_ids}</b></div>
                         <div className={'list-text nowPlaying-text'}>Stars: <b>{nowPlaying.vote_average}</b></div>
-                        <div className={'list-text nowPlaying-text'}>Rating: <b>{props.rating}</b></div>
+                        <div className={'list-text nowPlaying-text'}>Rating: <b>{nowPlaying.rating}</b></div>
                         <div>
                             <div className={'list-text nowPlaying-text'}>
                                 Overview:
