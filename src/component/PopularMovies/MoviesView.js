@@ -40,16 +40,17 @@ const MoviesView = props => {
                 </div>
                 <div className={'p-col-9'}>
                     <div className={'list-text-container'}>
-                        <div className={'list-text'}>Title: <b>{movie.title}</b></div>
-                        <div className={'list-text'}>Genre: <b>{movie.genre_ids}</b></div>
-                        <div className={'list-text'}>Stars: <b>{movie.vote_average}</b></div>
+                        <div className={'list-text movies-list-text'}>Title: <b>{movie.title}</b></div>
+                        <div className={'list-text movies-list-text'}>Rating: <b>{movie.rating}</b></div>
+                        <div className={'list-text  movies-list-text'}>Genre: <b>{movie.genre_ids}</b></div>
+                        <div className={'list-text movies-list-text'}>Stars: <b>{movie.vote_average}</b></div>
                         <div>
-                            <div className={'list-text'}>
+                            <div className={'list-text movies-list-text'}>
                                 Overview:
                             </div>
                             <div className={"overview-container"}>
                                 <ScrollPanel className={"list-overview-scrollPane"}>
-                                    <div className={'list-text-overview'}>
+                                    <div className={'list-text-overview movies-list-text'}>
                                         <b>{movie.overview}</b>
                                     </div>
                                 </ScrollPanel>

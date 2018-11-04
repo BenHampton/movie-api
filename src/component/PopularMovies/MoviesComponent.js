@@ -9,7 +9,7 @@ class MoviesComponent extends Component{
         super(props);
         this.state = {
             popularMovies: [],
-            layout: 'grid',
+            layout: 'list',
             movieTrailerKey: null,
             selectedMovie: null,
             movieIds: null,

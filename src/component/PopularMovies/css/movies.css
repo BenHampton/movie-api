@@ -2,6 +2,10 @@
     background: black;
 }
 
+.movies-list-text{
+    color: white;
+}
+
 .dataview-listItem {
     padding: 2em;
     border-bottom: 1px solid #222;

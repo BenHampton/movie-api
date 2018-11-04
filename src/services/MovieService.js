@@ -17,8 +17,11 @@ export class MovieService {
         axios.get(`${API_URL}${GET_POPULAR_MOVIES}${API_KEY}`)
             .then(response => response.data.results)
             .then(data => {
-                _this.setState({popularMovies: data});
-                _this.setState({moiveIds: data.id});
+            _this.setState({ popularMovies: data, movieIds: data.id }, () => {
+                for (let i = 0; i < data.length; i++){
+                    this.getMediaRating(_this, data[i]);
+                }
+            });
                 return data;
             });
     }
@@ -76,11 +79,12 @@ export class MovieService {
                             }
                         }
                         _this.setState({ nowPlaying: mediaAndRatings });
+                        _this.setState({ popularMovies: mediaAndRatings });
                         break;
                     } else if (allResults[i].iso_3166_1 !== 'US' && i == allResults.length-1){
                         objectToPush = Object.assign( {}, data, {rating: ''} );
                         mediaAndRatings.push(objectToPush);
-                        _this.setState({ nowPlaying: mediaAndRatings });
+                        _this.setState({ popularMovies: mediaAndRatings });
                     }
                 }
 
