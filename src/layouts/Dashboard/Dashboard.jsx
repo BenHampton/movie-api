@@ -14,10 +14,8 @@ import '../../../node_modules/primeflex/primeflex.css';
 import '../../../node_modules/primeicons/primeicons.css';
 import '../../component/Header/css/header.css';
 
-import '../../component/PopularMovies/css/movies.css';
-import '../../component/PopularMovies/css/movie.css';
-import '../../component/NowPlaying/css/nowPlaying.css';
-import '../../component/NowPlaying/css/nowPlayingMovie.css';
+import '../../component/Media/css/movies.css';
+import '../../component/Media/css/movie.css';
 import '../../component/SimilarMedia/css/similarMedia.css';
 import '../../component/TvShows/css/tvShow.css';
 import '../../component/TvShows/css/tvShows.css';

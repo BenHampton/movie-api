@@ -1,10 +1,9 @@
 import React from 'react';
-import {IMG_URL} from "../Constants/constants";
-import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 import {Card} from "primereact/components/card/Card";
 import {Fieldset} from "primereact/components/fieldset/Fieldset";
 import SimilarMediaComponent from "../SimilarMedia/SimilarMediaComponent";
+import {IMG_URL} from "../Constants/constants";
 
 const MovieView = props => {
 
@@ -19,7 +18,7 @@ const MovieView = props => {
                 </div>
             )
         }
-        var allReviews = reviews.map((review, key) => {
+        let allReviews = reviews.map((review, key) => {
             return(
                 <div key={key} className="content-section introduction">
                     <div className="feature-intro">
@@ -51,40 +50,40 @@ const MovieView = props => {
                 {author}
             </div>
         )
-    }
+    };
 
     const renderMovieOverview = (event) => {
         return(
-            <div className="content-section implementation scrollpanel-demo movie-text">
-                <Card subTitle={"Overview"}>
-                    <ScrollPanel className={"movie-overview"}>
+            <div className="content-section implementation scrollpanel-demo movie-overview-container">
+                <Card subTitle={"Overview"} className={'movie-overview-title'}>
+                    <ScrollPanel className={"movie-overview movie-text"}>
                         {props.movie.overview}
                     </ScrollPanel>
                 </Card>
             </div>
         )
-    }
+    };
 
     return(
         <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container movie'}>
             <div className={'p-grid p-nogutter p-col-12 '}>
                 <div className={'p-col-5'}>
                     <div className={'movie-imageContainer'}>
-                        <Lightbox type={'content'}>
+                        {/*<Lightbox type={'content'}>*/}
                             <a className={'group'} >
                                 <img src={`${IMG_URL}${props.movie.poster_path}`} alt={props.movie.original_title} className={'image-movie-poster'}/>
                             </a>
-                            <div>
-                                <iframe title="Video"
-                                        width="560"
-                                        height="315"
-                                        src={"https://www.youtube.com/embed/" + props.trailer}
-                                        frameBorder="0"
-                                        allowFullScreen>
+                            {/*<div>*/}
+                                {/*<iframe title="Video"*/}
+                                        {/*width="560"*/}
+                                        {/*height="315"*/}
+                                        {/*src={"https://www.youtube.com/embed/" + props.trailer}*/}
+                                        {/*frameBorder="0"*/}
+                                        {/*allowFullScreen>*/}
 
-                                </iframe>
-                            </div>
-                        </Lightbox>
+                                {/*</iframe>*/}
+                            {/*</div>*/}
+                        {/*</Lightbox>*/}
                         <div className={'p-col-12'}>
                             {renderMovieOverview()}
                         </div>
@@ -109,7 +108,7 @@ const MovieView = props => {
                     </div>
                 </div>
             </div>
-            { props.similarMedia.length != 0 ?
+            { props.similarMedia.length !== 0 ?
                 <div className={'similar-margin-top-10'}>
                     <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'}>
                         <div className={'p-offset-1 p-col-10'}>

@@ -1,0 +1,64 @@
+.movies{
+    background: black;
+}
+
+.dataview-listItem {
+    padding: 2em;
+    border-bottom: 1px solid #222;
+    width: 10px;
+}
+
+p-dataview-content{
+    margin-left: 50px;
+}
+
+.dashboard-route{
+    background: black;
+}
+
+.list-text-container{
+    margin-left: 5%;
+}
+
+.movies-list-text{
+    color: white;
+    padding: 15px;
+}
+
+.list-overview-scrollPane{
+    height: 130px;
+}
+
+.movies-overview-text{
+    color: white;
+    text-indent: 20px;
+    margin-left: 8%;
+    margin-right: 3%;
+}
+
+.grid-header{
+    font-size: 18px;
+    max-height: 5px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+a {
+    transition: all 0.7s;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.image-poster {
+    max-width: 90%;
+    height: 30vh;
+}
+
+.image-poster-grid {
+    max-width: 111%;
+    height: 64vh;
+}

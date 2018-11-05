@@ -1,15 +1,14 @@
 import Dashboard from "../layouts/Dashboard/Dashboard";
-import MoviePanel from "../component/PopularMovies/MoviePanel";
-import App from "../App";
-import NowPlayingPanel from "../component/NowPlaying/NowPlayingPanel";
+import App from "../component/Home/App";
 import TvShowPanel from "../component/TvShows/TvShowPanel";
-import MovieComponent from "../component/PopularMovies/MovieComponent";
 import TvShowComponent from "../component/TvShows/TvShowComponent";
-import NowPlayingMovieComponent from "../component/NowPlaying/NowPlayingMovieComponent";
+import MoviesPanel from "../component/Media/MoviesPanel";
+import MoviesComponent from "../component/Media/MovieComponent";
 
 const dashboardRoutes = [
+    //chrome://flags/#expensive-background-timer-throttling
   {
-    path: "/app",
+    path: "/home",
     name: "Home",
     icon: "pe-7s-graph",
     hide: false,
@@ -19,14 +18,14 @@ const dashboardRoutes = [
     path: "/movies",
     name: "Popular Movies",
     icon: "pe-7s-user",
-    component: MoviePanel
+    component: MoviesPanel
   },
   {
     path: "/now-playing",
     name: "Now Playing",
     icon: "pe-7s-news-paper",
     hide: false,
-    component: NowPlayingPanel
+    component: MoviesPanel
   },
   {
       path: "/tv-shows",
@@ -38,7 +37,13 @@ const dashboardRoutes = [
       path: "/movie",
       icon: "pe-7s-news-paper",
       hide: true,
-      component: MovieComponent
+      component: MoviesComponent
+  },
+  {
+      path: "/now-playing-movie",
+      icon: "pe-7s-news-paper",
+      hide: true,
+      component: MoviesComponent
   },
   {
       path: "/tv-show",
@@ -46,13 +51,7 @@ const dashboardRoutes = [
       hide: true,
       component: TvShowComponent
   },
-  {
-      path: "/now-playing-movie",
-      icon: "pe-7s-news-paper",
-      hide: true,
-      component: NowPlayingMovieComponent
-  },
-  { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
+  { redirect: true, path: "/", to: "/home", name: "Home" }
 ];
 
   // { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },
