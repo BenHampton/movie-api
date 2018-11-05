@@ -1,13 +1,12 @@
 import Dashboard from "../layouts/Dashboard/Dashboard";
-import MoviePanel from "../component/PopularMovies/MoviePanel";
 import App from "../App";
-import NowPlayingPanel from "../component/NowPlaying/NowPlayingPanel";
 import TvShowPanel from "../component/TvShows/TvShowPanel";
-import MovieComponent from "../component/PopularMovies/MovieComponent";
 import TvShowComponent from "../component/TvShows/TvShowComponent";
-import NowPlayingMovieComponent from "../component/NowPlaying/NowPlayingMovieComponent";
+import MediaPanel from "../component/Media/MediaPanel";
+import MediaComponent from "../component/Media/MediaComponent";
 
 const dashboardRoutes = [
+    //chrome://flags/#expensive-background-timer-throttling
   {
     path: "/app",
     name: "Home",
@@ -19,14 +18,14 @@ const dashboardRoutes = [
     path: "/movies",
     name: "Popular Movies",
     icon: "pe-7s-user",
-    component: MoviePanel
+    component: MediaPanel
   },
   {
     path: "/now-playing",
     name: "Now Playing",
     icon: "pe-7s-news-paper",
     hide: false,
-    component: NowPlayingPanel
+    component: MediaPanel
   },
   {
       path: "/tv-shows",
@@ -38,19 +37,19 @@ const dashboardRoutes = [
       path: "/movie",
       icon: "pe-7s-news-paper",
       hide: true,
-      component: MovieComponent
+      component: MediaComponent
+  },
+  {
+      path: "/now-playing-movie",
+      icon: "pe-7s-news-paper",
+      hide: true,
+      component: MediaComponent
   },
   {
       path: "/tv-show",
       icon: "pe-7s-news-paper",
       hide: true,
       component: TvShowComponent
-  },
-  {
-      path: "/now-playing-movie",
-      icon: "pe-7s-news-paper",
-      hide: true,
-      component: NowPlayingMovieComponent
   },
   { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
 ];
