@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {MovieService} from '../../services/MovieService';
-import MediasView from "./MediasView";
+import MoviesView from "./MoviesView";
 
-class MediasComponent extends Component{
+class MoviesComponent extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -42,7 +42,7 @@ class MediasComponent extends Component{
 
     render(){
         return(
-            <MediasView movies={this.state.movies}
+            <MoviesView movies={this.state.movies}
                         layout={this.state.layout}
                         movieTrailerKey={this.state.movieTrailerKey}
                         selectedMovie={this.state.selectedMovie}
@@ -55,4 +55,4 @@ class MediasComponent extends Component{
         )
     }
 }
-export default MediasComponent
+export default MoviesComponent

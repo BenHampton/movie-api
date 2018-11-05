@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {MovieService} from "../../services/MovieService";
-import MovieView from "./MovieView";
 import {MediaService} from "../../services/MediaService";
+import MovieView from "./MovieView";
 
-class MovieComponent extends Component {
+class MoviesComponent extends Component {
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
             movie: this.props.location.state.movie,
             trailer: this.props.location.state.movieTrailerKey,
@@ -45,4 +45,4 @@ class MovieComponent extends Component {
         )
     }
 }
-export default MovieComponent;
+export default MoviesComponent;

@@ -6,7 +6,7 @@ import {Lightbox} from "primereact/components/lightbox/Lightbox";
 import {ScrollPanel} from "primereact/components/scrollpanel/ScrollPanel";
 import {Link} from "react-router-dom";
 
-const MediasView = props => {
+const MoviesView = props => {
 
     const itemTemplate = (movie, layout) => {
         if (!movie) {
@@ -169,4 +169,4 @@ const MediasView = props => {
         </div>
     )
 }
-export default MediasView;
+export default MoviesView;

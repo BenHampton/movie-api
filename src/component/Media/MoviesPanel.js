@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import MoviesComponent from "./MoviesComponent";
 
 
-class MoviePanel extends Component{
+class MoviesPanel extends Component{
     constructor(props){
         super(props);
 
@@ -17,4 +17,4 @@ class MoviePanel extends Component{
         )
     }
 }
-export default MoviePanel;
+export default MoviesPanel;

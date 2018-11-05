@@ -2,8 +2,8 @@ import Dashboard from "../layouts/Dashboard/Dashboard";
 import App from "../App";
 import TvShowPanel from "../component/TvShows/TvShowPanel";
 import TvShowComponent from "../component/TvShows/TvShowComponent";
-import MediaPanel from "../component/Media/MediaPanel";
-import MediaComponent from "../component/Media/MediaComponent";
+import MoviesPanel from "../component/Media/MoviesPanel";
+import MoviesComponent from "../component/Media/MovieComponent";
 
 const dashboardRoutes = [
     //chrome://flags/#expensive-background-timer-throttling
@@ -18,14 +18,14 @@ const dashboardRoutes = [
     path: "/movies",
     name: "Popular Movies",
     icon: "pe-7s-user",
-    component: MediaPanel
+    component: MoviesPanel
   },
   {
     path: "/now-playing",
     name: "Now Playing",
     icon: "pe-7s-news-paper",
     hide: false,
-    component: MediaPanel
+    component: MoviesPanel
   },
   {
       path: "/tv-shows",
@@ -37,13 +37,13 @@ const dashboardRoutes = [
       path: "/movie",
       icon: "pe-7s-news-paper",
       hide: true,
-      component: MediaComponent
+      component: MoviesComponent
   },
   {
       path: "/now-playing-movie",
       icon: "pe-7s-news-paper",
       hide: true,
-      component: MediaComponent
+      component: MoviesComponent
   },
   {
       path: "/tv-show",
