@@ -1,0 +1,29 @@
+/*.App {*/
+  /*text-align: center;*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+/*from { transform: rotate(0deg); }*/
+/*to { transform: rotate(360deg); }*/
+/*}*/
+
+/*.App-title {*/
+/*font-size: 1.5em;*/
+/*}*/
+
+.home{
+    color: white;
+}
+
+.App-header {
+    margin: 5%;
+  height: 50px;
+  padding: 20px;
+}
+
+
+.App-intro {
+    margin: 10%;
+  font-size: large;
+}
+

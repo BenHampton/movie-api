@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/App.css';
 
 class App extends Component {
     constructor(props){
@@ -7,7 +7,7 @@ class App extends Component {
     }
   render() {
     return (
-      <div className="App">
+      <div className="home">
         <header className="App-header">
           <h4 className="App-title">web page is using React</h4>
         </header>

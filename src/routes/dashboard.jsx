@@ -1,5 +1,5 @@
 import Dashboard from "../layouts/Dashboard/Dashboard";
-import App from "../App";
+import App from "../component/Home/App";
 import TvShowPanel from "../component/TvShows/TvShowPanel";
 import TvShowComponent from "../component/TvShows/TvShowComponent";
 import MoviesPanel from "../component/Media/MoviesPanel";
@@ -8,7 +8,7 @@ import MoviesComponent from "../component/Media/MovieComponent";
 const dashboardRoutes = [
     //chrome://flags/#expensive-background-timer-throttling
   {
-    path: "/app",
+    path: "/home",
     name: "Home",
     icon: "pe-7s-graph",
     hide: false,
@@ -51,7 +51,7 @@ const dashboardRoutes = [
       hide: true,
       component: TvShowComponent
   },
-  { redirect: true, path: "/", to: "/dashboard", name: "Dashboard" }
+  { redirect: true, path: "/", to: "/home", name: "Home" }
 ];
 
   // { path: "/icons", name: "Icons", icon: "pe-7s-science", component: Icons },

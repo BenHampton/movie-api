@@ -18,6 +18,16 @@
     text-align: center;
 }
 
+.movie-overview-container{
+    margin-left: -15px;
+    width: 95%;
+}
+
+.movie-overview-title{
+    font-size: 20px;
+    color: white;
+}
+
 .movie-overview{
     font-size: 15px;
     text-align: left;

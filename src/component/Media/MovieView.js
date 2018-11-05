@@ -50,19 +50,19 @@ const MovieView = props => {
                 {author}
             </div>
         )
-    }
+    };
 
     const renderMovieOverview = (event) => {
         return(
-            <div className="content-section implementation scrollpanel-demo movie-text">
-                <Card subTitle={"Overview"}>
-                    <ScrollPanel className={"movie-overview"}>
+            <div className="content-section implementation scrollpanel-demo movie-overview-container">
+                <Card subTitle={"Overview"} className={'movie-overview-title'}>
+                    <ScrollPanel className={"movie-overview movie-text"}>
                         {props.movie.overview}
                     </ScrollPanel>
                 </Card>
             </div>
         )
-    }
+    };
 
     return(
         <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container movie'}>

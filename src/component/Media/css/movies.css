@@ -2,18 +2,55 @@
     background: black;
 }
 
-.movies-list-text{
-    color: white;
-}
-
 .dataview-listItem {
     padding: 2em;
     border-bottom: 1px solid #222;
     width: 10px;
 }
 
+p-dataview-content{
+    margin-left: 50px;
+}
+
 .dashboard-route{
-    background: white;
+    background: black;
+}
+
+.list-text-container{
+    margin-left: 5%;
+}
+
+.movies-list-text{
+    color: white;
+    padding: 15px;
+}
+
+.list-overview-scrollPane{
+    height: 130px;
+}
+
+.movies-overview-text{
+    color: white;
+    text-indent: 20px;
+    margin-left: 8%;
+    margin-right: 3%;
+}
+
+.grid-header{
+    font-size: 18px;
+    max-height: 5px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+a {
+    transition: all 0.7s;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
 }
 
 .image-poster {
@@ -24,32 +61,4 @@
 .image-poster-grid {
     max-width: 111%;
     height: 64vh;
-}
-.movieList-text{
-    margin: auto auto;
-    font-size: 15px;
-}
-
-.gridMovie-titles{
-    max-height: 10%;
-}
-
-p-dataview-content{
-    margin-left: 50px;
-}
-
-.grid-header{
-    font-size: 18px;
-    max-height: 5px;
-    margin-bottom: 30px;
-    margin-left: 10%;
-}
-
-a {
-    transition: all 0.7s;
-}
-
-a:hover{
-    text-decoration: none;
-    color: white;
 }

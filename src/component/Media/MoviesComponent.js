@@ -7,7 +7,7 @@ class MoviesComponent extends Component{
         super(props);
         this.state = {
             movies: [],
-            layout: 'grid',
+            layout: 'list',
             movieTrailerKey: null,
             selectedMovie: null,
             isDialogVisible: false
