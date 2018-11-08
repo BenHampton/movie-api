@@ -6,14 +6,14 @@ import {Panel} from "primereact/components/panel/Panel";
 
 const SimilarMediaView = props => {
 
-    const itemTemplate = (movie, layout) => {
-        if (!movie) {
+    const itemTemplate = (media, layout) => {
+        if (!media) {
             return;
         }
         if (layout === 'grid'){
-            return renderImageGrid(movie)
+            return renderImageGrid(media)
         }
-    }
+    };
 
     const renderImageGrid = (similarMedia) => {
         return (
@@ -23,9 +23,10 @@ const SimilarMediaView = props => {
                         <img src={`${IMG_URL}${similarMedia.poster_path}`} alt={similarMedia.original_title} className={'similar-image-poster'}/>
                     </a>
                 </Panel>
+
             </div>
         );
-    }
+    };
 
     return(
         <div  className={'content-section implementation similarMovie'}>

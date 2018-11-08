@@ -116,6 +116,7 @@ const MovieView = props => {
                                                    title={props.movie.title}
                                                    refreshMoviePage={props.refreshMoviePage}
                                                    similarMedia={props.similarMedia}
+                                                   location={window.location.pathname}
                             />
                         </div>
                     </div>

@@ -20,7 +20,7 @@ class MoviesComponent extends Component {
 
     componentDidMount(){
         this.movieReviews = this.getMovieDB.getMovieReviews(this, this.state.movie.id);
-        this.similarMedia = this.getSimilarMovieDB.getSimilarMedia(this, this.state.movie.id);
+        this.similarMedia = this.getSimilarMovieDB.getSimilarMovieMedia(this, this.state.movie.id);
     }
 
     componentDidUpdate(){

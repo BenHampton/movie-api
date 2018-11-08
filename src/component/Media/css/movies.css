@@ -44,6 +44,10 @@ p-dataview-content{
     font-weight: bold;
 }
 
+.iframe-container{
+    margin: 0;
+}
+
 a {
     transition: all 0.7s;
 }

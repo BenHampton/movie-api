@@ -18,7 +18,7 @@ const TvShowsView = props => {
         } else if (layout === 'grid'){
             return renderImageGrid(tvShow)
         }
-    }
+    };
 
     const renderImageHeader = (tvShow) => {
         return (
@@ -34,7 +34,7 @@ const TvShowsView = props => {
                 </Link>
             </div>
         );
-    }
+    };
 
     const renderListItem = (tvShow) => {
         return (
@@ -76,7 +76,7 @@ const TvShowsView = props => {
                 </div>
             </div>
         );
-    }
+    };
 
     const renderImageGrid = (tvShow) => {
         return (
@@ -87,6 +87,7 @@ const TvShowsView = props => {
                             <img src={`${IMG_URL}${tvShow.poster_path}`} alt={tvShow.original_name} className={'image-poster-grid'}/>
                         </a>
                         <div>
+                            { props.tvShowsTrailerKey ?
                             <iframe title="Video"
                                     width="560"
                                     height="315"
@@ -94,6 +95,8 @@ const TvShowsView = props => {
                                     frameBorder="0"
                                     allowFullScreen>
                             </iframe>
+                                : ''
+                            }
                         </div>
                     </Lightbox>
                     <div className="car-detail">
@@ -104,7 +107,7 @@ const TvShowsView = props => {
                 </Panel>
             </div>
         );
-    }
+    };
 
     const renderTvShowsDialogContent = (event) => {
         if (props.selectedTvShow) {
@@ -123,7 +126,8 @@ const TvShowsView = props => {
         else {
             return null;
         }
-    }
+    };
+
     return(
         <div className={'tvShows'} >
             <div className={'content-section implementation'}>
@@ -145,6 +149,6 @@ const TvShowsView = props => {
             </div>
         </div>
     )
-}
+};
 
 export default TvShowsView;

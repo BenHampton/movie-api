@@ -14,7 +14,7 @@ const TvShowView = props => {
                 {author}
             </div>
         )
-    }
+    };
 
     const renderReviews = (event) => {
         let reviews = props.tvShowReviews;
@@ -27,7 +27,7 @@ const TvShowView = props => {
                 </div>
             )
         }
-        var allReviews = reviews.map((review, key) => {
+        let allReviews = reviews.map((review, key) => {
             return(
                 <div key={key} className="content-section introduction">
                     <div className="feature-intro">
@@ -51,7 +51,7 @@ const TvShowView = props => {
             </div>
         )
 
-    }
+    };
 
     const renderMovieOverview = () => {
         return(
@@ -63,7 +63,7 @@ const TvShowView = props => {
                 </Card>
             </div>
         )
-    }
+    };
 
     return(
         <div className={'p-grid p-nogutter p-col-12 p-align-stretch vertical-container tvShow'}>
@@ -109,11 +109,15 @@ const TvShowView = props => {
                     </div>
                 </div>
             </div>
-            { props.similarMedia.length != 0 ?
+            { props.similarMedia.length !== 0 ?
                 <div className={'similar-margin-top-10'}>
                     <div className={'p-grid p-col-12 p-nogutter similar-margin-bottom-5'}>
                         <div className={'p-offset-1 p-col-10'}>
-                            <SimilarMediaComponent id={props.tvShow.id} title={props.tvShow.name} refreshMoviePage={props.refreshTvShowPage} />
+                            <SimilarMediaComponent id={props.tvShow.id}
+                                                   title={props.tvShow.name}
+                                                   refreshMoviePage={props.refreshTvShowPage}
+                                                   location={window.location.pathname}
+                            />
                         </div>
                     </div>
                 </div>
@@ -121,5 +125,5 @@ const TvShowView = props => {
             }
         </div>
     )
-}
+};
 export default TvShowView;

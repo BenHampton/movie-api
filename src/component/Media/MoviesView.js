@@ -17,7 +17,7 @@ const MoviesView = props => {
         } else if (layout === 'grid'){
             return renderImageGrid(movie)
         }
-    }
+    };
 
     this.updateMovieLayout = () => {
         return (
@@ -62,7 +62,7 @@ const MoviesView = props => {
                         <a className={'group'} onClick={(e) => props.retrieveMoviePreview(movie.id)} >
                             <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.original_title} className={'image-poster-grid'}/>
                         </a>
-                            {props.movieTrailerKey ?
+                            { props.movieTrailerKey ?
                                 <iframe title="Video"
                                         width="560"
                                         height="315"
@@ -96,7 +96,7 @@ const MoviesView = props => {
                 </div>
             </div>
         );
-    }
+    };
 
     const renderImageGrid = (movie) => {
         return (
@@ -124,7 +124,7 @@ const MoviesView = props => {
                 </Panel>
             </div>
         );
-    }
+    };
 
     // const renderDialogContent = (event) => {
     //     if (props.selectedMovie) {
@@ -168,5 +168,5 @@ const MoviesView = props => {
             </div>
         </div>
     )
-}
+};
 export default MoviesView;

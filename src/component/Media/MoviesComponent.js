@@ -7,12 +7,12 @@ class MoviesComponent extends Component{
         super(props);
         this.state = {
             movies: [],
-            layout: 'list',
+            layout: 'grid',
             movieTrailerKey: null,
             selectedMovie: null,
             isDialogVisible: false
 
-        }
+        };
         this.getMovieDB = new MovieService();
     }
     componentDidMount(){

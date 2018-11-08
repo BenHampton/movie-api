@@ -13,5 +13,7 @@ module.exports = {
     GET_TV_SHOW_VIDEOS: '/tv/{tv_id}/videos',
     GET_TV_SHOW_REVIEWS: '/tv/{tv_id}/reviews',
     GET_POPULAR_TV_SHOWS: '/tv/popular',
-    GET_SIMILAR_MEDIA: '/movie/{movie_id}/similar'
-}
+    GET_TV_SHOW_DETAILS: '/tv/{tv_id}',
+    GET_SIMILAR_MOVIE_MEDIA: '/movie/{movie_id}/similar',
+    GET_SIMILAR_TV_MEDIA: '/tv/{tv_id}/similar'
+};

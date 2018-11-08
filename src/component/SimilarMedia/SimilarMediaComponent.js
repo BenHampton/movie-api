@@ -8,11 +8,12 @@ class SimilarMediaComponent extends Component{
         this.state = {
             similarMedia: props.similarMedia,
             layout: 'grid',
-            movieTrailerKey: null,
-            selectedMovie: null,
-            movieIds: null,
+            location: props.location.pathname,
+            mediaTrailerKey: null,
+            selectedMedia: null,
+            mediaIds: null,
             isDialogVisible: false
-        }
+        };
         this.getMovieDB = new MediaService();
         this.retrieveMovieId = this.retrieveMovieId.bind(this);
         this.refreshSimPage = this.refreshSimPage.bind(this);
@@ -20,7 +21,11 @@ class SimilarMediaComponent extends Component{
     }
 
     componentWillReceiveProps(){
-        this.similarMedia = this.getMovieDB.getSimilarMedia(this, this.props.id);
+        if(this.props.location === '/tv-show'){
+            this.similarMedia = this.getMovieDB.getSimilarTvMedia(this, this.props.id);
+        }else if(this.props.location === '/movie') {
+            this.similarMedia = this.getMovieDB.getSimilarMovieMedia(this, this.props.id);
+        }
     }
 
     retrieveMovieId(movie){
@@ -35,7 +40,7 @@ class SimilarMediaComponent extends Component{
     renderSimilarMediaHeader() {
         return (
             <h4 className={'similar-header similarMovie-text'}>
-                Similar movies related to {this.props.title}
+                Similar movies related to { this.props.location === './movie' ? this.props.title : this.props.name }
             </h4>
         );
     }
@@ -47,11 +52,11 @@ class SimilarMediaComponent extends Component{
     render(){
         return(
             <SimilarMediaView similarMedia={this.state.similarMedia}
-                              movieIds={this.state.movieIds}
+                              mediaIds={this.state.mediaIds}
                               isDialogVisible={this.state.isDialogVisible}
                               layout={this.state.layout}
-                              selectedMovie={this.state.selectedMovie}
-                              movieTrailerKey={this.state.movieTrailerKey}
+                              selectedMedia={this.state.selectedMedia}
+                              mediaTrailerKey={this.state.mediaTrailerKey}
                               renderSimilarMediaHeader={this.renderSimilarMediaHeader()}
                               refreshSimPage={this.refreshSimPage.bind(this)}
             />
