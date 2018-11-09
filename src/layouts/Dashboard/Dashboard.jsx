@@ -4,7 +4,6 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import Sidebar from "../../component/Sidebar/Sidebar";
 
 import dashboardRoutes from "../../routes/dashboard.jsx";
-import Header from "../../component/Header/Header";
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 
@@ -12,7 +11,6 @@ import '../../../node_modules/primeicons/fonts/primeicons.svg';
 import '../../../node_modules/primereact/resources/primereact.css';
 import '../../../node_modules/primeflex/primeflex.css';
 import '../../../node_modules/primeicons/primeicons.css';
-import '../../component/Header/css/header.css';
 
 import '../../component/Media/css/movies.css';
 import '../../component/Media/css/movie.css';
@@ -28,15 +26,15 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div className="p-grid p-nogutter">
-          <div className={'p-col-12'}>
-                <Header/>
+      <div className="p-grid p-nogutter" style={{background: 'black'}}>
+          <div className={'p-col-12'} >
+              <Sidebar {...this.props}/>
           </div>
           <div className={'p-grid p-col-12 p-nogutter p-align-stretch vertical-container'} style={{background: 'black'}}>
-              <div className={'p-col-2'}>
-                  <Sidebar {...this.props}/>
-              </div>
-              <div className={'p-col-10 dashboard-route'} style={{background: 'black'}}>
+              {/*<div className={'p-col-2'}>*/}
+                  {/*<Sidebar {...this.props}/>*/}
+              {/*</div>*/}
+              <div className={'p-col-12 dashboard-route'} style={{background: 'black'}}>
                   <Switch>
                           {dashboardRoutes.map((prop, key) => {
                               if (prop.name === "/movie" || prop.name === "/tv-show" || prop.name === "/now-playing-movie") {

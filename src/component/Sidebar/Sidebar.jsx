@@ -28,28 +28,23 @@ class Sidebar extends Component {
   }
 
   render() {
-    //p-grid is on Dashboard and is good... SideBar had no p-grid and is not bootstrapped.. needs bootstrap and styling
     return (
       <div id="sidebar" className="sidebar" >
-        <div className={'sidebar-wrapper'}>
-          <div className={'sidebar-fixed'}>
-            <ul className={'nav'}>
-              <div>
-                {dashboardRoutes.map((prop, key) => {
-                  if (!prop.redirect)
-                    return (
-                      <li className={ prop.upgrade ? "active active-pro" : this.activeRoute(prop.path) } key={key} >
-                          <NavLink to={prop.path} className={prop.hide ? "nav-link navLink-hoverBox sidebar-hide" : "nav-link navLink-hoverBox"} activeClassName="active" >
-                            <i className={prop.icon} />
-                            <p>{prop.name}</p>
-                          </NavLink>
-                      </li>
-                    );
-                  return null;
-                })}
-              </div>
-            </ul>
-          </div>
+        <div className={''}>
+          <ul className={'nav-top'}>
+            {dashboardRoutes.map((prop, key) => {
+              if (!prop.redirect)
+                return (
+                  <li className={ prop.upgrade ? "active active-pro" : this.activeRoute(prop.path) } key={key} >
+                      <NavLink to={prop.path} className={prop.hide ? "nav-link navLink-hoverBox sidebar-hide" : "nav-link navLink-hoverBox"} activeClassName="active" >
+                        <i className={prop.icon} />
+                        <p>{prop.name}</p>
+                      </NavLink>
+                  </li>
+                );
+              return null;
+            })}
+          </ul>
         </div>
       </div>
     );
