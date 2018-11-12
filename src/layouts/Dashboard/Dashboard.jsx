@@ -17,6 +17,7 @@ import '../../component/Media/css/movie.css';
 import '../../component/SimilarMedia/css/similarMedia.css';
 import '../../component/TvShows/css/tvShow.css';
 import '../../component/TvShows/css/tvShows.css';
+import './css/dashboard.css'
 
 class Dashboard extends Component {
   constructor(props) {
@@ -31,10 +32,7 @@ class Dashboard extends Component {
               <Sidebar {...this.props}/>
           </div>
           <div className={'p-grid p-col-12 p-nogutter p-align-stretch vertical-container'} style={{background: 'black'}}>
-              {/*<div className={'p-col-2'}>*/}
-                  {/*<Sidebar {...this.props}/>*/}
-              {/*</div>*/}
-              <div className={'p-col-12 dashboard-route'} style={{background: 'black'}}>
+              <div className={'p-col-12 dashboard-route'}>
                   <Switch>
                           {dashboardRoutes.map((prop, key) => {
                               if (prop.name === "/movie" || prop.name === "/tv-show" || prop.name === "/now-playing-movie") {
