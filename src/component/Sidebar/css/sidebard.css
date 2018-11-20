@@ -1,30 +1,61 @@
+.nav-top{
+    margin-left: 3%;
+    margin-bottom: 0 !important;
+    height: 7vh;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+li {
+    margin-left: 10%;
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover{
+    color: #007bff;
+}
+
+/*li a:hover {*/
+    /*background-color: #111;*/
+/*}*/
 
 .sidebar {
     display: block;
     width: 100%;
     z-index: 1;
-    height: 100%;
+    height: 7vh;
     font-weight: 200;
     background: #202020;
-    display: block;
     text-align: left;
+    position: fixed;
+    opacity: 0.7;
 }
 
 /* height of sidebar*/
 .sidebar-wrapper{
     position: relative;
-    height: calc(100vh - 75px);
+    /*height: 10vh;*/
     /*overflow: auto;*/
     width: 100%;
-    z-index: 4;
-    padding-bottom: 30px;
+    /*z-index: 4;*/
 }
 
 .sidebar-fixed{
     /*height: calc(100vh - 75px);*/
     /*overflow: auto;*/
-    z-index: 4;
-    padding-bottom: 30px;
+    /*z-index: 4;*/
 }
 
 .sidebar-hide{
@@ -34,51 +65,49 @@
 /*nav text positioning*/
 .sidebar .nav {
     position: fixed;
-    margin-top: 0%;
 }
 
-.navLink-hoverBox{
-    width: 100%;
-}
+/*.navLink-hoverBox{*/
+    /*width: 100%;*/
+/*}*/
 
 /*menu item is highlighted when hovering*/
-.sidebar .nav .open > a,
-.sidebar .nav li.dropdown .dropdown-menu li:hover > a,
-.sidebar .nav li:hover > a {
-    background-color: rgba(255, 255, 255, 0.13);
-    opacity: 1;
-    width: 100%;
-}
+/*.sidebar .nav .open > a,*/
+/*.sidebar .nav li.dropdown .dropdown-menu li:hover > a,*/
+/*.sidebar .nav li:hover > a {*/
+    /*background-color: rgba(255, 255, 255, 0.13);*/
+    /*opacity: 1;*/
+    /*width: 100%;*/
+/*}*/
 
 /*nav text color and space between text*/
-.sidebar .nav li > a {
-    color: #007bff;
-    /*margin: 5px 15px;*/
-    opacity: .86;
-    margin-top: 15px;
-    border-radius: 4px;
-    display: block;
-}
+/*.sidebar .nav li > a {*/
+    /*color: #007bff;*/
+    /*!*margin: 5px 15px;*!*/
+    /*opacity: .86;*/
+    /*!*margin-top: 15px;*!*/
+    /*!*border-radius: 4px;*!*/
+/*}*/
 
-/*when menu item selected keeps highlighted*/
-.sidebar .nav li.active > a {
-    color: #FFFFFF;
-    opacity: 1;
-    background: rgba(255, 255, 255, 0.23);
-}
+/*!*when menu item selected keeps highlighted*!*/
+/*.sidebar .nav li.active > a {*/
+    /*color: #FFFFFF;*/
+    /*opacity: 1;*/
+    /*background: rgba(255, 255, 255, 0.23);*/
+/*}*/
 
 .nav{
     position: fixed;
 }
 
 /*makes nav menu items align up to down idk if its up to down or down to up lol*/
-.sidebar .nav p {
-    line-height: 30px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0 0 0 45px;
-}
+/*.sidebar .nav p {*/
+    /*!*line-height: 30px;*!*/
+    /*font-size: 12px;*/
+    /*font-weight: 600;*/
+    /*text-transform: uppercase;*/
+    /*!*margin: 0 0 0 45px;*!*/
+/*}*/
 
 
 

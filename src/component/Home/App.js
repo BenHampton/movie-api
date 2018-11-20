@@ -7,7 +7,7 @@ class App extends Component {
     }
   render() {
     return (
-      <div className="home">
+      <div className="home" >
         <header className="App-header">
           <h4 className="App-title">web page is using React</h4>
         </header>
