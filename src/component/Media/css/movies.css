@@ -1,5 +1,6 @@
 .movies{
     background: black;
+    margin-top: 3%;
 }
 
 .dataview-listItem {
@@ -41,7 +42,7 @@ p-dataview-content{
     font-size: 18px;
     max-height: 5px;
     margin-bottom: 30px;
-    margin-left: 10%;
+    margin-left: auto;
     font-weight: bold;
 }
 

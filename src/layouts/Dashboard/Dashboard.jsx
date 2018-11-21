@@ -32,7 +32,7 @@ class Dashboard extends Component {
               <Sidebar {...this.props}/>
           </div>
           <div className={'p-grid p-col-12 p-nogutter p-align-stretch vertical-container'} style={{background: 'black'}}>
-              <div className={'p-col-12 dashboard-route'}>
+              <div className={'p-col-12'}>
                   <Switch>
                           {dashboardRoutes.map((prop, key) => {
                               if (prop.name === "/movie" || prop.name === "/tv-show" || prop.name === "/now-playing-movie") {

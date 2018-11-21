@@ -7,14 +7,17 @@ class App extends Component {
     }
   render() {
     return (
-      <div className="home" >
-        <header className="App-header">
-          <h4 className="App-title">web page is using React</h4>
-        </header>
-        <p className="App-intro">
-          In the web application axios is used to call the end points supplied by MoiveDB.
-        </p>
-      </div>
+        <div className={'home'} >
+            <div className={'homepage'}>
+                <div className={'App-intro-container'}>
+                    <div className={'App-intro'}>
+                        <div className={'App-title'}>
+                            Movie Database API With React JS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
   }
 }
