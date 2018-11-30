@@ -1,14 +1,11 @@
 import axios from 'axios';
-import {
-    API_URL,
-    API_KEY,
-    GET_POPULAR_MOVIES,
-    GET_MOVIE_GENRES,
-    GET_NOW_PLAYING,
-    GET_MOVIE_VIDEOS,
-    GET_MOVIE_REVIEWS,
-    APPEND_TO_RESPONSE, GET_RELEASE_DATE
-} from '../config';
+import {API_URL, API_KEY} from '../config/config';
+import { GET_POPULAR_MOVIES,
+         GET_MOVIE_GENRES,
+         GET_NOW_PLAYING,
+         GET_MOVIE_VIDEOS,
+         GET_MOVIE_REVIEWS,
+         GET_RELEASE_DATE } from '../config/urls';
 
 const mediaAndRatings = [];
 

@@ -1,6 +1,4 @@
 module.exports = {
-    API_URL: 'https://api.themoviedb.org/3',
-    API_KEY: '?api_key=48cbf131a5d26607e9dfff2c7d974513',
     GET_POPULAR_MOVIES: '/movie/popular',
     GET_NOW_PLAYING: '/movie/now_playing',
     GET_MOVIE_GENRES: '/genre/movie/list',

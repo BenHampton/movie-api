@@ -1,12 +1,9 @@
 import axios from 'axios';
-import {
-    API_URL,
-    API_KEY,
-    GET_POPULAR_TV_SHOWS,
-    GET_TV_SHOW_VIDEOS,
-    GET_TV_SHOW_REVIEWS,
-    GET_TV_SHOW_DETAILS
-} from '../config';
+import { API_URL, API_KEY,} from '../config/config';
+import { GET_POPULAR_TV_SHOWS,
+         GET_TV_SHOW_VIDEOS,
+         GET_TV_SHOW_REVIEWS,
+         GET_TV_SHOW_DETAILS } from '../config/urls';
 
 export class TVServices {
 

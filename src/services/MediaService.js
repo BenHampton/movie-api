@@ -1,8 +1,6 @@
 import axios from 'axios';
-import{ API_URL,
-    API_KEY,
-    GET_SIMILAR_MOVIE_MEDIA,
-    GET_SIMILAR_TV_MEDIA}from '../config';
+import{ API_URL,API_KEY }from '../config/config';
+import{ GET_SIMILAR_MOVIE_MEDIA, GET_SIMILAR_TV_MEDIA }from '../config/urls';
 
 
 export class MediaService {
