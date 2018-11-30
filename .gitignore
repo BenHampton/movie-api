@@ -10,7 +10,7 @@
 /build
 
 # config api key/url
-/src/config/config.js
+/src/config/config
 
 # misc
 .DS_Store

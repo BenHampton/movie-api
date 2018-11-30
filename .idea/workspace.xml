@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a732bef1-ca0b-4870-92c8-0b7bc2f0256a" name="Default" comment="Adding git Project to Heroku master">
-      <change afterPath="$PROJECT_DIR$/src/urls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/MediaService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MediaService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/MovieService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MovieService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/TVServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/TVServices.js" afterDir="false" />
-    </list>
+    <list default="true" id="a732bef1-ca0b-4870-92c8-0b7bc2f0256a" name="Default" comment="Adding git Project to Heroku master" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,20 +28,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TvShowComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/TvShows/TvShowComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config.js">
+        <entry file="file://$PROJECT_DIR$/src/config/config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
               <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
@@ -56,38 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/urls.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MediaService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/MediaService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/MovieService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TVServices.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/services/TVServices.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="231">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -147,7 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/component/PopularMovies/MovieComponent.js" />
         <option value="$PROJECT_DIR$/src/component/NowPlaying/NowPlayingMovieComponent.js" />
         <option value="$PROJECT_DIR$/src/component/NowPlaying/css/nowPlayingMovie.css" />
         <option value="$PROJECT_DIR$/src/component/SimilarMedia/css/similarMedia.css" />
@@ -198,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/src/services/MovieService.js" />
         <option value="$PROJECT_DIR$/src/services/TVServices.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -258,6 +212,12 @@
               <item name="movie-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="movie-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -281,18 +241,18 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\13144\Documents\git\movie-api\src\resources" />
-      <recent name="C:\Users\13144\Documents\git\movie-api\public\resources\images" />
-      <recent name="C:\Users\13144\Documents\git\movie-api\public\resources" />
-      <recent name="C:\Users\13144\Documents\git\movie-api\src\layouts\Dashboard\css" />
-      <recent name="F:\git\movie-api\src\component\Home\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\git\movie-api\movie-api\src\component" />
       <recent name="F:\git\movie-api\movie-api\src" />
       <recent name="F:\git\movie-api\movie-api\src\routes" />
       <recent name="F:\git\movie-api\movie-api\src\layouts\Dashboard" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git\movie-api\src\config" />
+      <recent name="C:\Users\13144\Documents\git\movie-api\src\resources" />
+      <recent name="C:\Users\13144\Documents\git\movie-api\public\resources\images" />
+      <recent name="C:\Users\13144\Documents\git\movie-api\public\resources" />
+      <recent name="C:\Users\13144\Documents\git\movie-api\src\layouts\Dashboard\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -380,7 +340,7 @@
       <workItem from="1541351481976" duration="5000" />
       <workItem from="1541368647883" duration="11081000" />
       <workItem from="1542764976367" duration="9738000" />
-      <workItem from="1543550042587" duration="338000" />
+      <workItem from="1543550042587" duration="703000" />
     </task>
     <task id="LOCAL-00001" summary="SimilarMedia updated to Smart/Dumb Components">
       <created>1540697724789</created>
@@ -477,7 +437,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329689000" />
+    <option name="totallyTimeSpent" value="330054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -493,10 +453,10 @@
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32905984" />
-      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32478634" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32478634" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="11" sideWeight="0.49456522" visible="true" weight="0.14899328" />
+      <window_info content_ui="combo" id="Project" order="11" sideWeight="0.49456522" visible="true" weight="0.14899328" />
       <window_info anchor="right" id="Database" order="11" weight="0.3291367" />
       <window_info anchor="right" id="SciView" order="13" />
       <window_info id="Structure" order="12" side_tool="true" weight="0.25" />
@@ -546,7 +506,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/component/NowPlaying/NowPlayingView.js" />
     <entry file="file://$PROJECT_DIR$/src/component/NowPlaying/NowPlayingComponent.js" />
     <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/MoviePanel.js" />
     <entry file="file://$PROJECT_DIR$/src/component/PopularMovies/MoviesComponent.js" />
@@ -778,14 +737,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/urls.js">
+    <entry file="file://$PROJECT_DIR$/src/config/urls.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
@@ -810,6 +762,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
