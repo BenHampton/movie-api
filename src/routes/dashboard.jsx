@@ -6,7 +6,6 @@ import MoviesPanel from "../component/Media/MoviesPanel";
 import MoviesComponent from "../component/Media/MovieComponent";
 
 const dashboardRoutes = [
-    //chrome://flags/#expensive-background-timer-throttling
   {
     path: "/home",
     name: "Home",
