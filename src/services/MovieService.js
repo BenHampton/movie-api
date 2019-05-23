@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {API_URL, API_KEY} from '../config/config';
 import { GET_POPULAR_MOVIES,
-         GET_MOVIE_GENRES,
          GET_NOW_PLAYING,
          GET_MOVIE_VIDEOS,
          GET_MOVIE_REVIEWS,
@@ -57,7 +56,7 @@ export class MovieService {
                         _this.setState({ nowPlaying: mediaAndRatings });
                         _this.setState({ popularMovies: mediaAndRatings });
                         break;
-                    } else if (allResults[i].iso_3166_1 !== 'US' && i == allResults.length-1){
+                    } else if (allResults[i].iso_3166_1 !== 'US' && i === allResults.length-1){
                         objectToPush = Object.assign( {}, data, {rating: ''} );
                         mediaAndRatings.push(objectToPush);
                         _this.setState({ popularMovies: mediaAndRatings });
@@ -92,12 +91,11 @@ export class MovieService {
             });
     }
 
-    getMovieGenres(_this) {
-        axios.get(`${API_URL}${GET_MOVIE_GENRES}${API_KEY}`)
-            .then(response => response.data)
-            .then(data => {
-                let p = _this;
-            });
-
-    }
+    // getMovieGenres(_this) {
+    //     axios.get(`${API_URL}${GET_MOVIE_GENRES}${API_KEY}`)
+    //         .then(response => response.data)
+    //         .then(data => {
+    //         });
+    //
+    // }
 }

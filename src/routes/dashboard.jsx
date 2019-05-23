@@ -1,4 +1,3 @@
-import Dashboard from "../layouts/Dashboard/Dashboard";
 import App from "../component/Home/App";
 import TvShowPanel from "../component/TvShows/TvShowPanel";
 import TvShowComponent from "../component/TvShows/TvShowComponent";

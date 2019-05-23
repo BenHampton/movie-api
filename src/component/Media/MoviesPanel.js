@@ -3,10 +3,6 @@ import MoviesComponent from "./MoviesComponent";
 
 
 class MoviesPanel extends Component{
-    constructor(props){
-        super(props);
-
-    }
     render(){
         return(
             <div>

@@ -3,10 +3,6 @@ import TvShowsComponent from "./TvShowsComponent";
 
 
 class TvShowPanel extends Component{
-    constructor(props){
-        super(props);
-
-    }
     render(){
         return(
             <div>
