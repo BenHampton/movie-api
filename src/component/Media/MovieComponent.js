@@ -13,7 +13,7 @@ class MoviesComponent extends Component {
             similarMedia: [],
             hasReviews: true,
             hasSimilarMedia: true
-        }
+        };
         this.getMovieDB = new MovieService();
         this.getSimilarMovieDB = new MediaService();
     }
